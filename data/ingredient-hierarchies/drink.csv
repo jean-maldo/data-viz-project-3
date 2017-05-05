@@ -1,201 +1,201 @@
-source,target,drink
-amaretto,fruit juice,5
-apple,brandy,7
-apple,cinnamon,12
-apple,clove,8
-apple,fruit juice,12
-apple,lemon,5
-apple,orange,5
-apple,rum,6
-banana,fruit juice,7
-banana,pineapple,5
-banana,strawberry,6
-banana,yogurt,6
-berry,raspberry,8
-berry,strawberry,7
-berry,tequila,5
-bitters,bourbon,9
-bitters,cherry,7
-bitters,fruit juice,11
-bitters,gin,18
-bitters,lemon,5
-bitters,lime,5
-bitters,liqueur,9
-bitters,orange,8
-bitters,pineapple,6
-bitters,rum,10
-bitters,rye,8
-bitters,whiskey,5
-bourbon,milk/cream,6
-bourbon,mint,6
-bourbon,whiskey,5
-brandy,champagne,8
-brandy,cinnamon,11
-brandy,citrus,5
-brandy,clove,11
-brandy,coffee,5
-brandy,egg,10
-brandy,fruit juice,19
-brandy,gin,7
-brandy,lemon,16
-brandy,liqueur,10
-brandy,milk/cream,16
-brandy,orange,16
-brandy,pineapple,5
-brandy,red wine,9
-brandy,rum,18
-brandy,triple sec,11
-brandy,white wine,5
-brandy,wine,5
-campari,gin,6
-campari,orange,5
-champagne,fruit juice,23
-champagne,gin,12
-champagne,lemon,11
-champagne,liqueur,13
-champagne,orange,12
-champagne,sparkling wine,15
-cherry,gin,9
-chocolate,coffee,5
-chocolate,liqueur,5
-chocolate,milk/cream,16
-cinnamon,clove,26
-cinnamon,fruit juice,10
-cinnamon,ginger,9
-cinnamon,lemon,10
-cinnamon,milk/cream,10
-cinnamon,nutmeg,12
-cinnamon,orange,16
-cinnamon,rum,9
-cinnamon,vanilla,5
-citrus,fruit juice,8
-citrus,lemon,6
-citrus,liqueur,7
-citrus,orange,6
-citrus,red wine,5
-citrus,wine,6
-clove,fruit juice,8
-clove,ginger,8
-clove,lemon,9
-clove,milk/cream,5
-clove,nutmeg,8
-clove,orange,13
-clove,red wine,6
-clove,rum,8
-coffee,liqueur,6
-coffee,milk/cream,18
-cognac/armagnac,liqueur,8
-cognac/armagnac,rum,5
-cranberry,fruit juice,23
-cranberry,lime,5
-cranberry,liqueur,8
-cranberry,orange,9
-cranberry,rum,6
-cranberry,vodka,12
-creme de cacao,liqueur,8
-creme de cacao,milk/cream,7
-cucumber,gin,5
-cucumber,mint,10
-egg,milk/cream,17
-egg,nutmeg,6
-egg,rum,11
-fruit juice,gin,21
-fruit juice,ginger,19
-fruit juice,grapefruit,13
-fruit juice,honey,6
-fruit juice,lemon,32
-fruit juice,lime,32
-fruit juice,liqueur,35
-fruit juice,mango,7
-fruit juice,milk/cream,6
-fruit juice,mint,14
-fruit juice,orange,46
-fruit juice,passion fruit,7
-fruit juice,peach,7
-fruit juice,pineapple,30
-fruit juice,pomegranate,7
-fruit juice,raspberry,8
-fruit juice,red wine,8
-fruit juice,rum,34
-fruit juice,strawberry,6
-fruit juice,tequila,12
-fruit juice,triple sec,11
-fruit juice,vodka,29
-fruit juice,white wine,6
-fruit juice,wine,9
-gin,lemon,18
-gin,lemon juice,6
-gin,lime,9
-gin,liqueur,23
-gin,mint,8
-gin,orange,10
-gin,pineapple,7
-gin,rum,7
-gin,triple sec,6
-gin,vodka,5
-ginger,lemon,6
-ginger,lime,8
-ginger,milk/cream,5
-ginger,rum,5
-grapefruit,vodka,8
-honey,lemon,5
-lemon,lime,10
-lemon,liqueur,9
-lemon,mint,14
-lemon,orange,27
-lemon,red wine,9
-lemon,rum,10
-lemon,scotch,5
-lemon,triple sec,8
-lemon,vodka,17
-lemon,white wine,5
-lemon juice,liqueur,6
-lime,liqueur,12
-lime,mint,12
-lime,orange,8
-lime,pineapple,7
-lime,rum,24
-lime,tequila,14
-lime,vodka,6
-liqueur,milk/cream,12
-liqueur,mint,5
-liqueur,orange,18
-liqueur,peach,7
-liqueur,pineapple,7
-liqueur,red wine,6
-liqueur,rum,15
-liqueur,tequila,11
-liqueur,triple sec,15
-liqueur,vodka,15
-liqueur,wine,6
-melon,watermelon,7
-milk/cream,nutmeg,9
-milk/cream,orange,7
-milk/cream,rum,17
-milk/cream,vanilla,9
-milk/cream,vodka,5
-mint,pineapple,9
-mint,rum,8
-mint,vodka,5
-nutmeg,orange,5
-nutmeg,rum,6
-nutmeg,vanilla,5
-orange,peach,6
-orange,pineapple,9
-orange,red wine,13
-orange,rum,15
-orange,sparkling wine,6
-orange,strawberry,5
-orange,vanilla,8
-orange,vodka,14
-orange,whiskey,5
-orange,white wine,5
-peach,white wine,5
-pineapple,rum,14
-raspberry,strawberry,7
-red wine,wine,8
-rum,triple sec,7
-rye,whiskey,6
-tequila,triple sec,8
-triple sec,vodka,7
-white wine,wine,9
+source,source.category,target,target.category,drink
+amaretto,Alcohol,fruit juice,Fruit,5
+apple,Fruit,brandy,Alcohol,7
+apple,Fruit,cinnamon,Spice,12
+apple,Fruit,clove,Spice,8
+apple,Fruit,fruit juice,Fruit,12
+apple,Fruit,lemon,Fruit,5
+apple,Fruit,orange,Fruit,5
+apple,Fruit,rum,Alcohol,6
+banana,Fruit,fruit juice,Fruit,7
+banana,Fruit,pineapple,Fruit,5
+banana,Fruit,strawberry,Fruit,6
+banana,Fruit,yogurt,Dairy,6
+berry,Fruit,raspberry,Fruit,8
+berry,Fruit,strawberry,Fruit,7
+berry,Fruit,tequila,Alcohol,5
+bitters,Alcohol,bourbon,Alcohol,9
+bitters,Alcohol,cherry,Fruit,7
+bitters,Alcohol,fruit juice,Fruit,11
+bitters,Alcohol,gin,Alcohol,18
+bitters,Alcohol,lemon,Fruit,5
+bitters,Alcohol,lime,Fruit,5
+bitters,Alcohol,liqueur,Alcohol,9
+bitters,Alcohol,orange,Fruit,8
+bitters,Alcohol,pineapple,Fruit,6
+bitters,Alcohol,rum,Alcohol,10
+bitters,Alcohol,rye,Grain,8
+bitters,Alcohol,whiskey,Alcohol,5
+bourbon,Alcohol,milk/cream,Dairy,6
+bourbon,Alcohol,mint,Herb,6
+bourbon,Alcohol,whiskey,Alcohol,5
+brandy,Alcohol,champagne,Alcohol,8
+brandy,Alcohol,cinnamon,Spice,11
+brandy,Alcohol,citrus,Fruit,5
+brandy,Alcohol,clove,Spice,11
+brandy,Alcohol,coffee,Misc,5
+brandy,Alcohol,egg,Poultry,10
+brandy,Alcohol,fruit juice,Fruit,19
+brandy,Alcohol,gin,Alcohol,7
+brandy,Alcohol,lemon,Fruit,16
+brandy,Alcohol,liqueur,Alcohol,10
+brandy,Alcohol,milk/cream,Dairy,16
+brandy,Alcohol,orange,Fruit,16
+brandy,Alcohol,pineapple,Fruit,5
+brandy,Alcohol,red wine,Alcohol,9
+brandy,Alcohol,rum,Alcohol,18
+brandy,Alcohol,triple sec,Alcohol,11
+brandy,Alcohol,white wine,Alcohol,5
+brandy,Alcohol,wine,Alcohol,5
+campari,Alcohol,gin,Alcohol,6
+campari,Alcohol,orange,Fruit,5
+champagne,Alcohol,fruit juice,Fruit,23
+champagne,Alcohol,gin,Alcohol,12
+champagne,Alcohol,lemon,Fruit,11
+champagne,Alcohol,liqueur,Alcohol,13
+champagne,Alcohol,orange,Fruit,12
+champagne,Alcohol,sparkling wine,Alcohol,15
+cherry,Fruit,gin,Alcohol,9
+chocolate,Misc,coffee,Misc,5
+chocolate,Misc,liqueur,Alcohol,5
+chocolate,Misc,milk/cream,Dairy,16
+cinnamon,Spice,clove,Spice,26
+cinnamon,Spice,fruit juice,Fruit,10
+cinnamon,Spice,ginger,Vegetable,9
+cinnamon,Spice,lemon,Fruit,10
+cinnamon,Spice,milk/cream,Dairy,10
+cinnamon,Spice,nutmeg,Spice,12
+cinnamon,Spice,orange,Fruit,16
+cinnamon,Spice,rum,Alcohol,9
+cinnamon,Spice,vanilla,Condiment,5
+citrus,Fruit,fruit juice,Fruit,8
+citrus,Fruit,lemon,Fruit,6
+citrus,Fruit,liqueur,Alcohol,7
+citrus,Fruit,orange,Fruit,6
+citrus,Fruit,red wine,Alcohol,5
+citrus,Fruit,wine,Alcohol,6
+clove,Spice,fruit juice,Fruit,8
+clove,Spice,ginger,Vegetable,8
+clove,Spice,lemon,Fruit,9
+clove,Spice,milk/cream,Dairy,5
+clove,Spice,nutmeg,Spice,8
+clove,Spice,orange,Fruit,13
+clove,Spice,red wine,Alcohol,6
+clove,Spice,rum,Alcohol,8
+coffee,Misc,liqueur,Alcohol,6
+coffee,Misc,milk/cream,Dairy,18
+cognac/armagnac,Alcohol,liqueur,Alcohol,8
+cognac/armagnac,Alcohol,rum,Alcohol,5
+cranberry,Fruit,fruit juice,Fruit,23
+cranberry,Fruit,lime,Fruit,5
+cranberry,Fruit,liqueur,Alcohol,8
+cranberry,Fruit,orange,Fruit,9
+cranberry,Fruit,rum,Alcohol,6
+cranberry,Fruit,vodka,Alcohol,12
+creme de cacao,Alcohol,liqueur,Alcohol,8
+creme de cacao,Alcohol,milk/cream,Dairy,7
+cucumber,Vegetable,gin,Alcohol,5
+cucumber,Vegetable,mint,Herb,10
+egg,Poultry,milk/cream,Dairy,17
+egg,Poultry,nutmeg,Spice,6
+egg,Poultry,rum,Alcohol,11
+fruit juice,Fruit,gin,Alcohol,21
+fruit juice,Fruit,ginger,Vegetable,19
+fruit juice,Fruit,grapefruit,Fruit,13
+fruit juice,Fruit,honey,Condiment,6
+fruit juice,Fruit,lemon,Fruit,32
+fruit juice,Fruit,lime,Fruit,32
+fruit juice,Fruit,liqueur,Alcohol,35
+fruit juice,Fruit,mango,Fruit,7
+fruit juice,Fruit,milk/cream,Dairy,6
+fruit juice,Fruit,mint,Herb,14
+fruit juice,Fruit,orange,Fruit,46
+fruit juice,Fruit,passion fruit,Vegetable,7
+fruit juice,Fruit,peach,Fruit,7
+fruit juice,Fruit,pineapple,Fruit,30
+fruit juice,Fruit,pomegranate,Fruit,7
+fruit juice,Fruit,raspberry,Fruit,8
+fruit juice,Fruit,red wine,Alcohol,8
+fruit juice,Fruit,rum,Alcohol,34
+fruit juice,Fruit,strawberry,Fruit,6
+fruit juice,Fruit,tequila,Alcohol,12
+fruit juice,Fruit,triple sec,Alcohol,11
+fruit juice,Fruit,vodka,Alcohol,29
+fruit juice,Fruit,white wine,Alcohol,6
+fruit juice,Fruit,wine,Alcohol,9
+gin,Alcohol,lemon,Fruit,18
+gin,Alcohol,lemon juice,Fruit,6
+gin,Alcohol,lime,Fruit,9
+gin,Alcohol,liqueur,Alcohol,23
+gin,Alcohol,mint,Herb,8
+gin,Alcohol,orange,Fruit,10
+gin,Alcohol,pineapple,Fruit,7
+gin,Alcohol,rum,Alcohol,7
+gin,Alcohol,triple sec,Alcohol,6
+gin,Alcohol,vodka,Alcohol,5
+ginger,Vegetable,lemon,Fruit,6
+ginger,Vegetable,lime,Fruit,8
+ginger,Vegetable,milk/cream,Dairy,5
+ginger,Vegetable,rum,Alcohol,5
+grapefruit,Fruit,vodka,Alcohol,8
+honey,Condiment,lemon,Fruit,5
+lemon,Fruit,lime,Fruit,10
+lemon,Fruit,liqueur,Alcohol,9
+lemon,Fruit,mint,Herb,14
+lemon,Fruit,orange,Fruit,27
+lemon,Fruit,red wine,Alcohol,9
+lemon,Fruit,rum,Alcohol,10
+lemon,Fruit,scotch,Alcohol,5
+lemon,Fruit,triple sec,Alcohol,8
+lemon,Fruit,vodka,Alcohol,17
+lemon,Fruit,white wine,Alcohol,5
+lemon juice,Fruit,liqueur,Alcohol,6
+lime,Fruit,liqueur,Alcohol,12
+lime,Fruit,mint,Herb,12
+lime,Fruit,orange,Fruit,8
+lime,Fruit,pineapple,Fruit,7
+lime,Fruit,rum,Alcohol,24
+lime,Fruit,tequila,Alcohol,14
+lime,Fruit,vodka,Alcohol,6
+liqueur,Alcohol,milk/cream,Dairy,12
+liqueur,Alcohol,mint,Herb,5
+liqueur,Alcohol,orange,Fruit,18
+liqueur,Alcohol,peach,Fruit,7
+liqueur,Alcohol,pineapple,Fruit,7
+liqueur,Alcohol,red wine,Alcohol,6
+liqueur,Alcohol,rum,Alcohol,15
+liqueur,Alcohol,tequila,Alcohol,11
+liqueur,Alcohol,triple sec,Alcohol,15
+liqueur,Alcohol,vodka,Alcohol,15
+liqueur,Alcohol,wine,Alcohol,6
+melon,Fruit,watermelon,Fruit,7
+milk/cream,Dairy,nutmeg,Spice,9
+milk/cream,Dairy,orange,Fruit,7
+milk/cream,Dairy,rum,Alcohol,17
+milk/cream,Dairy,vanilla,Condiment,9
+milk/cream,Dairy,vodka,Alcohol,5
+mint,Herb,pineapple,Fruit,9
+mint,Herb,rum,Alcohol,8
+mint,Herb,vodka,Alcohol,5
+nutmeg,Spice,orange,Fruit,5
+nutmeg,Spice,rum,Alcohol,6
+nutmeg,Spice,vanilla,Condiment,5
+orange,Fruit,peach,Fruit,6
+orange,Fruit,pineapple,Fruit,9
+orange,Fruit,red wine,Alcohol,13
+orange,Fruit,rum,Alcohol,15
+orange,Fruit,sparkling wine,Alcohol,6
+orange,Fruit,strawberry,Fruit,5
+orange,Fruit,vanilla,Condiment,8
+orange,Fruit,vodka,Alcohol,14
+orange,Fruit,whiskey,Alcohol,5
+orange,Fruit,white wine,Alcohol,5
+peach,Fruit,white wine,Alcohol,5
+pineapple,Fruit,rum,Alcohol,14
+raspberry,Fruit,strawberry,Fruit,7
+red wine,Alcohol,wine,Alcohol,8
+rum,Alcohol,triple sec,Alcohol,7
+rye,Grain,whiskey,Alcohol,6
+tequila,Alcohol,triple sec,Alcohol,8
+triple sec,Alcohol,vodka,Alcohol,7
+white wine,Alcohol,wine,Alcohol,9
