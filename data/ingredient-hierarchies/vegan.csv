@@ -1,0 +1,304 @@
+source,target,vegan
+almond,dried fruit,5
+almond,onion,5
+almond,raisin,10
+apple,celery,5
+apple,fruit juice,6
+apple,leafy green,6
+apple,vinegar,5
+apricot,fig,5
+arugula,bell pepper,7
+arugula,leafy green,8
+arugula,onion,7
+avocado,cilantro,6
+avocado,hot pepper,5
+avocado,jalapeno,6
+avocado,leafy green,7
+avocado,onion,9
+avocado,orange,6
+avocado,pineapple,5
+avocado,tomato,9
+basil,cilantro,5
+basil,eggplant,5
+basil,garlic,6
+basil,herb,9
+basil,mint,9
+basil,pasta,6
+basil,tomato,14
+basil,zucchini,5
+bean,corn,7
+bean,garlic,11
+bean,green bean,8
+bean,legume,7
+bean,onion,17
+bean,pasta,5
+bean,tomato,9
+beet,carrot,7
+beet,onion,5
+beet,vinegar,6
+bell pepper,carrot,6
+bell pepper,cilantro,9
+bell pepper,eggplant,11
+bell pepper,garlic,6
+bell pepper,ginger,6
+bell pepper,herb,8
+bell pepper,hot pepper,6
+bell pepper,olive,6
+bell pepper,onion,18
+bell pepper,pepper,16
+bell pepper,potato,5
+bell pepper,tomato,11
+bell pepper,vinegar,8
+bell pepper,zucchini,8
+berry,blackberry,6
+berry,blueberry,9
+berry,citrus,13
+berry,cranberry,10
+berry,lemon,6
+berry,raspberry,9
+berry,strawberry,19
+blueberry,citrus,5
+blueberry,strawberry,5
+brandy,cherry,6
+broccoli,garlic,6
+broccoli rabe,garlic,7
+cabbage,carrot,11
+cabbage,cilantro,6
+cabbage,ginger,6
+cabbage,onion,7
+cabbage,vinegar,12
+capers,eggplant,7
+capers,olive,7
+capers,tomato,6
+carrot,celery,6
+carrot,cilantro,6
+carrot,fennel,5
+carrot,garlic,6
+carrot,ginger,8
+carrot,herb,6
+carrot,lemon,5
+carrot,onion,20
+carrot,parsnip,8
+carrot,potato,5
+carrot,tomato,5
+carrot,turnip,6
+carrot,vinegar,8
+celery,herb,6
+celery,onion,7
+celery,parsley,6
+champagne,fruit juice,8
+champagne,orange,5
+champagne,sparkling wine,5
+chard,leafy green,6
+cherry,dried fruit,5
+chickpea,pasta,5
+chickpea,tomato,5
+chile pepper,cilantro,9
+chile pepper,hot pepper,5
+chile pepper,onion,11
+chile pepper,tomatillo,5
+chile pepper,tomato,6
+cilantro,corn,8
+cilantro,garlic,9
+cilantro,ginger,7
+cilantro,herb,11
+cilantro,hot pepper,9
+cilantro,jalapeno,12
+cilantro,lime,9
+cilantro,mint,7
+cilantro,onion,28
+cilantro,parsley,7
+cilantro,pineapple,7
+cilantro,tomatillo,6
+cilantro,tomato,19
+cinnamon,clove,12
+cinnamon,dried fruit,5
+cinnamon,ginger,5
+cinnamon,orange,5
+cinnamon,raisin,6
+citrus,endive,5
+citrus,fennel,6
+citrus,fruit juice,5
+citrus,garlic,6
+citrus,grapefruit,10
+citrus,herb,9
+citrus,leafy green,5
+citrus,lemon,13
+citrus,lime,8
+citrus,mango,7
+citrus,olive,5
+citrus,onion,5
+citrus,orange,23
+citrus,pineapple,6
+citrus,rum,5
+coconut,pineapple,5
+coriander,cumin,7
+corn,herb,5
+corn,hot pepper,6
+corn,onion,8
+corn,tomato,16
+corn,zucchini,8
+couscous,raisin,6
+cranberry,dried fruit,7
+cranberry,ginger,8
+cranberry,orange,15
+cranberry,pear,6
+cranberry,wine,5
+cucumber,dill,8
+cucumber,mint,9
+cucumber,parsley,7
+cucumber,tomato,13
+dill,mint,5
+dill,parsley,6
+dried fruit,raisin,7
+eggplant,garlic,5
+eggplant,olive,5
+eggplant,tomato,14
+eggplant,zucchini,7
+endive,leafy green,5
+endive,orange,6
+escarole,leafy green,5
+fennel,garlic,5
+fennel,leafy green,6
+fennel,olive,6
+fennel,onion,9
+fennel,orange,7
+fennel,parsley,6
+fruit juice,garlic,5
+fruit juice,liqueur,7
+fruit juice,onion,5
+fruit juice,orange,15
+fruit juice,pineapple,5
+garlic,ginger,16
+garlic,green bean,8
+garlic,herb,20
+garlic,leafy green,11
+garlic,lemon,9
+garlic,mushroom,5
+garlic,onion,24
+garlic,orange,5
+garlic,parsley,9
+garlic,pasta,5
+garlic,pepper,6
+garlic,potato,11
+garlic,rosemary,8
+garlic,spinach,5
+garlic,thyme,6
+garlic,tomato,26
+garlic,vinegar,8
+garlic,zucchini,7
+ginger,leafy green,6
+ginger,lentil,5
+ginger,mushroom,6
+ginger,onion,6
+ginger,orange,7
+ginger,pear,6
+ginger,soy sauce,8
+ginger,tomato,7
+ginger,vinegar,12
+grapefruit,leafy green,6
+grapefruit,orange,5
+green bean,hot pepper,5
+green bean,mustard,5
+green bean,onion,10
+green bean,potato,5
+green bean,tomato,5
+herb,jalapeno,6
+herb,leafy green,10
+herb,lemon,6
+herb,mint,16
+herb,onion,24
+herb,parsley,12
+herb,pasta,8
+herb,pepper,12
+herb,pistachio,5
+herb,potato,10
+herb,rice,5
+herb,thyme,7
+herb,tomato,16
+herb,zucchini,9
+hot pepper,onion,5
+hot pepper,tomatillo,6
+hot pepper,tomato,8
+hot pepper,vinegar,6
+jalapeno,lime,5
+jalapeno,onion,14
+jalapeno,pineapple,5
+jalapeno,tomato,11
+kale,leafy green,8
+kale,onion,5
+leafy green,lettuce,7
+leafy green,olive,7
+leafy green,onion,7
+leafy green,parsley,5
+leafy green,pine nut,6
+leafy green,raisin,6
+leafy green,spinach,11
+leafy green,vinegar,15
+leek,onion,5
+legume,onion,5
+lemon,onion,8
+lemon,orange,7
+lemon,parsley,10
+lettuce,mustard,5
+lime,mango,6
+lime,mint,5
+lime,onion,9
+liqueur,orange,6
+mango,pineapple,8
+melon,mint,6
+melon,watermelon,8
+mint,onion,12
+mint,parsley,10
+mint,pasta,5
+mint,pineapple,5
+mint,strawberry,5
+mint,tomato,11
+mint,watermelon,5
+mint,zucchini,5
+mushroom,onion,5
+mushroom,tomato,6
+mustard,onion,8
+mustard,vinegar,10
+olive,onion,9
+olive,rosemary,6
+olive,tomato,9
+onion,parsley,7
+onion,parsnip,6
+onion,pepper,15
+onion,pineapple,6
+onion,potato,11
+onion,rice,6
+onion,rosemary,5
+onion,thyme,6
+onion,tomatillo,7
+onion,tomato,46
+onion,vinegar,22
+onion,zucchini,6
+orange,pineapple,6
+orange,red wine,6
+orange,strawberry,5
+parsley,tomato,7
+parsley,vinegar,5
+pasta,tomato,6
+pea,rice,5
+pea,tomato,6
+pepper,tomato,9
+pine nut,raisin,8
+pistachio,raisin,5
+potato,rosemary,7
+potato,sweet potato/yam,6
+potato,tomato,7
+potato,zucchini,5
+raisin,rice,6
+raisin,vinegar,5
+raspberry,strawberry,5
+rice,tomato,8
+rosemary,thyme,5
+soy,tofu,6
+spinach,vinegar,7
+strawberry,vinegar,5
+thyme,tomato,5
+tomato,vinegar,8
+tomato,zucchini,14
+yellow squash,zucchini,5

@@ -1,0 +1,1589 @@
+source,target,vegetarian
+almond,amaretto,8
+almond,apple,8
+almond,apricot,19
+almond,basil,5
+almond,berry,20
+almond,brandy,9
+almond,bread,7
+almond,cashew,11
+almond,cauliflower,5
+almond,cheese,8
+almond,cherry,27
+almond,chocolate,32
+almond,cinnamon,6
+almond,coconut,8
+almond,coffee,7
+almond,cranberry,7
+almond,cream cheese,13
+almond,currant,6
+almond,date,7
+almond,dried fruit,13
+almond,egg,46
+almond,fig,5
+almond,garlic,12
+almond,ginger,13
+almond,hazelnut,12
+almond,herb,6
+almond,honey,24
+almond,jam or jelly,5
+almond,leafy green,9
+almond,lemon,13
+almond,milk/cream,29
+almond,oat,9
+almond,onion,5
+almond,orange,15
+almond,parmesan,5
+almond,parsley,6
+almond,pasta,9
+almond,pear,10
+almond,pecan,7
+almond,pistachio,13
+almond,plum,6
+almond,raisin,23
+almond,raspberry,13
+almond,rice,8
+almond,sour cream,8
+almond,strawberry,8
+almond,tomato,7
+almond,vanilla,6
+almond,walnut,15
+amaretto,egg,7
+amaretto,milk/cream,5
+anise,cinnamon,9
+anise,egg,8
+anise,ginger,9
+anise,lemon,7
+anise,milk/cream,6
+anise,vanilla,5
+apple,apricot,6
+apple,berry,7
+apple,blue cheese,5
+apple,brandy,6
+apple,bread,5
+apple,butter,5
+apple,cabbage,16
+apple,carrot,9
+apple,celery,11
+apple,cheddar,5
+apple,cheese,10
+apple,cherry,13
+apple,cinnamon,23
+apple,citrus,7
+apple,clove,5
+apple,cranberry,13
+apple,cream cheese,6
+apple,currant,7
+apple,dried fruit,9
+apple,egg,21
+apple,endive,5
+apple,fruit juice,15
+apple,ginger,10
+apple,hazelnut,5
+apple,herb,6
+apple,honey,13
+apple,leafy green,15
+apple,lemon,6
+apple,mayonnaise,7
+apple,milk/cream,21
+apple,nutmeg,6
+apple,oat,12
+apple,onion,12
+apple,pear,7
+apple,pecan,14
+apple,phyllo/puff pastry dough,10
+apple,prune,10
+apple,raisin,24
+apple,rum,8
+apple,sour cream,7
+apple,sweet potato/yam,7
+apple,vanilla,8
+apple,vinegar,11
+apple,walnut,24
+apple,yogurt,6
+apricot,berry,7
+apricot,brandy,6
+apricot,cherry,19
+apricot,chocolate,11
+apricot,cinnamon,5
+apricot,cranberry,9
+apricot,cream cheese,10
+apricot,dried fruit,12
+apricot,egg,11
+apricot,fig,6
+apricot,jam or jelly,5
+apricot,milk/cream,5
+apricot,peach,5
+apricot,pear,12
+apricot,pecan,8
+apricot,pineapple,5
+apricot,pistachio,5
+apricot,prune,8
+apricot,raisin,8
+apricot,raspberry,5
+apricot,walnut,5
+artichoke,cheese,7
+artichoke,fennel,5
+artichoke,garlic,9
+artichoke,lemon,9
+artichoke,olive,5
+artichoke,parmesan,8
+artichoke,parsley,5
+artichoke,pasta,5
+artichoke,tomato,6
+arugula,bell pepper,9
+arugula,cheese,9
+arugula,eggplant,5
+arugula,fennel,7
+arugula,goat cheese,5
+arugula,leafy green,21
+arugula,lemon,6
+arugula,olive,5
+arugula,onion,12
+arugula,orange,6
+arugula,parmesan,15
+arugula,pine nut,6
+arugula,tomato,14
+arugula,vinegar,6
+asparagus,bean,6
+asparagus,bell pepper,5
+asparagus,cheese,9
+asparagus,egg,8
+asparagus,goat cheese,8
+asparagus,herb,7
+asparagus,lemon,5
+asparagus,mushroom,10
+asparagus,parmesan,11
+asparagus,pasta,12
+asparagus,potato,5
+asparagus,tomato,6
+avocado,bean,7
+avocado,carrot,5
+avocado,cheese,6
+avocado,cilantro,14
+avocado,garlic,7
+avocado,herb,6
+avocado,hot pepper,7
+avocado,jalapeno,7
+avocado,leafy green,10
+avocado,onion,13
+avocado,orange,9
+avocado,tomatillo,7
+avocado,tomato,17
+avocado,tortillas,9
+banana,bread,6
+banana,chocolate,13
+banana,coconut,6
+banana,cream cheese,6
+banana,egg,9
+banana,mango,7
+banana,milk/cream,16
+banana,pecan,12
+banana,pineapple,10
+banana,rum,12
+banana,strawberry,6
+banana,yogurt,5
+barley,herb,5
+basil,bean,6
+basil,bell pepper,18
+basil,capers,5
+basil,cheese,27
+basil,cilantro,6
+basil,corn,11
+basil,egg,8
+basil,eggplant,20
+basil,garlic,25
+basil,goat cheese,19
+basil,green bean,8
+basil,herb,26
+basil,leafy green,6
+basil,lemon,7
+basil,milk/cream,9
+basil,mint,14
+basil,mozzarella,14
+basil,olive,7
+basil,onion,6
+basil,parmesan,19
+basil,parsley,11
+basil,pasta,35
+basil,pine nut,7
+basil,potato,6
+basil,ricotta,6
+basil,tomato,64
+basil,zucchini,16
+bean,bell pepper,10
+bean,cheese,20
+bean,chickpea,16
+bean,cilantro,11
+bean,corn,11
+bean,egg,7
+bean,feta,8
+bean,garlic,24
+bean,green bean,12
+bean,herb,13
+bean,jalapeno,7
+bean,leafy green,9
+bean,legume,10
+bean,lemon,5
+bean,lentil,7
+bean,mint,5
+bean,monterey jack,5
+bean,mushroom,5
+bean,onion,30
+bean,parmesan,7
+bean,pasta,18
+bean,pepper,8
+bean,potato,8
+bean,rice,8
+bean,spinach,5
+bean,tomato,31
+bean,tortillas,11
+bean,zucchini,5
+beet,carrot,14
+beet,chard,5
+beet,cheese,9
+beet,citrus,6
+beet,egg,5
+beet,fennel,6
+beet,feta,6
+beet,goat cheese,14
+beet,herb,7
+beet,horseradish,7
+beet,leafy green,16
+beet,mint,5
+beet,onion,9
+beet,orange,6
+beet,pasta,6
+beet,radish,5
+beet,sour cream,7
+beet,tomato,5
+beet,vinegar,12
+beet,walnut,11
+bell pepper,bread,6
+bell pepper,broccoli,6
+bell pepper,cabbage,8
+bell pepper,carrot,14
+bell pepper,cheddar,8
+bell pepper,cheese,21
+bell pepper,chickpea,5
+bell pepper,cilantro,14
+bell pepper,corn,13
+bell pepper,cucumber,7
+bell pepper,egg,11
+bell pepper,eggplant,29
+bell pepper,feta,7
+bell pepper,garlic,15
+bell pepper,ginger,8
+bell pepper,goat cheese,10
+bell pepper,herb,15
+bell pepper,hot pepper,8
+bell pepper,jalapeno,9
+bell pepper,leafy green,7
+bell pepper,mayonnaise,7
+bell pepper,milk/cream,9
+bell pepper,mushroom,12
+bell pepper,olive,13
+bell pepper,onion,36
+bell pepper,parmesan,9
+bell pepper,pasta,14
+bell pepper,pepper,33
+bell pepper,pine nut,6
+bell pepper,potato,12
+bell pepper,spinach,7
+bell pepper,squash,6
+bell pepper,thyme,5
+bell pepper,tomato,37
+bell pepper,vinegar,10
+bell pepper,yellow squash,10
+bell pepper,zucchini,21
+berry,blackberry,22
+berry,blueberry,37
+berry,cheese,7
+berry,cherry,8
+berry,chocolate,19
+berry,citrus,27
+berry,cranberry,24
+berry,cream cheese,12
+berry,egg,22
+berry,ginger,8
+berry,herb,6
+berry,lemon,23
+berry,lime,5
+berry,liqueur,6
+berry,milk/cream,31
+berry,nectarine,5
+berry,peach,9
+berry,pear,8
+berry,pistachio,5
+berry,raspberry,42
+berry,rhubarb,6
+berry,strawberry,49
+berry,vanilla,8
+berry,vinegar,6
+berry,walnut,7
+blackberry,blueberry,15
+blackberry,egg,14
+blackberry,lemon,7
+blackberry,mango,6
+blackberry,milk/cream,16
+blackberry,raspberry,21
+blackberry,strawberry,7
+blue cheese,celery,5
+blue cheese,cheese,32
+blue cheese,endive,8
+blue cheese,fig,7
+blue cheese,leafy green,15
+blue cheese,milk/cream,13
+blue cheese,onion,9
+blue cheese,parmesan,7
+blue cheese,pasta,5
+blue cheese,pear,7
+blue cheese,potato,9
+blue cheese,sour cream,5
+blue cheese,spinach,5
+blue cheese,tomato,6
+blue cheese,walnut,13
+blueberry,bread,7
+blueberry,citrus,13
+blueberry,cornmeal,7
+blueberry,cream cheese,7
+blueberry,egg,9
+blueberry,lemon,28
+blueberry,milk/cream,22
+blueberry,mint,5
+blueberry,raspberry,19
+blueberry,strawberry,14
+bok choy,ginger,5
+bourbon,egg,8
+bourbon,milk/cream,9
+bourbon,pecan,10
+brandy,cherry,8
+brandy,chocolate,12
+brandy,dried fruit,7
+brandy,egg,6
+brandy,honey,6
+brandy,milk/cream,10
+brandy,pear,6
+brandy,prune,9
+brandy,raisin,9
+brandy,raspberry,5
+bread,cheddar,12
+bread,cheese,9
+bread,chocolate,6
+bread,cinnamon,8
+bread,citrus,6
+bread,corn,5
+bread,cornmeal,41
+bread,date,5
+bread,dried fruit,5
+bread,egg,35
+bread,ginger,6
+bread,herb,6
+bread,hominy/cornmeal/masa,6
+bread,honey,6
+bread,milk/cream,43
+bread,molasses,5
+bread,mushroom,6
+bread,oat,7
+bread,onion,6
+bread,orange,6
+bread,pecan,10
+bread,pumpkin,5
+bread,raisin,13
+bread,sour cream,6
+bread,walnut,12
+bread,whole wheat,7
+broccoli,carrot,6
+broccoli,cheese,8
+broccoli,garlic,10
+broccoli,parmesan,9
+broccoli,pasta,7
+broccoli rabe,cheese,5
+broccoli rabe,garlic,12
+butter,chocolate,9
+butter,cinnamon,5
+butter,cream cheese,6
+butter,egg,18
+butter,milk/cream,11
+butter,vanilla,5
+buttermilk,cream cheese,5
+buttermilk,egg,5
+buttermilk,orange,5
+buttermilk,raspberry,5
+butternut squash,cheese,6
+butternut squash,garlic,5
+butternut squash,milk/cream,6
+butternut squash,parmesan,10
+butternut squash,pasta,10
+butternut squash,sage,9
+butternut squash,squash,10
+cabbage,carrot,26
+cabbage,cilantro,7
+cabbage,ginger,9
+cabbage,herb,5
+cabbage,hot pepper,6
+cabbage,leafy green,6
+cabbage,mayonnaise,13
+cabbage,mustard,7
+cabbage,onion,18
+cabbage,sour cream,8
+cabbage,vinegar,19
+cantaloupe,honeydew,6
+cantaloupe,melon,5
+capers,eggplant,7
+capers,olive,8
+capers,tomato,7
+carrot,celery,10
+carrot,cheese,6
+carrot,cilantro,12
+carrot,citrus,6
+carrot,coconut,8
+carrot,corn,5
+carrot,cream cheese,10
+carrot,dill,7
+carrot,fennel,9
+carrot,garlic,13
+carrot,ginger,18
+carrot,herb,11
+carrot,honey,7
+carrot,hot pepper,8
+carrot,leafy green,6
+carrot,leek,6
+carrot,lemon,9
+carrot,mayonnaise,12
+carrot,milk/cream,8
+carrot,mushroom,6
+carrot,mustard,5
+carrot,noodle,5
+carrot,onion,28
+carrot,orange,10
+carrot,parsley,7
+carrot,parsnip,14
+carrot,pasta,7
+carrot,pea,5
+carrot,potato,21
+carrot,radish,8
+carrot,rice,6
+carrot,squash,6
+carrot,sweet potato/yam,8
+carrot,tomato,6
+carrot,turnip,12
+carrot,vinegar,13
+carrot,walnut,5
+carrot,yogurt,5
+carrot,zucchini,9
+cashew,honey,7
+cashew,pecan,5
+cauliflower,cheese,7
+cauliflower,curry,5
+cauliflower,garlic,6
+cauliflower,herb,8
+cauliflower,potato,7
+cauliflower,tomato,5
+celery,cheese,6
+celery,egg,5
+celery,garlic,5
+celery,herb,6
+celery,lemon,7
+celery,mayonnaise,7
+celery,onion,12
+celery,parsley,8
+celery,potato,10
+celery,vinegar,5
+champagne,fruit juice,8
+champagne,orange,6
+champagne,sparkling wine,5
+chard,leafy green,14
+chard,onion,6
+chard,pine nut,5
+chard,raisin,6
+cheddar,cheese,30
+cheddar,cornmeal,11
+cheddar,cream cheese,5
+cheddar,egg,20
+cheddar,hot pepper,5
+cheddar,milk/cream,18
+cheddar,monterey jack,6
+cheddar,mushroom,5
+cheddar,pepper,6
+cheddar,potato,11
+cheddar,sour cream,6
+cheddar,tomato,5
+cheese,chile pepper,5
+cheese,chive,8
+cheese,chocolate,7
+cheese,cilantro,7
+cheese,citrus,20
+cheese,corn,13
+cheese,cornmeal,8
+cheese,cream cheese,29
+cheese,egg,60
+cheese,eggplant,16
+cheese,endive,10
+cheese,fennel,5
+cheese,feta,21
+cheese,fig,10
+cheese,fontina,6
+cheese,garlic,42
+cheese,goat cheese,40
+cheese,herb,73
+cheese,hot pepper,13
+cheese,leafy green,39
+cheese,leek,9
+cheese,lemon,8
+cheese,milk/cream,38
+cheese,mint,12
+cheese,mozzarella,20
+cheese,mushroom,33
+cheese,mustard,9
+cheese,noodle,7
+cheese,olive,21
+cheese,onion,53
+cheese,orange,6
+cheese,parmesan,52
+cheese,parsley,17
+cheese,pasta,69
+cheese,pea,5
+cheese,pear,6
+cheese,pepper,27
+cheese,phyllo/puff pastry dough,10
+cheese,pine nut,10
+cheese,potato,39
+cheese,rice,9
+cheese,ricotta,19
+cheese,rosemary,11
+cheese,sage,7
+cheese,sour cream,15
+cheese,spinach,19
+cheese,sweet potato/yam,6
+cheese,swiss cheese,8
+cheese,thyme,6
+cheese,tomato,88
+cheese,tortillas,11
+cheese,vinegar,5
+cheese,walnut,19
+cheese,white wine,5
+cheese,yogurt,8
+cheese,zucchini,27
+cherry,chocolate,16
+cherry,cranberry,9
+cherry,cream cheese,5
+cherry,dried fruit,13
+cherry,egg,10
+cherry,kirsch,6
+cherry,milk/cream,10
+cherry,orange,5
+cherry,pear,8
+cherry,pecan,6
+cherry,vanilla,6
+cherry,walnut,5
+chickpea,eggplant,5
+chickpea,garlic,6
+chickpea,pasta,6
+chickpea,potato,6
+chickpea,tomato,13
+chile pepper,cilantro,12
+chile pepper,hot pepper,6
+chile pepper,onion,11
+chile pepper,tomatillo,5
+chile pepper,tomato,7
+chive,corn,5
+chive,egg,9
+chive,garlic,6
+chive,goat cheese,7
+chive,herb,19
+chive,mayonnaise,5
+chive,milk/cream,13
+chive,onion,6
+chive,parsley,15
+chive,potato,17
+chive,sour cream,9
+chive,tarragon,8
+chocolate,cinnamon,19
+chocolate,citrus,10
+chocolate,coconut,22
+chocolate,coffee,39
+chocolate,cognac/armagnac,8
+chocolate,cranberry,12
+chocolate,cream cheese,31
+chocolate,dried fruit,10
+chocolate,egg,81
+chocolate,frangelico,5
+chocolate,ginger,11
+chocolate,hazelnut,20
+chocolate,jam or jelly,17
+chocolate,lemon,7
+chocolate,liqueur,14
+chocolate,macadamia nut,5
+chocolate,milk/cream,108
+chocolate,mint,12
+chocolate,oat,8
+chocolate,orange,18
+chocolate,peanut,12
+chocolate,pear,7
+chocolate,pecan,27
+chocolate,pistachio,15
+chocolate,raisin,8
+chocolate,raspberry,22
+chocolate,rum,9
+chocolate,sour cream,17
+chocolate,strawberry,10
+chocolate,vanilla,16
+chocolate,walnut,23
+chocolate,yogurt,9
+cilantro,citrus,5
+cilantro,coconut,5
+cilantro,corn,10
+cilantro,garlic,15
+cilantro,ginger,13
+cilantro,green onion/scallion,6
+cilantro,herb,20
+cilantro,hot pepper,17
+cilantro,jalapeno,19
+cilantro,lemon,7
+cilantro,lime,15
+cilantro,mayonnaise,5
+cilantro,mint,10
+cilantro,monterey jack,5
+cilantro,onion,35
+cilantro,parsley,10
+cilantro,pepper,9
+cilantro,pineapple,8
+cilantro,rice,5
+cilantro,tomatillo,10
+cilantro,tomato,24
+cilantro,tortillas,8
+cinnamon,citrus,6
+cinnamon,clove,32
+cinnamon,cranberry,6
+cinnamon,cream cheese,8
+cinnamon,date,6
+cinnamon,dried fruit,9
+cinnamon,egg,33
+cinnamon,ginger,29
+cinnamon,hazelnut,5
+cinnamon,honey,12
+cinnamon,lemon,12
+cinnamon,mango,6
+cinnamon,milk/cream,30
+cinnamon,molasses,6
+cinnamon,nutmeg,13
+cinnamon,oat,9
+cinnamon,onion,5
+cinnamon,orange,6
+cinnamon,pear,9
+cinnamon,pecan,12
+cinnamon,pumpkin,5
+cinnamon,raisin,10
+cinnamon,sour cream,7
+cinnamon,sweet potato/yam,6
+cinnamon,vanilla,11
+cinnamon,vinegar,5
+cinnamon,walnut,11
+citrus,cranberry,7
+citrus,cream cheese,12
+citrus,egg,50
+citrus,endive,7
+citrus,fennel,10
+citrus,fruit juice,8
+citrus,garlic,10
+citrus,ginger,11
+citrus,grapefruit,19
+citrus,green bean,8
+citrus,herb,29
+citrus,honey,7
+citrus,leafy green,17
+citrus,lemon,53
+citrus,lime,17
+citrus,mango,11
+citrus,milk/cream,25
+citrus,mustard,7
+citrus,olive,11
+citrus,onion,13
+citrus,orange,48
+citrus,pasta,10
+citrus,pepper,5
+citrus,pineapple,9
+citrus,pistachio,5
+citrus,rice,5
+citrus,rum,8
+citrus,salad dressing,6
+citrus,strawberry,9
+citrus,tomato,6
+citrus,vanilla,9
+citrus,vinegar,9
+citrus,walnut,6
+citrus,yogurt,5
+clove,dried fruit,5
+clove,egg,7
+clove,ginger,19
+clove,milk/cream,5
+clove,nutmeg,8
+clove,rice,5
+clove,vinegar,5
+coconut,cream cheese,12
+coconut,curry,7
+coconut,dried fruit,5
+coconut,egg,29
+coconut,ginger,6
+coconut,lime,9
+coconut,mango,12
+coconut,milk/cream,23
+coconut,mint,5
+coconut,oat,7
+coconut,orange,5
+coconut,passion fruit,5
+coconut,pecan,9
+coconut,pineapple,17
+coconut,rice,9
+coconut,rum,13
+coconut,sour cream,5
+coffee,cream cheese,6
+coffee,egg,29
+coffee,hazelnut,5
+coffee,liqueur,7
+coffee,milk/cream,29
+coffee,pecan,6
+coffee,vanilla,5
+coffee,walnut,9
+cognac/armagnac,egg,9
+cognac/armagnac,milk/cream,9
+cognac/armagnac,prune,5
+coriander,cumin,8
+coriander,ginger,6
+corn,cornmeal,7
+corn,egg,6
+corn,garlic,6
+corn,green bean,5
+corn,herb,8
+corn,hot pepper,13
+corn,jalapeno,11
+corn,milk/cream,14
+corn,okra,6
+corn,onion,12
+corn,pepper,7
+corn,potato,6
+corn,rice,6
+corn,tomato,32
+corn,zucchini,12
+cornmeal,egg,21
+cornmeal,herb,5
+cornmeal,hot pepper,7
+cornmeal,lemon,5
+cornmeal,milk/cream,33
+cornmeal,molasses,7
+cornmeal,parmesan,9
+cornmeal,sour cream,5
+cornmeal,tomato,5
+cottage cheese,egg,12
+cottage cheese,sour cream,6
+couscous,olive,5
+couscous,raisin,7
+cranberry,dried fruit,12
+cranberry,egg,8
+cranberry,fruit juice,6
+cranberry,ginger,12
+cranberry,kumquat,5
+cranberry,maple syrup,5
+cranberry,milk/cream,8
+cranberry,oat,8
+cranberry,onion,6
+cranberry,orange,24
+cranberry,pear,13
+cranberry,pecan,11
+cranberry,raisin,6
+cranberry,walnut,11
+cranberry,wine,6
+cream cheese,egg,32
+cream cheese,ginger,14
+cream cheese,jam or jelly,11
+cream cheese,lemon,14
+cream cheese,lime,6
+cream cheese,milk/cream,32
+cream cheese,orange,13
+cream cheese,peanut,6
+cream cheese,pecan,8
+cream cheese,pineapple,6
+cream cheese,potato,5
+cream cheese,pumpkin,5
+cream cheese,raisin,5
+cream cheese,raspberry,7
+cream cheese,sour cream,26
+cream cheese,strawberry,9
+cream cheese,vanilla,8
+cream cheese,walnut,14
+cucumber,dill,17
+cucumber,feta,5
+cucumber,herb,10
+cucumber,leafy green,5
+cucumber,lemon,6
+cucumber,mango,5
+cucumber,mayonnaise,5
+cucumber,milk/cream,6
+cucumber,mint,17
+cucumber,onion,8
+cucumber,parsley,10
+cucumber,radish,9
+cucumber,sour cream,8
+cucumber,tomato,27
+cucumber,vinegar,6
+cucumber,yogurt,13
+currant,egg,9
+currant,milk/cream,6
+currant,orange,5
+currant,raisin,6
+curry,ginger,7
+curry,potato,5
+curry,sweet potato/yam,6
+date,dried fruit,6
+date,fig,5
+date,honey,5
+date,milk/cream,6
+date,oat,9
+date,pecan,5
+date,walnut,15
+date,yogurt,6
+dill,egg,6
+dill,feta,7
+dill,herb,13
+dill,lemon,6
+dill,mayonnaise,5
+dill,mint,9
+dill,onion,10
+dill,parsley,11
+dill,potato,8
+dill,sour cream,9
+dill,tomato,5
+dill,vinegar,6
+dill,yogurt,8
+dried fruit,egg,6
+dried fruit,fig,10
+dried fruit,ginger,5
+dried fruit,honey,6
+dried fruit,milk/cream,5
+dried fruit,oat,9
+dried fruit,onion,5
+dried fruit,pear,8
+dried fruit,pecan,8
+dried fruit,pistachio,9
+dried fruit,prune,6
+dried fruit,raisin,18
+dried fruit,walnut,12
+egg,feta,9
+egg,fruit juice,8
+egg,garlic,10
+egg,ginger,32
+egg,goat cheese,11
+egg,grapefruit,5
+egg,hazelnut,15
+egg,herb,28
+egg,honey,13
+egg,hot pepper,8
+egg,jam or jelly,15
+egg,kirsch,5
+egg,leafy green,13
+egg,lemon,47
+egg,lime,23
+egg,liqueur,13
+egg,macadamia nut,5
+egg,mango,13
+egg,maple syrup,7
+egg,mayonnaise,13
+egg,milk/cream,251
+egg,mint,6
+egg,molasses,10
+egg,mozzarella,6
+egg,mushroom,15
+egg,mustard,6
+egg,nutmeg,10
+egg,oat,5
+egg,onion,30
+egg,orange,36
+egg,parmesan,20
+egg,parsley,6
+egg,pasta,8
+egg,peach,8
+egg,pear,14
+egg,pecan,25
+egg,pepper,15
+egg,phyllo/puff pastry dough,10
+egg,pineapple,12
+egg,pistachio,20
+egg,potato,30
+egg,prune,5
+egg,pumpkin,12
+egg,raisin,21
+egg,raspberry,22
+egg,rice,12
+egg,ricotta,5
+egg,rum,17
+egg,sour cream,26
+egg,spinach,15
+egg,strawberry,23
+egg,sweet potato/yam,8
+egg,swiss cheese,5
+egg,tarragon,7
+egg,tequila,5
+egg,tomato,26
+egg,vanilla,51
+egg,walnut,20
+egg,yogurt,9
+egg,zucchini,8
+eggplant,feta,6
+eggplant,garlic,9
+eggplant,goat cheese,9
+eggplant,herb,7
+eggplant,mint,6
+eggplant,mozzarella,7
+eggplant,olive,14
+eggplant,onion,13
+eggplant,parmesan,6
+eggplant,pasta,15
+eggplant,pepper,5
+eggplant,squash,6
+eggplant,tomato,54
+eggplant,vinegar,5
+eggplant,yellow squash,6
+eggplant,zucchini,15
+endive,fennel,5
+endive,leafy green,13
+endive,mustard,5
+endive,onion,5
+endive,orange,8
+endive,spinach,5
+endive,vinegar,5
+endive,walnut,9
+escarole,leafy green,7
+escarole,onion,5
+fennel,garlic,7
+fennel,grapefruit,7
+fennel,green bean,5
+fennel,herb,6
+fennel,leafy green,9
+fennel,lemon,7
+fennel,lettuce,5
+fennel,mustard,5
+fennel,olive,7
+fennel,onion,14
+fennel,orange,11
+fennel,parsley,6
+fennel,raisin,5
+fennel,tarragon,5
+fennel,tomato,6
+fennel,vinegar,5
+feta,garlic,8
+feta,herb,11
+feta,leafy green,13
+feta,mint,11
+feta,olive,17
+feta,onion,10
+feta,pasta,10
+feta,phyllo/puff pastry dough,8
+feta,pine nut,6
+feta,spinach,11
+feta,tomato,27
+feta,watermelon,6
+feta,yogurt,6
+feta,zucchini,6
+fig,goat cheese,5
+fig,honey,8
+fig,milk/cream,6
+fig,pear,9
+fig,pecan,8
+fig,raisin,5
+fig,walnut,8
+fontina,mushroom,5
+frangelico,hazelnut,7
+frangelico,milk/cream,7
+fruit juice,garlic,5
+fruit juice,ginger,5
+fruit juice,lemon,6
+fruit juice,liqueur,9
+fruit juice,milk/cream,6
+fruit juice,onion,6
+fruit juice,orange,25
+fruit juice,pineapple,7
+garlic,ginger,22
+garlic,goat cheese,8
+garlic,green bean,11
+garlic,herb,57
+garlic,hot pepper,8
+garlic,jalapeno,9
+garlic,leafy green,28
+garlic,lemon,23
+garlic,mayonnaise,5
+garlic,milk/cream,19
+garlic,mint,6
+garlic,mozzarella,5
+garlic,mushroom,17
+garlic,olive,15
+garlic,onion,52
+garlic,orange,6
+garlic,parmesan,29
+garlic,parsley,22
+garlic,parsnip,5
+garlic,pasta,34
+garlic,pea,8
+garlic,pepper,14
+garlic,pine nut,10
+garlic,potato,46
+garlic,raisin,5
+garlic,rice,7
+garlic,ricotta,6
+garlic,rosemary,13
+garlic,soy,5
+garlic,spinach,11
+garlic,sweet potato/yam,5
+garlic,thyme,11
+garlic,tomato,62
+garlic,vinegar,11
+garlic,walnut,5
+garlic,yogurt,6
+garlic,zucchini,14
+ginger,green bean,6
+ginger,green onion/scallion,5
+ginger,herb,10
+ginger,honey,8
+ginger,leafy green,7
+ginger,lemon,14
+ginger,lentil,6
+ginger,lime,10
+ginger,mango,12
+ginger,milk/cream,33
+ginger,molasses,23
+ginger,mushroom,9
+ginger,noodle,8
+ginger,nutmeg,8
+ginger,onion,10
+ginger,orange,11
+ginger,parsley,5
+ginger,pasta,6
+ginger,pear,14
+ginger,pecan,8
+ginger,pineapple,6
+ginger,pistachio,7
+ginger,plum,6
+ginger,pumpkin,8
+ginger,raisin,17
+ginger,rice,13
+ginger,sour cream,6
+ginger,soy,8
+ginger,soy sauce,11
+ginger,sweet potato/yam,10
+ginger,tofu,5
+ginger,tomato,7
+ginger,vinegar,13
+ginger,yogurt,6
+ginger,zucchini,5
+goat cheese,herb,16
+goat cheese,leafy green,18
+goat cheese,milk/cream,11
+goat cheese,mint,8
+goat cheese,mushroom,11
+goat cheese,olive,11
+goat cheese,onion,14
+goat cheese,parsley,5
+goat cheese,pasta,15
+goat cheese,pepper,6
+goat cheese,potato,12
+goat cheese,spinach,7
+goat cheese,thyme,6
+goat cheese,tomato,31
+goat cheese,walnut,7
+goat cheese,zucchini,6
+grapefruit,leafy green,10
+grapefruit,orange,13
+green bean,herb,10
+green bean,hot pepper,5
+green bean,lemon,8
+green bean,mustard,5
+green bean,onion,11
+green bean,parsley,5
+green bean,pasta,7
+green bean,pea,7
+green bean,pecan,5
+green bean,potato,11
+green bean,tomato,8
+green bean,vinegar,8
+hazelnut,honey,6
+hazelnut,milk/cream,11
+hazelnut,orange,5
+hazelnut,pear,10
+hazelnut,walnut,7
+herb,hot pepper,9
+herb,jalapeno,10
+herb,leafy green,26
+herb,lemon,15
+herb,lime,5
+herb,milk/cream,19
+herb,mint,34
+herb,mushroom,23
+herb,mustard,6
+herb,noodle,6
+herb,olive,14
+herb,onion,51
+herb,parmesan,11
+herb,parsley,34
+herb,pasta,42
+herb,pea,8
+herb,pepper,20
+herb,phyllo/puff pastry dough,5
+herb,pistachio,8
+herb,potato,41
+herb,radish,5
+herb,rice,12
+herb,ricotta,7
+herb,rosemary,11
+herb,sage,9
+herb,sour cream,13
+herb,soy,7
+herb,spinach,5
+herb,sugar snap pea,7
+herb,sweet potato/yam,7
+herb,tarragon,13
+herb,thyme,15
+herb,tomatillo,7
+herb,tomato,54
+herb,walnut,5
+herb,yogurt,15
+herb,zucchini,20
+honey,lemon,14
+honey,milk/cream,15
+honey,mustard,5
+honey,oat,12
+honey,orange,16
+honey,peach,6
+honey,pecan,8
+honey,phyllo/puff pastry dough,6
+honey,pistachio,6
+honey,raisin,6
+honey,strawberry,6
+honey,vinegar,9
+honey,walnut,20
+honey,yogurt,10
+horseradish,mustard,5
+horseradish,onion,6
+horseradish,potato,13
+horseradish,vinegar,8
+hot pepper,jalapeno,7
+hot pepper,lime,5
+hot pepper,milk/cream,8
+hot pepper,onion,17
+hot pepper,pepper,17
+hot pepper,potato,6
+hot pepper,sweet potato/yam,5
+hot pepper,tomatillo,9
+hot pepper,tomato,18
+hot pepper,vinegar,8
+jalapeno,lemon,5
+jalapeno,lime,8
+jalapeno,mint,6
+jalapeno,onion,30
+jalapeno,pepper,8
+jalapeno,pineapple,6
+jalapeno,sour cream,8
+jalapeno,tomatillo,5
+jalapeno,tomato,19
+jam or jelly,milk/cream,13
+jam or jelly,orange,5
+jam or jelly,peanut,5
+jam or jelly,raspberry,12
+kale,leafy green,13
+kale,onion,7
+kale,parmesan,5
+kale,potato,5
+kirsch,milk/cream,6
+kiwi,mango,6
+kiwi,orange,6
+kiwi,pineapple,6
+kiwi,strawberry,6
+leafy green,lemon,7
+leafy green,lettuce,13
+leafy green,mayonnaise,8
+leafy green,mushroom,10
+leafy green,mustard,9
+leafy green,olive,15
+leafy green,onion,30
+leafy green,orange,13
+leafy green,parmesan,15
+leafy green,parsley,10
+leafy green,pasta,16
+leafy green,pear,5
+leafy green,pecan,6
+leafy green,pepper,11
+leafy green,pine nut,16
+leafy green,potato,7
+leafy green,radish,8
+leafy green,raisin,9
+leafy green,salad dressing,9
+leafy green,spinach,29
+leafy green,tomato,27
+leafy green,vinegar,22
+leafy green,walnut,11
+leafy green,watercress,10
+leek,mushroom,8
+leek,onion,9
+leek,potato,10
+leek,turnip,5
+legume,onion,6
+lemon,lemon juice,12
+lemon,mayonnaise,11
+lemon,milk/cream,44
+lemon,mint,8
+lemon,mustard,8
+lemon,olive,10
+lemon,onion,15
+lemon,orange,15
+lemon,parmesan,9
+lemon,parsley,19
+lemon,pasta,13
+lemon,pine nut,5
+lemon,pistachio,8
+lemon,potato,8
+lemon,red wine,5
+lemon,salad dressing,5
+lemon,sour cream,10
+lemon,strawberry,14
+lemon,thyme,6
+lemon,tomato,8
+lemon,vanilla,8
+lemon,walnut,10
+lemon,yogurt,8
+lemon,zucchini,7
+lentil,onion,5
+lentil,tomato,7
+lettuce,mustard,6
+lettuce,onion,5
+lettuce,parmesan,5
+lettuce,radish,7
+lettuce,salad dressing,5
+lettuce,tomato,5
+lettuce,walnut,6
+lime,mango,12
+lime,melon,6
+lime,milk/cream,13
+lime,mint,10
+lime,onion,16
+lime,pineapple,7
+lime,rum,8
+lime,strawberry,5
+lime,tomato,6
+lime juice,milk/cream,5
+liqueur,milk/cream,20
+liqueur,orange,15
+liqueur,raspberry,8
+macadamia nut,pineapple,5
+mango,milk/cream,10
+mango,orange,5
+mango,papaya,6
+mango,pineapple,19
+mango,raisin,5
+mango,rum,9
+mango,strawberry,5
+mango,yogurt,6
+maple syrup,milk/cream,8
+maple syrup,oat,5
+maple syrup,pear,5
+maple syrup,pecan,9
+maple syrup,sweet potato/yam,6
+maple syrup,vinegar,5
+maple syrup,walnut,6
+mayonnaise,milk/cream,9
+mayonnaise,mustard,7
+mayonnaise,onion,11
+mayonnaise,parmesan,5
+mayonnaise,parsley,6
+mayonnaise,potato,13
+mayonnaise,salad dressing,5
+mayonnaise,sour cream,14
+mayonnaise,vinegar,9
+melon,mint,5
+melon,watermelon,7
+milk/cream,mint,19
+milk/cream,molasses,10
+milk/cream,monterey jack,5
+milk/cream,mozzarella,11
+milk/cream,mushroom,20
+milk/cream,nutmeg,13
+milk/cream,onion,28
+milk/cream,orange,25
+milk/cream,parmesan,31
+milk/cream,parsley,15
+milk/cream,pasta,21
+milk/cream,pea,5
+milk/cream,peach,11
+milk/cream,peanut,10
+milk/cream,pear,13
+milk/cream,pecan,18
+milk/cream,pepper,6
+milk/cream,phyllo/puff pastry dough,13
+milk/cream,pineapple,10
+milk/cream,pistachio,14
+milk/cream,plum,6
+milk/cream,potato,58
+milk/cream,pumpkin,12
+milk/cream,raisin,17
+milk/cream,raspberry,32
+milk/cream,rice,16
+milk/cream,rosemary,9
+milk/cream,rum,18
+milk/cream,sage,8
+milk/cream,sour cream,20
+milk/cream,spinach,13
+milk/cream,strawberry,36
+milk/cream,sweet potato/yam,12
+milk/cream,thyme,10
+milk/cream,tomato,12
+milk/cream,vanilla,58
+milk/cream,walnut,18
+milk/cream,white wine,9
+milk/cream,yogurt,7
+mint,olive,6
+mint,onion,20
+mint,orange,6
+mint,parsley,22
+mint,pasta,9
+mint,peanut,5
+mint,pineapple,5
+mint,potato,6
+mint,rice,6
+mint,ricotta,5
+mint,sour cream,6
+mint,strawberry,9
+mint,sugar snap pea,6
+mint,tomato,22
+mint,watermelon,6
+mint,yogurt,13
+mint,zucchini,8
+monterey jack,tortillas,7
+mozzarella,mushroom,5
+mozzarella,olive,7
+mozzarella,parmesan,14
+mozzarella,pasta,14
+mozzarella,potato,6
+mozzarella,ricotta,6
+mozzarella,tomato,25
+mushroom,noodle,8
+mushroom,olive,6
+mushroom,onion,32
+mushroom,parmesan,21
+mushroom,parsley,10
+mushroom,pasta,31
+mushroom,pea,5
+mushroom,pepper,13
+mushroom,potato,21
+mushroom,rice,13
+mushroom,rosemary,10
+mushroom,sour cream,5
+mushroom,soy,7
+mushroom,spinach,13
+mushroom,sweet potato/yam,5
+mushroom,swiss cheese,5
+mushroom,thyme,7
+mushroom,tomato,19
+mushroom,white wine,10
+mustard,onion,19
+mustard,potato,11
+mustard,salad dressing,6
+mustard,vinegar,14
+noodle,pasta,19
+noodle,tomato,6
+noodle,zucchini,6
+nutmeg,vanilla,5
+oat,pecan,9
+oat,raisin,5
+oat,walnut,8
+okra,tomato,6
+olive,onion,18
+olive,orange,5
+olive,parmesan,6
+olive,parsley,7
+olive,pasta,19
+olive,pepper,12
+olive,pine nut,5
+olive,potato,6
+olive,rosemary,6
+olive,tomato,43
+olive,vinegar,5
+olive,zucchini,7
+onion,orange,8
+onion,parmesan,20
+onion,parsley,13
+onion,parsnip,7
+onion,pasta,21
+onion,pea,6
+onion,pepper,36
+onion,pine nut,10
+onion,pineapple,6
+onion,potato,51
+onion,raisin,13
+onion,rice,17
+onion,rosemary,9
+onion,sage,6
+onion,sour cream,15
+onion,spinach,16
+onion,squash,7
+onion,sweet potato/yam,9
+onion,tarragon,5
+onion,thyme,14
+onion,tomatillo,12
+onion,tomato,86
+onion,vinegar,39
+onion,walnut,7
+onion,yogurt,10
+onion,zucchini,16
+orange,pecan,10
+orange,pineapple,11
+orange,pistachio,6
+orange,pomegranate,6
+orange,raisin,7
+orange,raspberry,9
+orange,red wine,7
+orange,rice,5
+orange,sour cream,6
+orange,sparkling wine,5
+orange,strawberry,9
+orange,sweet potato/yam,9
+orange,vanilla,9
+orange,vinegar,6
+orange,walnut,12
+orange,yogurt,5
+papaya,pineapple,5
+parmesan,parsley,13
+parmesan,pasta,42
+parmesan,pea,5
+parmesan,pine nut,14
+parmesan,potato,20
+parmesan,ricotta,14
+parmesan,rosemary,5
+parmesan,sage,11
+parmesan,spinach,13
+parmesan,squash,6
+parmesan,thyme,5
+parmesan,tomato,25
+parmesan,white wine,5
+parmesan,zucchini,11
+parsley,pasta,13
+parsley,pea,5
+parsley,pine nut,5
+parsley,potato,16
+parsley,rice,5
+parsley,tarragon,8
+parsley,thyme,6
+parsley,tomato,16
+parsley,vinegar,6
+parsley,walnut,7
+parsley,zucchini,5
+parsnip,potato,15
+parsnip,rosemary,5
+parsnip,rutabaga,5
+parsnip,turnip,12
+pasta,pea,10
+pasta,peanut,6
+pasta,pepper,12
+pasta,pine nut,14
+pasta,potato,6
+pasta,raisin,7
+pasta,ricotta,18
+pasta,sage,5
+pasta,sour cream,5
+pasta,spinach,11
+pasta,squash,8
+pasta,sugar snap pea,5
+pasta,tomato,76
+pasta,walnut,7
+pasta,white wine,6
+pasta,zucchini,14
+pea,potato,7
+pea,rice,8
+pea,sugar snap pea,5
+pea,tomato,9
+peach,raspberry,12
+pear,phyllo/puff pastry dough,6
+pear,raspberry,6
+pear,red wine,6
+pear,walnut,10
+pear,white wine,5
+pecan,pumpkin,5
+pecan,raisin,10
+pecan,rum,5
+pecan,sour cream,6
+pecan,sweet potato/yam,13
+pecan,vanilla,7
+pecan,walnut,10
+pepper,potato,7
+pepper,rice,8
+pepper,sour cream,7
+pepper,spinach,5
+pepper,tomatillo,7
+pepper,tomato,26
+pepper,zucchini,7
+phyllo/puff pastry dough,raspberry,5
+phyllo/puff pastry dough,tomato,7
+pine nut,raisin,16
+pine nut,rice,7
+pine nut,ricotta,5
+pine nut,spinach,5
+pine nut,tomato,12
+pineapple,rum,8
+pineapple,strawberry,5
+pistachio,raisin,11
+pistachio,rice,6
+pistachio,strawberry,5
+pistachio,walnut,5
+pistachio,yogurt,6
+plum,vanilla,5
+potato,rosemary,18
+potato,sage,8
+potato,sour cream,9
+potato,spinach,6
+potato,sugar snap pea,5
+potato,sweet potato/yam,22
+potato,thyme,11
+potato,tomato,18
+potato,turnip,10
+potato,vinegar,7
+potato,yogurt,5
+potato,zucchini,8
+pumpkin,squash,7
+pumpkin,walnut,7
+radish,watercress,7
+raisin,rice,18
+raisin,rum,10
+raisin,sour cream,5
+raisin,vinegar,7
+raisin,walnut,14
+raspberry,rhubarb,5
+raspberry,strawberry,14
+raspberry,yogurt,5
+rhubarb,strawberry,12
+rice,saffron,7
+rice,tomato,18
+ricotta,spinach,6
+ricotta,tomato,13
+ricotta,zucchini,5
+rosemary,thyme,7
+sage,sweet potato/yam,5
+salad dressing,vinegar,7
+sour cream,vanilla,5
+soy,soy sauce,5
+soy,tofu,11
+soy sauce,tofu,7
+spinach,tomato,8
+spinach,vinegar,8
+squash,tomato,7
+squash,zucchini,8
+strawberry,vanilla,5
+strawberry,vinegar,7
+tarragon,tomato,6
+tarragon,zucchini,5
+thyme,tomato,7
+tomato,tortillas,11
+tomato,vinegar,12
+tomato,yogurt,10
+tomato,zucchini,32
+vinegar,walnut,5
+walnut,yogurt,10
+walnut,zucchini,6
+yellow squash,zucchini,11
+yogurt,zucchini,5
