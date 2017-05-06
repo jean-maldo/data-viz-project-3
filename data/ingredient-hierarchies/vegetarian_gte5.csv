@@ -953,8 +953,8 @@ endive,Vegetable,orange,Fruit,8
 endive,Vegetable,spinach,Vegetable,5
 endive,Vegetable,vinegar,Condiment,5
 endive,Vegetable,walnut,Nut,9
-escarole,Seafood,leafy green,Vegetable,7
-escarole,Seafood,onion,Vegetable,5
+escarole,Vegetable,leafy green,Vegetable,7
+escarole,Vegetable,onion,Vegetable,5
 fennel,Vegetable,garlic,Herb,7
 fennel,Vegetable,grapefruit,Fruit,7
 fennel,Vegetable,green bean,Vegetable,5
