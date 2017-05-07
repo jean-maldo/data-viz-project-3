@@ -7,7 +7,12 @@
 
 .node {
   font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #bbb;
+  fill: #aaa;
+}
+
+.category {
+  font: 300 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #555;
 }
 
 .node:hover {
@@ -75,7 +80,8 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + radius + "," + radius + ")");
 
 var link = svg.append("g").selectAll(".link"),
-    node = svg.append("g").selectAll(".node");
+    node = svg.append("g").selectAll(".node"),
+    cat = svg.append("g").selectAll(".categories");
 
 d3.queue()
             .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
@@ -84,6 +90,9 @@ d3.queue()
             .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
             .defer(d3.csv, "data/ingredient_categories.csv")
             .await(showVisualization);
+
+var ingredient_leaves;
+var categories;
 
 function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories) {
     if (error) throw error;
@@ -100,17 +109,48 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
           .attr("class", "link")
           .attr("d", line);
 
+      ingredient_leaves = root.leaves();
+      categories = {};
+      
+      ingredient_leaves.forEach(function(d) {
+        
+        if (!categories[d.data.parent.key]) {
+            categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1};
+        } else {
+            categories[d.data.parent.key].x += d.x;
+            categories[d.data.parent.key].y += d.y;
+            categories[d.data.parent.key].count += 1;
+        }
+        
+      });
+      
+      
+      var cat_array = [];
+      
+      for (var prop in categories) {
+        cat_array.push(categories[prop]);
+      }
+      
       node = node
-        .data(root.leaves())
+        .data(ingredient_leaves)
         .enter().append("text")
           .attr("class", "node")
           .attr("dy", "0.31em")
-          .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+          .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 30) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
           .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
           .text(function(d) { return d.data.key; })
           .on("mouseover", mouseovered)
           .on("mouseout", mouseouted);
-          
+      
+      cat
+        .data(cat_array)
+        .enter().append("text")
+          .attr("class", "category")
+          .attr("dy", "0.31em")
+          .attr("transform", function(d) { return "rotate(" + (d.x/d.count + 180) + ")translate(0," + (d.y/d.count + 12) + ")" + (d.x/d.count < 270 && d.x/d.count > 90 ? "" : "rotate(-180)"); })
+          .attr("text-anchor", "middle")
+          .attr("alignment-baseline", "baseline")
+          .text(function(d) { return d.category; })
     
     // Lazily construct the package hierarchy from class names.
     function packageHierarchy(classes) {
