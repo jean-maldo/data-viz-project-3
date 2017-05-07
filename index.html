@@ -72,10 +72,17 @@ var svg = d3.select("body").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
   .append("g")
-    .attr("transform", "translate(" + radius + "," + radius + ")");
+    .attr("transform", "translate(" + radius + "," + radius + ")")
+    .attr("id", "ingredients")
+
+var circle=d3.select("#ingredients").append("circle")
+  .attr("r", innerRadius+10)
+  .attr("id", "circle")
+  .attr("opacity","0")
 
 var link = svg.append("g").selectAll(".link"),
     node = svg.append("g").selectAll(".node");
+
 
 d3.queue()
             .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
@@ -87,12 +94,14 @@ d3.queue()
 
 function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories) {
     if (error) throw error;
-    
+
       var root = packageHierarchy(data_brunch)
           .sum(function(d) { return d.size; });
 
       cluster(root);
+      d3.select("#ingredients").on("mouseleave",clusterouted)
 
+      id=0
       link = link
         .data(packageImports(root.leaves()))
         .enter().append("path")
@@ -108,10 +117,9 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
           .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
           .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
           .text(function(d) { return d.data.key; })
-          .on("mouseover", mouseovered)
-          .on("mouseout", mouseouted);
-          
-    
+
+          .on("mouseover", mouseovered);
+
     // Lazily construct the package hierarchy from class names.
     function packageHierarchy(classes) {
       var map = {};
@@ -146,18 +154,26 @@ function getCategory(nameKey, myArray){
 }
 
 function mouseovered(d) {
+  d3.selectAll("path").style("visibility","visible")
   node
-      .each(function(n) { n.target = n.source = false; });
+      .each(function(n) {n.target = n.source = false; });
 
   link
       .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
       .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
     .filter(function(l) { return l.target === d || l.source === d; })
-      .raise();
+      .raise()
+
+  link.filter(function(l) { return l.target !== d && l.source !== d
+  }).style("visibility", "hidden");
 
   node
       .classed("node--target", function(n) { return n.target; })
       .classed("node--source", function(n) { return n.source; });
+}
+
+function clusterouted(d){
+  d3.selectAll("path").style("visibility", "visible")
 }
 
 function mouseouted(d) {
