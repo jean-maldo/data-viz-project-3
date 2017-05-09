@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
@@ -51,10 +52,27 @@
 
 </style>
 <body>
+  <table>
+    <tr>
+  <td> <p id="svg"></p> </td>
+  <td><p id="svg1"></p></td>
+</tr>
+</table>
 
 <script>
 
 //code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
+
+//this is for width and height of recipes
+var width=400
+var height=500
+
+var svg1 = d3.select("#svg1").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("border","solid #ccc 1px");
+d3.select("#svg1").style("visibility","hidden")
+
 
 var diameter = 800,
     radius = diameter / 2,
@@ -68,7 +86,7 @@ var line = d3.radialLine()
     .radius(function(d) { return d.y; })
     .angle(function(d) { return d.x / 180 * Math.PI; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#svg").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
   .append("g")
@@ -90,10 +108,15 @@ d3.queue()
             .defer(d3.json, "data/ingredient-hierarchies/lunch_hierarchy.json")
             .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
             .defer(d3.csv, "data/ingredient_categories.csv")
+            .defer(d3.csv,"data/recipes_nutritional_cals.csv")
             .await(showVisualization);
 
-function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories) {
+function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories,recipes) {
     if (error) throw error;
+
+      var data=recipes; //need to change this to be a filtered listener
+      specificData=data.filter(function(d){
+        return d.brunch==="1"})
 
       var root = packageHierarchy(data_brunch)
           .sum(function(d) { return d.size; });
@@ -101,13 +124,14 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
       cluster(root);
       d3.select("#ingredients").on("mouseleave",clusterouted)
 
-      id=0
+
       link = link
         .data(packageImports(root.leaves()))
         .enter().append("path")
           .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
           .attr("class", "link")
           .attr("d", line);
+
 
       node = node
         .data(root.leaves())
@@ -116,8 +140,8 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
           .attr("dy", "0.31em")
           .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
           .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-          .text(function(d) { return d.data.key; })
-
+          .text(function(d) {
+            return d.data.key; })
           .on("mouseover", mouseovered);
 
     // Lazily construct the package hierarchy from class names.
@@ -153,8 +177,40 @@ function getCategory(nameKey, myArray){
     }
 }
 
+
+
+
+var lasthovered;
 function mouseovered(d) {
+  d3.selectAll(".recipenames").remove()
+
+  d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
   d3.selectAll("path").style("visibility","visible")
+
+  lasthovered=d.data.ingredient
+
+  recipes=specificData.filter(function(i){
+    return i[lasthovered]==="1"})
+  topRecipes=recipes.sort(function(x,y){return (Number(y["rating"])-Number(x["rating"]))}) //descending scale in terms of ratings
+  topTen=topRecipes.slice(0,10) //here are the top ten recipes
+
+
+  index=1
+  topTen.forEach(function(d){
+    svg1.append("text")
+    .attr("x","10")
+    .attr("y",30*index+50)
+    .text(d.title)
+    .style("fill",10)
+    .classed("recipenames", true)
+    index+=1;
+  })
+
+
+
+
+
+
   node
       .each(function(n) {n.target = n.source = false; });
 
@@ -169,7 +225,14 @@ function mouseovered(d) {
 
   node
       .classed("node--target", function(n) { return n.target; })
-      .classed("node--source", function(n) { return n.source; });
+      .classed("node--source", function(n) {
+        return n.source; });
+
+
+
+
+
+
 }
 
 function clusterouted(d){
