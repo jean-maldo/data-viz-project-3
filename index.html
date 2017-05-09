@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
@@ -54,12 +55,42 @@
   stroke: #2ca02c;
 }
 
+text{
+  font-family: arial;
+}
+
 </style>
 <body>
+  <table>
+    <tr>
+  <td> <p id="svg"></p> </td>
+  <td><p id="svg1"></p></td>
+</tr>
+</table>
 
 <script>
 
 //code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
+
+//this is for width and height of recipes
+var width=530
+var height=800
+
+var svg1 = d3.select("#svg1").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+d3.select("#svg1").style("visibility","hidden")
+//
+// svg1.append("rect")
+// .attr("width",width)
+// .attr("height",height)
+// .style("fill","green")
+
+svg1.append("image")
+  .attr("xlink:href", "eggheader.png") //carrot created in sketch
+  .attr("x", 0)
+  .attr("y",0)
+
 
 var diameter = 800,
     radius = diameter / 2,
@@ -73,15 +104,22 @@ var line = d3.radialLine()
     .radius(function(d) { return d.y; })
     .angle(function(d) { return d.x / 180 * Math.PI; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#svg").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
   .append("g")
-    .attr("transform", "translate(" + radius + "," + radius + ")");
+    .attr("transform", "translate(" + radius + "," + radius + ")")
+    .attr("id", "ingredients")
+
+var circle=d3.select("#ingredients").append("circle")
+  .attr("r", innerRadius+120)
+  .attr("id", "circle")
+  .attr("opacity","0")
 
 var link = svg.append("g").selectAll(".link"),
     node = svg.append("g").selectAll(".node"),
     cat = svg.append("g").selectAll(".categories");
+
 
 d3.queue()
             .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
@@ -89,11 +127,12 @@ d3.queue()
             .defer(d3.json, "data/ingredient-hierarchies/lunch_hierarchy.json")
             .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
             .defer(d3.csv, "data/ingredient_categories.csv")
+            .defer(d3.csv,"data/recipes_nutritional_cals.csv")
             .await(showVisualization);
 
 var ingredient_leaves;
 var categories;
-
+var cat_array;
 
 var color = d3.interpolateLab("#008000", "#c83a22");
 
@@ -161,33 +200,40 @@ function perp(p0, p1) {
   return [u01x / u01d, u01y / u01d];
 }
 
-function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories) {
+function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories, recipes) {
     if (error) throw error;
     
-      var root = packageHierarchy(data_breakfast)
+      
+    
+   
+      var data=recipes; //need to change this to be a filtered listener
+      specificData=data.filter(function(d){
+        return d.brunch==="1"})
+
+      var root = packageHierarchy(data_brunch)
           .sum(function(d) { return d.size; });
 
-      cluster(root);
-      
+          cluster(root);
+      d3.select("#ingredients").on("mouseleave",clusterouted)
       ingredient_leaves = root.leaves();
       categories = {};
+        
       
-      
+      packageImports(ingredient_leaves).forEach(function(d, i) {
+        path_line = line(packageImports(ingredient_leaves)[i]);
 
-      path_line = line(packageImports(ingredient_leaves)[0]);
+        link
+            .data(quad(sample(path_line, 8)))
+            .enter().append("path")
+            .each(function(e) { e.source = d[0], e.target = d[d.length - 1]; })
+            .attr("class", "link")
+            .style("fill", function(d) { return color(d.t); })
+            .style("stroke", function(d) { return color(d.t); })
+            .attr("opacity", 0.9)
+            .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
+      });
       
-      link = link
-        .data(quad(sample(path_line, 8)))
-        .enter().append("path")
-          .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
-          .attr("class", "link")
-          .style("fill", function(d) { return color(d.t); })
-      .style("stroke", function(d) { return color(d.t); })
-      .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 2); });
-
-      
-      
-      ingredient_leaves.forEach(function(d) {
+      ingredient_leaves.forEach(function(d, i) {
         
         if (!categories[d.data.parent.key]) {
             categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1};
@@ -198,9 +244,8 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
         }
         
       });
-      
-      
-      var cat_array = [];
+       
+      cat_array = [];
       
       for (var prop in categories) {
         cat_array.push(categories[prop]);
@@ -214,8 +259,7 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
           .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 30) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
           .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
           .text(function(d) { return d.data.key; })
-          .on("mouseover", mouseovered)
-          .on("mouseout", mouseouted);
+          .on("mouseover", mouseovered);
       
       cat
         .data(cat_array)
@@ -225,8 +269,8 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
           .attr("transform", function(d) { return "rotate(" + (d.x/d.count + 180) + ")translate(0," + (d.y/d.count + 12) + ")" + (d.x/d.count < 270 && d.x/d.count > 90 ? "" : "rotate(-180)"); })
           .attr("text-anchor", "middle")
           .attr("alignment-baseline", "baseline")
-          .text(function(d) { return d.category; })
-    
+          .text(function(d) { return d.category; });
+
     // Lazily construct the package hierarchy from class names.
     function packageHierarchy(classes) {
       var map = {};
@@ -260,19 +304,85 @@ function getCategory(nameKey, myArray){
     }
 }
 
+
+
+
+var lasthovered;
 function mouseovered(d) {
+
+  d3.selectAll(".recipenames").remove()
+
+  d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
+  d3.selectAll("path").style("visibility","visible")
+
+  lasthovered=d.data.ingredient
+
+  recipes=specificData.filter(function(i){
+    return i[lasthovered]==="1"})
+  topRecipes=recipes.sort(function(x,y){return (Number(y["rating"])-Number(x["rating"]))}) //descending scale in terms of ratings
+  topTen=topRecipes.slice(0,5) //here are the top ten recipes
+
+
+  index=1
+  topTen.forEach(function(d){
+
+    svg1.append("a")
+    .attr("xlink:href", d.link)
+    .append("text")
+    .attr("x",75)
+    .attr("y",40*index+250)
+    .text(index+". "+d.title)
+    .style("fill",10)
+    .classed("recipenames", true)
+    .on("mouseover", recipeOver)
+    .on("mouseout", recipeOut)
+    index+=1;
+  })
+
+
+
+  function recipeOver(d,i){
+    d3.select(this).attr("fill", "blue");
+  }
+
+  function recipeOut(d,i){
+    d3.select(this).attr("fill","black");
+  }
+
+
+
+
+
+
+
+
   node
       .each(function(n) { n.target = n.source = false; });
 
-  link
+  var all_links = d3.selectAll(".link")
+    all_links
       .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
       .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
     .filter(function(l) { return l.target === d || l.source === d; })
-      .raise();
+      .raise()
+
+  all_links.filter(function(l) { return l.target !== d && l.source !== d
+  }).style("visibility", "hidden");
 
   node
       .classed("node--target", function(n) { return n.target; })
-      .classed("node--source", function(n) { return n.source; });
+      .classed("node--source", function(n) {
+        return n.source; });
+
+
+
+
+
+
+}
+
+function clusterouted(d){
+  d3.selectAll("path").style("visibility", "visible")
 }
 
 function mouseouted(d) {
