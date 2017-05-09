@@ -50,6 +50,10 @@
   stroke: #2ca02c;
 }
 
+text{
+  font-family: arial;
+}
+
 </style>
 <body>
   <table>
@@ -64,14 +68,23 @@
 //code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
 
 //this is for width and height of recipes
-var width=400
-var height=500
+var width=530
+var height=800
 
 var svg1 = d3.select("#svg1").append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .style("border","solid #ccc 1px");
+    .attr("height", height);
 d3.select("#svg1").style("visibility","hidden")
+//
+// svg1.append("rect")
+// .attr("width",width)
+// .attr("height",height)
+// .style("fill","green")
+
+svg1.append("image")
+  .attr("xlink:href", "eggheader.png") //carrot created in sketch
+  .attr("x", 0)
+  .attr("y",0)
 
 
 var diameter = 800,
@@ -192,19 +205,36 @@ function mouseovered(d) {
   recipes=specificData.filter(function(i){
     return i[lasthovered]==="1"})
   topRecipes=recipes.sort(function(x,y){return (Number(y["rating"])-Number(x["rating"]))}) //descending scale in terms of ratings
-  topTen=topRecipes.slice(0,10) //here are the top ten recipes
+  topTen=topRecipes.slice(0,5) //here are the top ten recipes
 
 
   index=1
   topTen.forEach(function(d){
-    svg1.append("text")
-    .attr("x","10")
-    .attr("y",30*index+50)
-    .text(d.title)
+
+    svg1.append("a")
+    .attr("xlink:href", d.link)
+    .append("text")
+    .attr("x",75)
+    .attr("y",40*index+250)
+    .text(index+". "+d.title)
     .style("fill",10)
     .classed("recipenames", true)
+    .on("mouseover", recipeOver)
+    .on("mouseout", recipeOut)
     index+=1;
   })
+
+
+
+  function recipeOver(d,i){
+    d3.select(this).attr("fill", "blue");
+  }
+
+  function recipeOut(d,i){
+    d3.select(this).attr("fill","black");
+  }
+
+
 
 
 
