@@ -32,13 +32,6 @@
   font-weight: 700;
 }
 
-.node--source {
-  fill: #2ca02c;
-}
-
-.node--target {
-  fill: #d62728;
-}
 
 .link--source,
 .link--target {
@@ -390,6 +383,7 @@ function mouseovered(d) {
 }
 
 function clusterouted(d){
+  mouseouted(d);
   d3.selectAll("path").style("visibility", "visible")
 }
 
