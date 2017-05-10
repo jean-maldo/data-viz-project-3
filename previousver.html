@@ -1,0 +1,303 @@
+
+<html>
+<head>
+<script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+
+
+<style>
+
+.node {
+  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #bbb;
+}
+
+.node:hover {
+  fill: #000;
+}
+
+.link {
+  stroke: steelblue;
+  stroke-opacity: 0.4;
+  fill: none;
+  pointer-events: none;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+  font-weight: 700;
+}
+
+.node--source {
+  fill: #2ca02c;
+}
+
+.node--target {
+  fill: #d62728;
+}
+
+.link--source,
+.link--target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+
+.link--source {
+  stroke: #d62728;
+}
+
+.link--target {
+  stroke: #2ca02c;
+}
+
+text{
+  font-family: arial;
+}
+
+</style>
+<body>
+  <table>
+    <tr>
+  <td> <p id="svg"></p> </td>
+  <td><p id="svg1"></p></td>
+</tr>
+</table>
+
+<script>
+
+//code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
+
+//this is for width and height of recipes
+var width=530
+var height=800
+
+var svg1 = d3.select("#svg1").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+d3.select("#svg1").style("visibility","hidden")
+//
+// svg1.append("rect")
+// .attr("width",width)
+// .attr("height",height)
+// .style("fill","green")
+
+svg1.append("image")
+  .attr("xlink:href", "eggheader.png") //carrot created in sketch
+  .attr("x", 0)
+  .attr("y",0)
+
+
+var diameter = 800,
+    radius = diameter / 2,
+    innerRadius = radius - 120;
+
+var cluster = d3.cluster()
+    .size([360, innerRadius]);
+
+var line = d3.radialLine()
+    .curve(d3.curveBundle.beta(0.85))
+    .radius(function(d) { return d.y; })
+    .angle(function(d) { return d.x / 180 * Math.PI; });
+
+var svg = d3.select("#svg").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+  .append("g")
+    .attr("transform", "translate(" + radius + "," + radius + ")")
+    .attr("id", "ingredients")
+
+var circle=d3.select("#ingredients").append("circle")
+  .attr("r", innerRadius+10)
+  .attr("id", "circle")
+  .attr("opacity","0")
+
+var link = svg.append("g").selectAll(".link"),
+    node = svg.append("g").selectAll(".node");
+
+
+d3.queue()
+            .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
+            .defer(d3.json, "data/ingredient-hierarchies/brunch_hierarchy.json")
+            .defer(d3.json, "data/ingredient-hierarchies/lunch_hierarchy.json")
+            .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
+            .defer(d3.csv, "data/ingredient_categories.csv")
+            .defer(d3.csv,"data/recipes_nutritional_cals.csv")
+            .await(showVisualization);
+
+function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories,recipes) {
+    if (error) throw error;
+
+      var data=recipes; //need to change this to be a filtered listener
+      specificData=data.filter(function(d){
+        return d.brunch==="1"})
+
+      var root = packageHierarchy(data_brunch)
+          .sum(function(d) { return d.size; });
+
+      cluster(root);
+      d3.select("#ingredients").on("mouseleave",clusterouted)
+
+
+      link = link
+        .data(packageImports(root.leaves()))
+        .enter().append("path")
+          .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
+          .attr("class", "link")
+          .attr("d", line);
+
+
+      node = node
+        .data(root.leaves())
+        .enter().append("text")
+          .attr("class", "node")
+          .attr("dy", "0.31em")
+          .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+          .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+          .text(function(d) {
+            return d.data.key; })
+          .on("mouseover", mouseovered);
+
+    // Lazily construct the package hierarchy from class names.
+    function packageHierarchy(classes) {
+      var map = {};
+
+      function find(name, data) {
+        var node = map[name], i;
+        if (!node) {
+          node = map[name] = data || {name: name, children: []};
+          if (name.length) {
+            node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
+            node.parent.children.push(node);
+            node.key = name.substring(i + 1);
+          }
+        }
+        return node;
+      }
+
+      classes.forEach(function(d) {
+        find(getCategory(d.ingredient, data_categories) + "." + d.ingredient, d);
+      });
+
+      return d3.hierarchy(map[""]);
+    }
+}
+
+function getCategory(nameKey, myArray){
+    for (var i=0; i < myArray.length; i++) {
+        if (myArray[i].Ingredients === nameKey) {
+            return myArray[i].Categories;
+        }
+    }
+}
+
+
+
+
+var lasthovered;
+function mouseovered(d) {
+  d3.selectAll(".recipenames").remove()
+
+  d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
+  d3.selectAll("path").style("visibility","visible")
+
+  lasthovered=d.data.ingredient
+
+  recipes=specificData.filter(function(i){
+    return i[lasthovered]==="1"})
+  topRecipes=recipes.sort(function(x,y){return (Number(y["rating"])-Number(x["rating"]))}) //descending scale in terms of ratings
+  topTen=topRecipes.slice(0,5) //here are the top ten recipes
+
+
+  index=1
+  topTen.forEach(function(d){
+
+    svg1.append("a")
+    .attr("xlink:href", d.link)
+    .append("text")
+    .attr("x",75)
+    .attr("y",40*index+250)
+    .text(index+". "+d.title)
+    .style("fill",10)
+    .classed("recipenames", true)
+    .on("mouseover", recipeOver)
+    .on("mouseout", recipeOut)
+    index+=1;
+  })
+
+
+
+  function recipeOver(d,i){
+    d3.select(this).attr("fill", "blue");
+  }
+
+  function recipeOut(d,i){
+    d3.select(this).attr("fill","black");
+  }
+
+
+
+
+
+
+
+
+  node
+      .each(function(n) {n.target = n.source = false; });
+
+  link
+      .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
+      .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
+    .filter(function(l) { return l.target === d || l.source === d; })
+      .raise()
+
+  link.filter(function(l) { return l.target !== d && l.source !== d
+  }).style("visibility", "hidden");
+
+  node
+      .classed("node--target", function(n) { return n.target; })
+      .classed("node--source", function(n) {
+        return n.source; });
+
+
+
+
+
+
+}
+
+function clusterouted(d){
+  d3.selectAll("path").style("visibility", "visible")
+}
+
+function mouseouted(d) {
+  link
+      .classed("link--target", false)
+      .classed("link--source", false);
+
+  node
+      .classed("node--target", false)
+      .classed("node--source", false);
+}
+
+// Return a list of imports for the given array of nodes.
+function packageImports(nodes) {
+  var map = {},
+      imports = [];
+
+  // Compute a map from name to node.
+  nodes.forEach(function(d) {
+    map[d.data.ingredient] = d;
+  });
+
+  // For each import, construct a link from the source to target node.
+  nodes.forEach(function(d) {
+    if (d.data.list_ingredients) d.data.list_ingredients.forEach(function(i) {
+      imports.push(map[d.data.ingredient].path(map[i]));
+    });
+  });
+
+  return imports;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Foodspire</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+	.title {font-family: 'Fjalla One';}
+	body {font-family: 'Josefin Sans';}
+	svg {border: solid white 1px; background-color: white; display: block; margin: auto; }
+	.cat_img:hover { 
+  border: 3px solid #5c5c5c; 
+  border-radius: 8px;
+} 
+.cat_img.active { 
+  border: 3px solid #00d3cc; 
+  border-radius: 8px;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 20vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 2.5em; margin: 10px; }
+h3 { margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+.yang_row{
+	margin-left: 0px;
+}
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ff2f2f; 
+ float: right; 
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-offset-1 col-sm-2"> <img  src="images/cover.png" alt="Cinque Terre" width="279" height="188"></div>
+		<div class="col-sm-9"> 
+			</br>
+			<h1 class = "title">Foodspire! </h1> 
+			</br>
+			<h3>A quick guide to nutritious guide!</h3> 
+		</div>
+
+  <!-- 9 categories -->
+    <div class="col-sm-12">
+        <div class="col-sm-4">
+          <div class="col-md-9">
+            <div class="col-md-6"> <img id="breakfast"   class="cat_img active" src="images/breakfast.png" alt="Cinque Terre" width="140" height="90"></div>
+              <div class="col-md-6"> <img id="lunch" class="cat_img" src="images/lunch.png" alt="Cinque Terre" width="140" height="90""></div></div>
+              <div class="col-md-3"> <img id="dinner" class="cat_img" src="images/dinner.png" alt="Cinque Terre" width="140" height="90"></div></div>
+        <div class="col-sm-4">
+          <div class="col-md-9">
+            <div class="col-md-6"> <img id="brunch" class="cat_img" src="images/brunch.png" alt="Cinque Terre" width="140" height="90"></div>
+              <div class="col-md-6"> <img id="dessert" class="cat_img" src="images/dissert.png" alt="Cinque Terre" width="140" height="90""></div></div>
+              <div class="col-md-3"> <img id="vegetarian" class="cat_img" src="images/vegetarian.png" alt="Cinque Terre" width="140" height="90"></div></div>
+        <div class="col-sm-4">
+          <div class="col-md-9">
+            <div class="col-md-6"> <img id="vegan" class="cat_img" src="images/vegan.png" alt="Cinque Terre" width="140" height="90"></div>
+              <div class="col-md-6"> <img id="drink" class="cat_img" src="images/drink.png" alt="Cinque Terre" width="140" height="90"></div></div>
+      </div>
+  </div>
+
+<!-- 	dropdown menues
+ -->	
+ 	<div class="col-sm-offset-7 col-md-5">
+	<div class=" row">
+		<div class="dropdown" style="padding-top: 40px">
+    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select ranking (default top rated recipes)
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation" ><a id="rating" role="menuitem" tabindex="-1" href="#">Top rated</a></li>
+      <li role="presentation"><a id="proteincontent" role="menuitem" tabindex="-1" href="#">Top proteid</a></li>
+      <li role="presentation"><a id="fatcontent" role="menuitem" tabindex="-1" href="#">Less fat</a></li>
+      <li role="presentation"><a id="sodiumcontent" role="menuitem" tabindex="-1" href="#">Less HDL</a></li>  
+      <li role="presentation"><a id="calories" role="menuitem" tabindex="-1" href="#">Less carbs</a></li>    
+  
+    </ul>
+  </div>
+  
+  	</div>
+	
+	<div id = "ratinglist" class="yang_row row"></div>
+	</div>
+
+
+<script>
+var food_cat = "breakfast"
+var food_rating = "rating"
+var rating_num = 5
+drawrightcharts("breakfast","rating")
+
+$('.cat_img').on('click', changeClass);
+
+$(".dropdown-menu li a").click(function(){
+    
+    $(".btn:first-child").text($(this).text());
+     $(".btn:first-child").val($(this).text());
+     console.log($(this).attr('id'))
+     food_rating = $(this).attr('id')
+     drawrightcharts(food_cat,food_rating)
+     $(".btn:first-child").append(" <span class='caret'></span>")
+  });
+
+function changeClass() {
+	
+    $('.cat_img.active').removeClass('active');
+    $(this).addClass('active');
+    
+    food_cat = $(this).attr('id')
+	
+	drawrightcharts(food_cat,food_rating)
+	
+
+}
+
+function drawrightcharts(food_cat,food_rating) {
+	console.log(food_cat)
+	$("#ratinglist").empty()
+	d3.csv("recipes_nutritional_cals.csv", function(csv) {
+    csv = csv.filter(function(row) {
+        return row[food_cat] == '1';
+    });
+   
+    //console.log(csv)
+    food_data = csv.sort(function(a, b) {
+	switch(food_rating) {
+    case "rating":
+    	
+        return d3.descending(+a.rating, +b.rating);
+        break;
+    case "proteincontent":
+        return d3.descending(+a.proteincontent, +b.proteincontent);
+        break;
+    case "fatcontent":
+        return d3.ascending(+a.fatcontent, +b.fatcontent);
+        break;
+    case "sodiumcontent":
+        return d3.ascending(+a.sodiumcontent, +b.sodiumcontent);
+        break;
+    case "calories":
+        return d3.ascending(+a.calories, +b.calories);
+        break;            
+    default:
+        return d3.descending(+a.rating, +b.rating);
+}    	
+	
+      }).slice(0,rating_num)
+    
+    
+    for(i = 0; i < rating_num; i++){
+	    console.log(food_data)
+	    $("#ratinglist").append("<p><div class='row'><b>"+food_data[i].title+"</b></div><div class='row vertical-center'>"
+	    
+		
+
+	    +"<div class='col-md-6 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p>Fat: "+ food_data[i].fatcontent +"g <p>Protein: "+ food_data[i].proteincontent +"g <p>Carbohydrates: "+ food_data[i].carbscontent +"g <p>Sodium: "+ food_data[i].sodiumcontent +"g <p>Fiber: "+ food_data[i].fibercontent +"g <p>Cholesterol: "+ food_data[i].cholesterolcontent +"g <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
+	    console.log("fd")
+	    drawdonut(food_data[i], i)
+	    for(j=0; j<food_data[i].rating; j++){
+		   $("#stars"+i).append('<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>')
+		 
+		   
+		   
+	    }
+	    
+    }
+    
+});
+}
+
+function drawdonut(rowdata, index) {
+	console.log(rowdata)
+	var total_ca = parseInt(rowdata.carbscontent * 4)  + parseInt(rowdata.proteincontent  * 4) + parseInt(rowdata.fatcontent  * 9)
+	var data = [
+      {name: 'Carbs', count: rowdata.carbscontent * 4, percentage: rowdata.calories * 400 / total_ca, color: '#F5A623'},
+      {name: 'Protein', count: rowdata.proteincontent * 4 , percentage: rowdata.proteincontent * 400 / total_ca, color: '#4A90E2'},
+      {name: 'Fat', count: rowdata.fatcontent * 9, percentage: rowdata.fatcontent * 900 / total_ca, color: '#F8E81C'}
+    ];
+    
+    console.log(data)
+    
+    var width = 160,
+    height = 160,
+    radius = 70;
+
+		var arc = d3.arc()
+    	.outerRadius(radius - 4)
+    	.innerRadius(60);
+
+		var pie = d3.pie()
+	    .sort(null)
+	    .value(function(d) {
+	        return d.count;
+	    });
+
+		var svg = d3.select('#chart'+index).append("svg")
+	    .attr("width", width)
+	    .attr("height", height)
+	    .append("g")
+	    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    var g = svg.selectAll(".arc")
+      .data(pie(data))
+      .enter().append("g");    
+
+   	g.append("path")
+    	.attr("d", arc)
+      .style("fill", function(d,i) {
+      	return d.data.color;
+      });
+
+
+    // g.append("text")
+    // 	.attr("transform", function(d) {
+    //     var _d = arc.centroid(d);
+    //     _d[0] *= 1.5;	//multiply by a constant factor
+    //     _d[1] *= 1.5;	//multiply by a constant factor
+    //     return "translate(" + _d + ")";
+    //   })
+    //   .attr("dy", ".50em")
+    //   .style("text-anchor", "middle")
+    //   .text(function(d) {
+        
+    //     return d.data.percentage + '%';
+    //   });
+
+        
+    g.append("text")
+	   .attr("text-anchor", "middle")
+		 .attr('font-size', '1em')
+		 .attr('y', 4)
+	   .text(total_ca+" Calories");
+
+
+
+	
+}
+	
+</script>
+
+</body>
+</html>

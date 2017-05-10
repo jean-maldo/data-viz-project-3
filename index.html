@@ -14,12 +14,12 @@
 	.title {font-family: 'Fjalla One';}
 	body {font-family: 'Josefin Sans';}
 	svg {border: solid white 1px; background-color: white; display: block; margin: auto; }
-	.cat_img:hover { 
-  border: 3px solid #5c5c5c; 
+	.cat_img:hover {
+  border: 3px solid #5c5c5c;
   border-radius: 8px;
-} 
-.cat_img.active { 
-  border: 3px solid #00d3cc; 
+}
+.cat_img.active {
+  border: 3px solid #00d3cc;
   border-radius: 8px;
 }
 
@@ -38,15 +38,15 @@ h3 { margin: 10px; }
 
 /****** Style Star Rating Widget *****/
 
-.rating { 
+.rating {
   border: none;
   float: left;
 }
 .yang_row{
 	margin-left: 0px;
 }
-.rating > input { display: none; } 
-.rating > label:before { 
+.rating > input { display: none; }
+.rating > label:before {
   margin: 5px;
   font-size: 1.25em;
   font-family: FontAwesome;
@@ -54,14 +54,14 @@ h3 { margin: 10px; }
   content: "\f005";
 }
 
-.rating > .half:before { 
+.rating > .half:before {
   content: "\f089";
   position: absolute;
 }
 
-.rating > label { 
-  color: #ff2f2f; 
- float: right; 
+.rating > label {
+  color: #ff2f2f;
+ float: right;
 }
 
 .no-gutters {
@@ -82,14 +82,14 @@ h3 { margin: 10px; }
     <div class ="container-fluid">
         <div class="row">
             <div class="col-sm-offset-1 col-sm-2"> <img  src="images/cover.png" alt="Cinque Terre" width="279" height="188"></div>
-            <div class="col-sm-9"> 
+            <div class="col-sm-9">
                 </br>
-                <h1 class = "title">Foodspire! </h1> 
+                <h1 class = "title">Foodspire! </h1>
                 </br>
-                <h3>A quick guide to nutritious guide!</h3> 
+                <h3>A quick guide to nutritious guide!</h3>
             </div>
         </div>
-        
+
       <!-- 9 categories -->
         <div class="row-fluid">
             <div class="col-xs-6 no-gutters">
@@ -113,12 +113,12 @@ h3 { margin: 10px; }
                 </div>
             </div>
         </div>
-        
+
         <!-- 	dropdown menues
-         -->	
+         -->
          <div class="row">
             <div id="ingredient_links" class="col-lg-8">
-                
+
             </div>
             <div class="col-lg-4">
                 <div class=" row">
@@ -126,11 +126,11 @@ h3 { margin: 10px; }
                         <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select ranking (default top rated recipes)
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation" ><a id="rating" role="menuitem" tabindex="-1" href="#">Top rated</a></li>
-                            <li role="presentation"><a id="proteincontent" role="menuitem" tabindex="-1" href="#">Top proteid</a></li>
-                            <li role="presentation"><a id="fatcontent" role="menuitem" tabindex="-1" href="#">Less fat</a></li>
-                            <li role="presentation"><a id="sodiumcontent" role="menuitem" tabindex="-1" href="#">Less HDL</a></li>  
-                            <li role="presentation"><a id="calories" role="menuitem" tabindex="-1" href="#">Less carbs</a></li>    
+                            <li role="presentation" ><a id="rating" role="menuitem" tabindex="-1" >Top Rated</a></li>
+                            <li role="presentation"><a id="proteincontent" role="menuitem" tabindex="-1" >Top Protein</a></li>
+                            <li role="presentation"><a id="fatcontent" role="menuitem" tabindex="-1" >Least Fat</a></li>
+                            <li role="presentation"><a id="sodiumcontent" role="menuitem" tabindex="-1" >Least Sodium</a></li>
+                            <li role="presentation"><a id="calories" role="menuitem" tabindex="-1" >Least Carbs</a></li>
 
                         </ul>
                     </div>
@@ -147,42 +147,49 @@ h3 { margin: 10px; }
 var food_cat = "breakfast"
 var food_rating = "rating"
 var rating_num = 5
-drawrightcharts("breakfast","rating")
+var food_cat_list = {};
 
-$('.cat_img').on('click', changeClass);
 
-$(".dropdown-menu li a").click(function(){
-    
-    $(".btn:first-child").text($(this).text());
-     $(".btn:first-child").val($(this).text());
-     food_rating = $(this).attr('id')
-     drawrightcharts(food_cat,food_rating)
-     $(".btn:first-child").append(" <span class='caret'></span>")
-  });
+// drawrightcharts("breakfast","rating")
+
+
+//
+// $(".dropdown-menu li a").click(function(){
+//
+//     $(".btn:first-child").text($(this).text());
+//      $(".btn:first-child").val($(this).text());
+//      food_rating = $(this).attr('id')
+//      drawrightcharts(food_cat,food_rating)
+//      $(".btn:first-child").append(" <span class='caret'></span>")
+//   });
+
+
 
 function changeClass() {
-	
+
     $('.cat_img.active').removeClass('active');
     $(this).addClass('active');
-    
+
     food_cat = $(this).attr('id')
-	
-	drawrightcharts(food_cat,food_rating)
-	
+		console.log(food_cat)
+
+	//
+	// drawrightcharts(topRecipes,food_rating)
+
 
 }
 
-function drawrightcharts(food_cat,food_rating) {
+function drawrightcharts(topRecipes, food_rating) { //need to pass in the data here already filtered to the top 5.
 	$("#ratinglist").empty()
-	d3.csv("data/recipes_nutritional_cals.csv", function(csv) {
-    csv = csv.filter(function(row) {
-        return row[food_cat] == '1';
-    });
-   
-    food_data = csv.sort(function(a, b) {
+	// d3.csv("data/recipes_nutritional_cals.csv", function(csv) {
+  //   csv = csv.filter(function(row) { //filters to the category that is selected.
+  //       return row[food_cat] == '1';
+  //   });
+
+    food_data = topRecipes.sort(function(a, b) {
 	switch(food_rating) {
     case "rating":
-    	
+
         return d3.descending(+a.rating, +b.rating);
         break;
     case "proteincontent":
@@ -196,14 +203,15 @@ function drawrightcharts(food_cat,food_rating) {
         break;
     case "calories":
         return d3.ascending(+a.calories, +b.calories);
-        break;            
+        break;
     default:
         return d3.descending(+a.rating, +b.rating);
-}    	
-	
-      }).slice(0,rating_num)
-    
-    
+
+	}
+      })
+			.slice(0,rating_num)
+
+
     for(i = 0; i < rating_num; i++){
 	    $("#ratinglist").append("<p><div class='row'><b>"+food_data[i].title+"</b></div><div class='row vertical-center'>"
 
@@ -211,11 +219,14 @@ function drawrightcharts(food_cat,food_rating) {
 	    drawdonut(food_data[i], i)
 	    for(j=0; j<food_data[i].rating; j++){
 		   $("#stars"+i).append('<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>')
-		  
+
 	    }
-	    
+
     }
-    
+	// })
+}
+
+
     //code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
 
     //this is for width and height of recipes
@@ -226,11 +237,8 @@ function drawrightcharts(food_cat,food_rating) {
         .attr("width", width)
         .attr("height", height);
     d3.select("#svg1").style("visibility","hidden")
-    //
-    // svg1.append("rect")
-    // .attr("width",width)
-    // .attr("height",height)
-    // .style("fill","green")
+
+
 
     svg1.append("image")
       .attr("xlink:href", "eggheader.png") //carrot created in sketch
@@ -265,21 +273,29 @@ function drawrightcharts(food_cat,food_rating) {
       .attr("id", "circle")
       .attr("opacity","0")
 
-    var link = svg.append("g").selectAll(".link"),
-        node = svg.append("g").selectAll(".node"),
-        cat = svg.append("g").selectAll(".categories");
+    var link = svg.append("g"),
+        node = svg.append("g"),
+        cat = svg.append("g");
     d3.queue()
         .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
         .defer(d3.json, "data/ingredient-hierarchies/brunch_hierarchy.json")
         .defer(d3.json, "data/ingredient-hierarchies/lunch_hierarchy.json")
         .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
+				.defer(d3.json, "data/ingredient-hierarchies/dessert_hierarchy.json")
+				.defer(d3.json, "data/ingredient-hierarchies/vegetarian_hierarchy.json")
+				.defer(d3.json, "data/ingredient-hierarchies/vegan_hierarchy.json")
+				.defer(d3.json, "data/ingredient-hierarchies/drink_hierarchy.json")
         .defer(d3.csv, "data/ingredient_categories.csv")
         .defer(d3.csv,"data/recipes_nutritional_cals.csv")
         .await(showVisualization);
 
+
     var ingredient_leaves;
     var categories, lineColors;
     var cat_array;
+
+
+
 
     // Sample the SVG path string "d" uniformly with the specified precision.
     function sample(d, precision) {
@@ -345,120 +361,171 @@ function drawrightcharts(food_cat,food_rating) {
       return [u01x / u01d, u01y / u01d];
     }
 
-    function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories, recipes) {
+		function showIngredientLinks(food_cat, recipes, data_categories) {
+
+
+
+			var selected_data = food_cat_list[food_cat];
+
+
+
+			        var data=recipes;
+			          specificData=data.filter(function(d){
+			            return d[food_cat]==="1"})
+			          var color = d3.interpolateLab("#008000", "#c83a22");
+			          var root = packageHierarchy(selected_data)
+			              .sum(function(d) { return d.size; });
+
+			              cluster(root);
+			          d3.select("#ingredients").on("mouseleave",clusterouted)
+			          ingredient_leaves = root.leaves();
+			          categories = {};
+			          lineColors = {};
+
+			            cat_index = 0;
+
+			          ingredient_leaves.forEach(function(d, i) {
+
+			            if (!categories[d.data.parent.key]) {
+			                categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1, index: cat_index};
+			                cat_index++;
+			            } else {
+			                categories[d.data.parent.key].x += d.x;
+			                categories[d.data.parent.key].y += d.y;
+			                categories[d.data.parent.key].count += 1;
+			            }
+
+			          });
+
+			          cat_array = [];
+
+			          for (var prop in categories) {
+			            cat_array.push(categories[prop]);
+			          }
+
+			          var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
+
+			          for (var i=0; i < cat_array.length; i++) {
+			            for (var j=0; j < cat_array.length; j++) {
+			                lineColors[cat_array[i].category + "_" + cat_array[j].category] = d3.interpolateLab(colorScale(i), colorScale(j));
+			            }
+			          }
+
+
+  						link = svg.append("g").selectAll(".link"),
+							link=d3.selectAll(".link").remove()
+							  link = svg.append("g").selectAll(".link"),
+
+
+			          packageImports(ingredient_leaves).forEach(function(d, i) {
+			            path_line = line(packageImports(ingredient_leaves)[i]);
+
+									link
+			                .data(quad(sample(path_line, 8)))
+			                .enter().append("path")
+			                .each(function(e) { e.source = d[0], e.target = d[d.length - 1]; })
+			                .attr("class", "link")
+			                .style("fill", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
+			                .style("stroke", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
+			                .attr("opacity", 0.9)
+
+			                .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
+			          });
+
+								// node=node.selectAll(".node").remove();
+
+								node=node.remove()
+								  node = svg.append("g").selectAll(".node"),
+
+			          node = node
+			            .data(ingredient_leaves)
+			            .enter().append("text").merge(node)
+			              .attr("class", "node")
+			              .attr("dy", "0.31em")
+			              .attr("fill", function(d) { return colorScale(categories[d.parent.data.key].index); })
+			              .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 30) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+			              .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+			              .text(function(d) { return d.data.key; })
+
+			              .on("mouseover", mouseovered);
+
+
+
+										cat=cat.remove()
+											cat = svg.append("g").selectAll(".cat"),
+			          cat=cat
+			            .data(cat_array)
+			            .enter().append("text").merge(cat)
+			              .attr("class", "category")
+			              .attr("dy", "0.31em")
+			              .attr("transform", function(d) { return "rotate(" + (d.x/d.count + 180) + ")translate(0," + (d.y/d.count + 12) + ")" + (d.x/d.count < 270 && d.x/d.count > 90 ? "" : "rotate(-180)"); })
+			              .attr("text-anchor", "middle")
+			              .attr("alignment-baseline", "baseline")
+										.classed("cat1", true)
+			              .text(function(d) { return d.category; });
+
+			        // Lazily construct the package hierarchy from class names.
+			        function packageHierarchy(classes) {
+			          var map = {};
+
+			          function find(name, data) {
+			            var node = map[name], i;
+			            if (!node) {
+			              node = map[name] = data || {name: name, children: []};
+			              if (name.length) {
+			                node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
+			                node.parent.children.push(node);
+			                node.key = name.substring(i + 1);
+			              }
+			            }
+			            return node;
+			          }
+
+			          classes.forEach(function(d) {
+			            find(getCategory(d.ingredient, data_categories) + "." + d.ingredient, d);
+			          });
+
+			          return d3.hierarchy(map[""]);
+			        }
+
+		}
+    function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_dessert, data_vegetarian, data_vegan, data_drink, data_categories, recipes) { //for flare diagram
         if (error) throw error;
-            
-        var selected_data = data_breakfast;
-        if (food_cat == "breakfast") {
-            selected_data = data_breakfast;
-        } else if(food_cat == "brunch") {
-            selected_data = data_brunch;
-        } else if(food_cat == "lunch") {
-            selected_data = data_lunch;
-        } else if(food_cat == "dinner") {
-            selected_data = data_dinner;
-        }
 
-        var data=recipes; //need to change this to be a filtered listener
-          specificData=data.filter(function(d){
-            return d.brunch==="1"})
-          var color = d3.interpolateLab("#008000", "#c83a22");
-          var root = packageHierarchy(selected_data)
-              .sum(function(d) { return d.size; });
+				food_cat_list["breakfast"] = data_breakfast;
+				food_cat_list["brunch"]=data_brunch;
+					food_cat_list["lunch"]=data_lunch;
+				food_cat_list["dinner"]=data_dinner;
+				food_cat_list["dessert"]=data_dessert;
+				food_cat_list["vegetarian"]=data_vegetarian;
+				food_cat_list["vegan"]=data_vegan;
+				food_cat_list["drink"]=data_drink;
 
-              cluster(root);
-          d3.select("#ingredients").on("mouseleave",clusterouted)
-          ingredient_leaves = root.leaves();
-          categories = {};
-          lineColors = {};
-          
-            cat_index = 0;
-            
-          ingredient_leaves.forEach(function(d, i) {
-            
-            if (!categories[d.data.parent.key]) {
-                categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1, index: cat_index};
-                cat_index++;
-            } else {
-                categories[d.data.parent.key].x += d.x;
-                categories[d.data.parent.key].y += d.y;
-                categories[d.data.parent.key].count += 1;
-            }
-            
-          });
-           
-          cat_array = [];
-          
-          for (var prop in categories) {
-            cat_array.push(categories[prop]);
-          }
-          
-          var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
-          
-          for (var i=0; i < cat_array.length; i++) {
-            for (var j=0; j < cat_array.length; j++) {
-                lineColors[cat_array[i].category + "_" + cat_array[j].category] = d3.interpolateLab(colorScale(i), colorScale(j));
-            }
-          }
-          
-          packageImports(ingredient_leaves).forEach(function(d, i) {
-            path_line = line(packageImports(ingredient_leaves)[i]);
 
-            link
-                .data(quad(sample(path_line, 8)))
-                .enter().append("path")
-                .each(function(e) { e.source = d[0], e.target = d[d.length - 1]; })
-                .attr("class", "link")
-                .style("fill", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
-                .style("stroke", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
-                .attr("opacity", 0.9)
-                .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
-          });
-          
-          node = node
-            .data(ingredient_leaves)
-            .enter().append("text")
-              .attr("class", "node")
-              .attr("dy", "0.31em")
-              .attr("fill", function(d) { return colorScale(categories[d.parent.data.key].index); })
-              .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 30) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-              .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-              .text(function(d) { return d.data.key; })
-              .on("mouseover", mouseovered);
-          
-          cat
-            .data(cat_array)
-            .enter().append("text")
-              .attr("class", "category")
-              .attr("dy", "0.31em")
-              .attr("transform", function(d) { return "rotate(" + (d.x/d.count + 180) + ")translate(0," + (d.y/d.count + 12) + ")" + (d.x/d.count < 270 && d.x/d.count > 90 ? "" : "rotate(-180)"); })
-              .attr("text-anchor", "middle")
-              .attr("alignment-baseline", "baseline")
-              .text(function(d) { return d.category; });
+				food_cat="breakfast"
 
-        // Lazily construct the package hierarchy from class names.
-        function packageHierarchy(classes) {
-          var map = {};
+				function changeClass() {
 
-          function find(name, data) {
-            var node = map[name], i;
-            if (!node) {
-              node = map[name] = data || {name: name, children: []};
-              if (name.length) {
-                node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
-                node.parent.children.push(node);
-                node.key = name.substring(i + 1);
-              }
-            }
-            return node;
-          }
+				    $('.cat_img.active').removeClass('active');
+				    $(this).addClass('active');
 
-          classes.forEach(function(d) {
-            find(getCategory(d.ingredient, data_categories) + "." + d.ingredient, d);
-          });
+				    food_cat = $(this).attr('id')
 
-          return d3.hierarchy(map[""]);
-        }
+						// d3.select("#ingredient_links")
+						// .select("svg").selectAll("*").remove()
+
+
+						showIngredientLinks(food_cat,recipes, data_categories)
+
+				}
+
+
+				$('.cat_img').on('click', changeClass);
+
+				showIngredientLinks(food_cat,recipes, data_categories)
+
+
+
     }
 
     function getCategory(nameKey, myArray){
@@ -477,7 +544,7 @@ function drawrightcharts(food_cat,food_rating) {
 
       d3.selectAll(".recipenames").remove()
 
-      d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
+      // d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
       d3.selectAll("path").style("visibility","visible")
 
       lasthovered=d.data.ingredient
@@ -485,24 +552,37 @@ function drawrightcharts(food_cat,food_rating) {
       recipes=specificData.filter(function(i){
         return i[lasthovered]==="1"})
       topRecipes=recipes.sort(function(x,y){return (Number(y["rating"])-Number(x["rating"]))}) //descending scale in terms of ratings
-      topTen=topRecipes.slice(0,5) //here are the top ten recipes
 
 
-      index=1
-      topTen.forEach(function(d){
+			drawrightcharts(topRecipes,"rating")
 
-        svg1.append("a")
-        .attr("xlink:href", d.link)
-        .append("text")
-        .attr("x",75)
-        .attr("y",40*index+250)
-        .text(index+". "+d.title)
-        .style("fill",10)
-        .classed("recipenames", true)
-        .on("mouseover", recipeOver)
-        .on("mouseout", recipeOut)
-        index+=1;
-      })
+
+
+
+			$(".dropdown-menu li a").click(function(){
+
+			    $(".btn:first-child").text($(this).text());
+			     $(".btn:first-child").val($(this).text());
+			     food_rating = $(this).attr('id')
+			     drawrightcharts(topRecipes,food_rating)
+			     $(".btn:first-child").append(" <span class='caret'></span>")
+			  });
+
+      // index=1
+      // topTen.forEach(function(d){
+			//
+      //   svg1.append("a")
+      //   .attr("xlink:href", d.link)
+      //   .append("text")
+      //   .attr("x",75)
+      //   .attr("y",40*index+250)
+      //   .text(index+". "+d.title)
+      //   .style("fill",10)
+      //   .classed("recipenames", true)
+      //   .on("mouseover", recipeOver)
+      //   .on("mouseout", recipeOut)
+      //   index+=1;
+      // })
 
 
 
@@ -574,18 +654,18 @@ function drawrightcharts(food_cat,food_rating) {
       return imports;
     }
 
-});
-}
+// });
+// }
 
 function drawdonut(rowdata, index) {
-	
+
 	var total_ca = parseInt(rowdata.carbscontent * 4)  + parseInt(rowdata.proteincontent  * 4) + parseInt(rowdata.fatcontent  * 9)
 	var data = [
       {name: 'Carbs', count: rowdata.carbscontent * 4, percentage: rowdata.calories * 400 / total_ca, color: '#F5A623'},
       {name: 'Protein', count: rowdata.proteincontent * 4 , percentage: rowdata.proteincontent * 400 / total_ca, color: '#4A90E2'},
       {name: 'Fat', count: rowdata.fatcontent * 9, percentage: rowdata.fatcontent * 900 / total_ca, color: '#F8E81C'}
     ];
-    
+
     var width = 160,
     height = 160,
     radius = 70;
@@ -608,7 +688,7 @@ function drawdonut(rowdata, index) {
 
     var g = svg.selectAll(".arc")
       .data(pie(data))
-      .enter().append("g");    
+      .enter().append("g");
 
    	g.append("path")
     	.attr("d", arc)
@@ -627,11 +707,11 @@ function drawdonut(rowdata, index) {
     //   .attr("dy", ".50em")
     //   .style("text-anchor", "middle")
     //   .text(function(d) {
-        
+
     //     return d.data.percentage + '%';
     //   });
 
-        
+
     g.append("text")
 	   .attr("text-anchor", "middle")
 		 .attr('font-size', '1em')
