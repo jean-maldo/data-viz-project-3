@@ -1,421 +1,645 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-<script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	<title>Foodspire</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-<style>
-
-.node {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	<style>
+	.title {font-family: 'Fjalla One';}
+	body {font-family: 'Josefin Sans';}
+	svg {border: solid white 1px; background-color: white; display: block; margin: auto; }
+	.cat_img:hover { 
+  border: 3px solid #5c5c5c; 
+  border-radius: 8px;
+} 
+.cat_img.active { 
+  border: 3px solid #00d3cc; 
+  border-radius: 8px;
 }
 
-.category {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #555;
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 20vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 
-.node:hover {
-  fill: #000;
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 2.5em; margin: 10px; }
+h3 { margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+.yang_row{
+	margin-left: 0px;
+}
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
 }
 
-.link {
-  stroke: steelblue;
-  stroke-opacity: 0.4;
-  fill: none;
-  pointer-events: none;
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
 }
 
-.node:hover,
-.node--source,
-.node--target {
-  font-weight: 700;
+.rating > label { 
+  color: #ff2f2f; 
+ float: right; 
 }
 
+.no-gutters {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-right: 0;
+  padding-left: 0;
 
-.link--source,
-.link--target {
-  stroke-opacity: 1;
-  stroke-width: 2px;
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-
-.link--source {
-  stroke: #d62728;
-}
-
-.link--target {
-  stroke: #2ca02c;
-}
-
-text{
-  font-family: arial;
-}
-
-</style>
+	</style>
+</head>
 <body>
-  <table>
-    <tr>
-  <td> <p id="svg"></p> </td>
-  <td><p id="svg1"></p></td>
-</tr>
-</table>
+    <div class ="container-fluid">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-2"> <img  src="images/cover.png" alt="Cinque Terre" width="279" height="188"></div>
+            <div class="col-sm-9"> 
+                </br>
+                <h1 class = "title">Foodspire! </h1> 
+                </br>
+                <h3>A quick guide to nutritious guide!</h3> 
+            </div>
+        </div>
+        
+      <!-- 9 categories -->
+        <div class="row-fluid">
+            <div class="col-xs-6 no-gutters">
+                <div class="col-sm-6 no-gutters">
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="breakfast"   class="cat_img active" src="images/breakfast.png" alt="Cinque Terre" width="120" height="80"></div>
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="lunch" class="cat_img" src="images/lunch.png" alt="Cinque Terre" width="120" height="80"></div>
+                </div>
+                <div class="col-sm-6 no-gutters">
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="brunch" class="cat_img" src="images/brunch.png" alt="Cinque Terre" width="120" height="80"></div>
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="dinner" class="cat_img" src="images/dinner.png" alt="Cinque Terre" width="120" height="80"></div>
+                </div>
+            </div>
+            <div class="col-xs-6 no-gutters">
+                <div class="col-sm-6 no-gutters">
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="dessert" class="cat_img" src="images/dissert.png" alt="Cinque Terre" width="120" height="80"></div>
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="vegetarian" class="cat_img" src="images/vegetarian.png" alt="Cinque Terre" width="120" height="80"></div>
+                </div>
+                <div class="col-sm-6 no-gutters">
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="vegan" class="cat_img" src="images/vegan.png" alt="Cinque Terre" width="120" height="80"></div>
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="drink" class="cat_img" src="images/drink.png" alt="Cinque Terre" width="120" height="80"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 	dropdown menues
+         -->	
+         <div class="row">
+            <div id="ingredient_links" class="col-lg-8">
+                
+            </div>
+            <div class="col-lg-4">
+                <div class=" row">
+                    <div class="dropdown" style="padding-top: 40px">
+                        <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select ranking (default top rated recipes)
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation" ><a id="rating" role="menuitem" tabindex="-1" href="#">Top rated</a></li>
+                            <li role="presentation"><a id="proteincontent" role="menuitem" tabindex="-1" href="#">Top proteid</a></li>
+                            <li role="presentation"><a id="fatcontent" role="menuitem" tabindex="-1" href="#">Less fat</a></li>
+                            <li role="presentation"><a id="sodiumcontent" role="menuitem" tabindex="-1" href="#">Less HDL</a></li>  
+                            <li role="presentation"><a id="calories" role="menuitem" tabindex="-1" href="#">Less carbs</a></li>    
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id = "ratinglist" class="yang_row row"></div>
+            </div>
+         </div>
+    </div>
+
 
 <script>
+var food_cat = "breakfast"
+var food_rating = "rating"
+var rating_num = 5
+drawrightcharts("breakfast","rating")
 
-//code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
+$('.cat_img').on('click', changeClass);
 
-//this is for width and height of recipes
-var width=530
-var height=800
-
-var svg1 = d3.select("#svg1").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-d3.select("#svg1").style("visibility","hidden")
-//
-// svg1.append("rect")
-// .attr("width",width)
-// .attr("height",height)
-// .style("fill","green")
-
-svg1.append("image")
-  .attr("xlink:href", "eggheader.png") //carrot created in sketch
-  .attr("x", 0)
-  .attr("y",0)
-
-
-var diameter = 800,
-    radius = diameter / 2,
-    innerRadius = radius - 120;
-
-var cluster = d3.cluster()
-    .size([360, innerRadius]);
-
-var line = d3.radialLine()
-    .curve(d3.curveBundle.beta(0.85))
-    .radius(function(d) { return d.y; })
-    .angle(function(d) { return d.x / 180 * Math.PI; });
-
-var svg = d3.select("#svg").append("svg")
-    .attr("width", diameter)
-    .attr("height", diameter)
-  .append("g")
-    .attr("transform", "translate(" + radius + "," + radius + ")")
-    .attr("id", "ingredients")
-
-var circle=d3.select("#ingredients").append("circle")
-  .attr("r", innerRadius+120)
-  .attr("id", "circle")
-  .attr("opacity","0")
-
-var link = svg.append("g").selectAll(".link"),
-    node = svg.append("g").selectAll(".node"),
-    cat = svg.append("g").selectAll(".categories");
-
-
-d3.queue()
-            .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
-            .defer(d3.json, "data/ingredient-hierarchies/brunch_hierarchy.json")
-            .defer(d3.json, "data/ingredient-hierarchies/lunch_hierarchy.json")
-            .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
-            .defer(d3.csv, "data/ingredient_categories.csv")
-            .defer(d3.csv,"data/recipes_nutritional_cals.csv")
-            .await(showVisualization);
-
-var ingredient_leaves;
-var categories, lineColors;
-var cat_array;
-
-// Sample the SVG path string "d" uniformly with the specified precision.
-function sample(d, precision) {
-  var path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
-  path.setAttribute("d", d);
-
-  var n = path.getTotalLength(), t = [0], i = 0, dt = precision;
-  while ((i += dt) < n) t.push(i);
-  t.push(n);
-
-  return t.map(function(t) {
-    var p = path.getPointAtLength(t), a = [p.x, p.y];
-    a.t = t / n;
-    return a;
-  });
-}
-
-// Compute quads of adjacent points [p0, p1, p2, p3].
-function quad(points) {
-  return d3.range(points.length - 1).map(function(i) {
-    var a = [points[i - 1], points[i], points[i + 1], points[i + 2]];
-    a.t = (points[i].t + points[i + 1].t) / 2;
-    return a;
-  });
-}
-
-// Compute stroke outline for segment p12.
-function lineJoin(p0, p1, p2, p3, width) {
-  var u12 = perp(p1, p2),
-      r = width / 2,
-      a = [p1[0] + u12[0] * r, p1[1] + u12[1] * r],
-      b = [p2[0] + u12[0] * r, p2[1] + u12[1] * r],
-      c = [p2[0] - u12[0] * r, p2[1] - u12[1] * r],
-      d = [p1[0] - u12[0] * r, p1[1] - u12[1] * r];
-
-  if (p0) { // clip ad and dc using average of u01 and u12
-    var u01 = perp(p0, p1), e = [p1[0] + u01[0] + u12[0], p1[1] + u01[1] + u12[1]];
-    a = lineIntersect(p1, e, a, b);
-    d = lineIntersect(p1, e, d, c);
-  }
-
-  if (p3) { // clip ab and dc using average of u12 and u23
-    var u23 = perp(p2, p3), e = [p2[0] + u23[0] + u12[0], p2[1] + u23[1] + u12[1]];
-    b = lineIntersect(p2, e, a, b);
-    c = lineIntersect(p2, e, d, c);
-  }
-
-  return "M" + a + "L" + b + " " + c + " " + d + "Z";
-}
-
-// Compute intersection of two infinite lines ab and cd.
-function lineIntersect(a, b, c, d) {
-  var x1 = c[0], x3 = a[0], x21 = d[0] - x1, x43 = b[0] - x3,
-      y1 = c[1], y3 = a[1], y21 = d[1] - y1, y43 = b[1] - y3,
-      ua = (x43 * (y1 - y3) - y43 * (x1 - x3)) / (y43 * x21 - x43 * y21);
-  return [x1 + ua * x21, y1 + ua * y21];
-}
-
-// Compute unit vector perpendicular to p01.
-function perp(p0, p1) {
-  var u01x = p0[1] - p1[1], u01y = p1[0] - p0[0],
-      u01d = Math.sqrt(u01x * u01x + u01y * u01y);
-  return [u01x / u01d, u01y / u01d];
-}
-
-function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories, recipes) {
-    if (error) throw error;
+$(".dropdown-menu li a").click(function(){
     
-    
-
-      var data=recipes; //need to change this to be a filtered listener
-      specificData=data.filter(function(d){
-        return d.brunch==="1"})
-      var color = d3.interpolateLab("#008000", "#c83a22");
-      var root = packageHierarchy(data_brunch)
-          .sum(function(d) { return d.size; });
-
-          cluster(root);
-      d3.select("#ingredients").on("mouseleave",clusterouted)
-      ingredient_leaves = root.leaves();
-      categories = {};
-      lineColors = {};
-      
-        cat_index = 0;
-        
-      ingredient_leaves.forEach(function(d, i) {
-        
-        if (!categories[d.data.parent.key]) {
-            categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1, index: cat_index};
-            cat_index++;
-        } else {
-            categories[d.data.parent.key].x += d.x;
-            categories[d.data.parent.key].y += d.y;
-            categories[d.data.parent.key].count += 1;
-        }
-        
-      });
-       
-      cat_array = [];
-      
-      for (var prop in categories) {
-        cat_array.push(categories[prop]);
-      }
-      
-      var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
-      
-      for (var i=0; i < cat_array.length; i++) {
-        for (var j=0; j < cat_array.length; j++) {
-            lineColors[cat_array[i].category + "_" + cat_array[j].category] = d3.interpolateLab(colorScale(i), colorScale(j));
-        }
-      }
-      
-      packageImports(ingredient_leaves).forEach(function(d, i) {
-        path_line = line(packageImports(ingredient_leaves)[i]);
-
-        link
-            .data(quad(sample(path_line, 8)))
-            .enter().append("path")
-            .each(function(e) { e.source = d[0], e.target = d[d.length - 1]; })
-            .attr("class", "link")
-            .style("fill", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
-            .style("stroke", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
-            .attr("opacity", 0.9)
-            .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
-      });
-      
-      node = node
-        .data(ingredient_leaves)
-        .enter().append("text")
-          .attr("class", "node")
-          .attr("dy", "0.31em")
-          .attr("fill", function(d) { console.log(colorScale(categories[d.parent.data.key].index)); return colorScale(categories[d.parent.data.key].index); })
-          .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 30) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
-          .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-          .text(function(d) { return d.data.key; })
-          .on("mouseover", mouseovered);
-      
-      cat
-        .data(cat_array)
-        .enter().append("text")
-          .attr("class", "category")
-          .attr("dy", "0.31em")
-          .attr("transform", function(d) { return "rotate(" + (d.x/d.count + 180) + ")translate(0," + (d.y/d.count + 12) + ")" + (d.x/d.count < 270 && d.x/d.count > 90 ? "" : "rotate(-180)"); })
-          .attr("text-anchor", "middle")
-          .attr("alignment-baseline", "baseline")
-          .text(function(d) { return d.category; });
-
-    // Lazily construct the package hierarchy from class names.
-    function packageHierarchy(classes) {
-      var map = {};
-
-      function find(name, data) {
-        var node = map[name], i;
-        if (!node) {
-          node = map[name] = data || {name: name, children: []};
-          if (name.length) {
-            node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
-            node.parent.children.push(node);
-            node.key = name.substring(i + 1);
-          }
-        }
-        return node;
-      }
-
-      classes.forEach(function(d) {
-        find(getCategory(d.ingredient, data_categories) + "." + d.ingredient, d);
-      });
-
-      return d3.hierarchy(map[""]);
-    }
-}
-
-function getCategory(nameKey, myArray){
-    for (var i=0; i < myArray.length; i++) {
-        if (myArray[i].Ingredients === nameKey) {
-            return myArray[i].Categories;
-        }
-    }
-}
-
-
-
-
-var lasthovered;
-function mouseovered(d) {
-
-  d3.selectAll(".recipenames").remove()
-
-  d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
-  d3.selectAll("path").style("visibility","visible")
-
-  lasthovered=d.data.ingredient
-
-  recipes=specificData.filter(function(i){
-    return i[lasthovered]==="1"})
-  topRecipes=recipes.sort(function(x,y){return (Number(y["rating"])-Number(x["rating"]))}) //descending scale in terms of ratings
-  topTen=topRecipes.slice(0,5) //here are the top ten recipes
-
-
-  index=1
-  topTen.forEach(function(d){
-
-    svg1.append("a")
-    .attr("xlink:href", d.link)
-    .append("text")
-    .attr("x",75)
-    .attr("y",40*index+250)
-    .text(index+". "+d.title)
-    .style("fill",10)
-    .classed("recipenames", true)
-    .on("mouseover", recipeOver)
-    .on("mouseout", recipeOut)
-    index+=1;
-  })
-
-
-
-  function recipeOver(d,i){
-    d3.select(this).attr("fill", "blue");
-  }
-
-  function recipeOut(d,i){
-    d3.select(this).attr("fill","black");
-  }
-
-
-
-
-
-
-
-
-  node
-      .each(function(n) { n.target = n.source = false; });
-
-  var all_links = d3.selectAll(".link")
-    all_links
-      .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
-      .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
-    .filter(function(l) { return l.target === d || l.source === d; })
-      .raise()
-
-  all_links.filter(function(l) { return l.target !== d && l.source !== d
-  }).style("visibility", "hidden");
-
-  node
-      .classed("node--target", function(n) { return n.target; })
-      .classed("node--source", function(n) {
-        return n.source; });
-
-
-
-
-
-
-}
-
-function clusterouted(d){
-  mouseouted(d);
-  d3.selectAll("path").style("visibility", "visible")
-}
-
-function mouseouted(d) {
-  link
-      .classed("link--target", false)
-      .classed("link--source", false);
-
-  node
-      .classed("node--target", false)
-      .classed("node--source", false);
-}
-
-// Return a list of imports for the given array of nodes.
-function packageImports(nodes) {
-  var map = {},
-      imports = [];
-
-  // Compute a map from name to node.
-  nodes.forEach(function(d) {
-    map[d.data.ingredient] = d;
+    $(".btn:first-child").text($(this).text());
+     $(".btn:first-child").val($(this).text());
+     food_rating = $(this).attr('id')
+     drawrightcharts(food_cat,food_rating)
+     $(".btn:first-child").append(" <span class='caret'></span>")
   });
 
-  // For each import, construct a link from the source to target node.
-  nodes.forEach(function(d) {
-    if (d.data.list_ingredients) d.data.list_ingredients.forEach(function(i) {
-      imports.push(map[d.data.ingredient].path(map[i]));
+function changeClass() {
+	
+    $('.cat_img.active').removeClass('active');
+    $(this).addClass('active');
+    
+    food_cat = $(this).attr('id')
+	
+	drawrightcharts(food_cat,food_rating)
+	
+
+}
+
+function drawrightcharts(food_cat,food_rating) {
+	$("#ratinglist").empty()
+	d3.csv("data/recipes_nutritional_cals.csv", function(csv) {
+    csv = csv.filter(function(row) {
+        return row[food_cat] == '1';
     });
-  });
+   
+    food_data = csv.sort(function(a, b) {
+	switch(food_rating) {
+    case "rating":
+    	
+        return d3.descending(+a.rating, +b.rating);
+        break;
+    case "proteincontent":
+        return d3.descending(+a.proteincontent, +b.proteincontent);
+        break;
+    case "fatcontent":
+        return d3.ascending(+a.fatcontent, +b.fatcontent);
+        break;
+    case "sodiumcontent":
+        return d3.ascending(+a.sodiumcontent, +b.sodiumcontent);
+        break;
+    case "calories":
+        return d3.ascending(+a.calories, +b.calories);
+        break;            
+    default:
+        return d3.descending(+a.rating, +b.rating);
+}    	
+	
+      }).slice(0,rating_num)
+    
+    
+    for(i = 0; i < rating_num; i++){
+	    $("#ratinglist").append("<p><div class='row'><b>"+food_data[i].title+"</b></div><div class='row vertical-center'>"
 
-  return imports;
+	    +"<div class='col-md-6 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p>Fat: "+ food_data[i].fatcontent +"g <p>Protein: "+ food_data[i].proteincontent +"g <p>Carbohydrates: "+ food_data[i].carbscontent +"g <p>Sodium: "+ food_data[i].sodiumcontent +"g <p>Fiber: "+ food_data[i].fibercontent +"g <p>Cholesterol: "+ food_data[i].cholesterolcontent +"g <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
+	    drawdonut(food_data[i], i)
+	    for(j=0; j<food_data[i].rating; j++){
+		   $("#stars"+i).append('<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>')
+		  
+	    }
+	    
+    }
+    
+    //code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
+
+    //this is for width and height of recipes
+    var width=530
+    var height=800
+
+    var svg1 = d3.select("#svg1").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+    d3.select("#svg1").style("visibility","hidden")
+    //
+    // svg1.append("rect")
+    // .attr("width",width)
+    // .attr("height",height)
+    // .style("fill","green")
+
+    svg1.append("image")
+      .attr("xlink:href", "eggheader.png") //carrot created in sketch
+      .attr("x", 0)
+      .attr("y",0)
+
+
+    var diameter = 800,
+        radius = diameter / 2,
+        innerRadius = radius - 120;
+
+    var cluster = d3.cluster()
+        .size([360, innerRadius]);
+
+    var line = d3.radialLine()
+        .curve(d3.curveBundle.beta(0.85))
+        .radius(function(d) { return d.y; })
+        .angle(function(d) { return d.x / 180 * Math.PI; });
+
+    var svg_base = d3.select("#ingredient_links");
+
+    svg_base.select("svg").remove();
+    var svg = svg_base.append("svg")
+        .attr("width", diameter)
+        .attr("height", diameter)
+      .append("g")
+        .attr("transform", "translate(" + radius + "," + radius + ")")
+        .attr("id", "ingredients")
+
+    var circle=d3.select("#ingredients").append("circle")
+      .attr("r", innerRadius+120)
+      .attr("id", "circle")
+      .attr("opacity","0")
+
+    var link = svg.append("g").selectAll(".link"),
+        node = svg.append("g").selectAll(".node"),
+        cat = svg.append("g").selectAll(".categories");
+    d3.queue()
+        .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/brunch_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/lunch_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
+        .defer(d3.csv, "data/ingredient_categories.csv")
+        .defer(d3.csv,"data/recipes_nutritional_cals.csv")
+        .await(showVisualization);
+
+    var ingredient_leaves;
+    var categories, lineColors;
+    var cat_array;
+
+    // Sample the SVG path string "d" uniformly with the specified precision.
+    function sample(d, precision) {
+      var path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+      path.setAttribute("d", d);
+
+      var n = path.getTotalLength(), t = [0], i = 0, dt = precision;
+      while ((i += dt) < n) t.push(i);
+      t.push(n);
+
+      return t.map(function(t) {
+        var p = path.getPointAtLength(t), a = [p.x, p.y];
+        a.t = t / n;
+        return a;
+      });
+    }
+
+    // Compute quads of adjacent points [p0, p1, p2, p3].
+    function quad(points) {
+      return d3.range(points.length - 1).map(function(i) {
+        var a = [points[i - 1], points[i], points[i + 1], points[i + 2]];
+        a.t = (points[i].t + points[i + 1].t) / 2;
+        return a;
+      });
+    }
+
+    // Compute stroke outline for segment p12.
+    function lineJoin(p0, p1, p2, p3, width) {
+      var u12 = perp(p1, p2),
+          r = width / 2,
+          a = [p1[0] + u12[0] * r, p1[1] + u12[1] * r],
+          b = [p2[0] + u12[0] * r, p2[1] + u12[1] * r],
+          c = [p2[0] - u12[0] * r, p2[1] - u12[1] * r],
+          d = [p1[0] - u12[0] * r, p1[1] - u12[1] * r];
+
+      if (p0) { // clip ad and dc using average of u01 and u12
+        var u01 = perp(p0, p1), e = [p1[0] + u01[0] + u12[0], p1[1] + u01[1] + u12[1]];
+        a = lineIntersect(p1, e, a, b);
+        d = lineIntersect(p1, e, d, c);
+      }
+
+      if (p3) { // clip ab and dc using average of u12 and u23
+        var u23 = perp(p2, p3), e = [p2[0] + u23[0] + u12[0], p2[1] + u23[1] + u12[1]];
+        b = lineIntersect(p2, e, a, b);
+        c = lineIntersect(p2, e, d, c);
+      }
+
+      return "M" + a + "L" + b + " " + c + " " + d + "Z";
+    }
+
+    // Compute intersection of two infinite lines ab and cd.
+    function lineIntersect(a, b, c, d) {
+      var x1 = c[0], x3 = a[0], x21 = d[0] - x1, x43 = b[0] - x3,
+          y1 = c[1], y3 = a[1], y21 = d[1] - y1, y43 = b[1] - y3,
+          ua = (x43 * (y1 - y3) - y43 * (x1 - x3)) / (y43 * x21 - x43 * y21);
+      return [x1 + ua * x21, y1 + ua * y21];
+    }
+
+    // Compute unit vector perpendicular to p01.
+    function perp(p0, p1) {
+      var u01x = p0[1] - p1[1], u01y = p1[0] - p0[0],
+          u01d = Math.sqrt(u01x * u01x + u01y * u01y);
+      return [u01x / u01d, u01y / u01d];
+    }
+
+    function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories, recipes) {
+        if (error) throw error;
+            
+        var selected_data = data_breakfast;
+        if (food_cat == "breakfast") {
+            selected_data = data_breakfast;
+        } else if(food_cat == "brunch") {
+            selected_data = data_brunch;
+        } else if(food_cat == "lunch") {
+            selected_data = data_lunch;
+        } else if(food_cat == "dinner") {
+            selected_data = data_dinner;
+        }
+
+        var data=recipes; //need to change this to be a filtered listener
+          specificData=data.filter(function(d){
+            return d.brunch==="1"})
+          var color = d3.interpolateLab("#008000", "#c83a22");
+          var root = packageHierarchy(selected_data)
+              .sum(function(d) { return d.size; });
+
+              cluster(root);
+          d3.select("#ingredients").on("mouseleave",clusterouted)
+          ingredient_leaves = root.leaves();
+          categories = {};
+          lineColors = {};
+          
+            cat_index = 0;
+            
+          ingredient_leaves.forEach(function(d, i) {
+            
+            if (!categories[d.data.parent.key]) {
+                categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1, index: cat_index};
+                cat_index++;
+            } else {
+                categories[d.data.parent.key].x += d.x;
+                categories[d.data.parent.key].y += d.y;
+                categories[d.data.parent.key].count += 1;
+            }
+            
+          });
+           
+          cat_array = [];
+          
+          for (var prop in categories) {
+            cat_array.push(categories[prop]);
+          }
+          
+          var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
+          
+          for (var i=0; i < cat_array.length; i++) {
+            for (var j=0; j < cat_array.length; j++) {
+                lineColors[cat_array[i].category + "_" + cat_array[j].category] = d3.interpolateLab(colorScale(i), colorScale(j));
+            }
+          }
+          
+          packageImports(ingredient_leaves).forEach(function(d, i) {
+            path_line = line(packageImports(ingredient_leaves)[i]);
+
+            link
+                .data(quad(sample(path_line, 8)))
+                .enter().append("path")
+                .each(function(e) { e.source = d[0], e.target = d[d.length - 1]; })
+                .attr("class", "link")
+                .style("fill", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
+                .style("stroke", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
+                .attr("opacity", 0.9)
+                .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
+          });
+          
+          node = node
+            .data(ingredient_leaves)
+            .enter().append("text")
+              .attr("class", "node")
+              .attr("dy", "0.31em")
+              .attr("fill", function(d) { return colorScale(categories[d.parent.data.key].index); })
+              .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 30) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+              .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+              .text(function(d) { return d.data.key; })
+              .on("mouseover", mouseovered);
+          
+          cat
+            .data(cat_array)
+            .enter().append("text")
+              .attr("class", "category")
+              .attr("dy", "0.31em")
+              .attr("transform", function(d) { return "rotate(" + (d.x/d.count + 180) + ")translate(0," + (d.y/d.count + 12) + ")" + (d.x/d.count < 270 && d.x/d.count > 90 ? "" : "rotate(-180)"); })
+              .attr("text-anchor", "middle")
+              .attr("alignment-baseline", "baseline")
+              .text(function(d) { return d.category; });
+
+        // Lazily construct the package hierarchy from class names.
+        function packageHierarchy(classes) {
+          var map = {};
+
+          function find(name, data) {
+            var node = map[name], i;
+            if (!node) {
+              node = map[name] = data || {name: name, children: []};
+              if (name.length) {
+                node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
+                node.parent.children.push(node);
+                node.key = name.substring(i + 1);
+              }
+            }
+            return node;
+          }
+
+          classes.forEach(function(d) {
+            find(getCategory(d.ingredient, data_categories) + "." + d.ingredient, d);
+          });
+
+          return d3.hierarchy(map[""]);
+        }
+    }
+
+    function getCategory(nameKey, myArray){
+        for (var i=0; i < myArray.length; i++) {
+            if (myArray[i].Ingredients === nameKey) {
+                return myArray[i].Categories;
+            }
+        }
+    }
+
+
+
+
+    var lasthovered;
+    function mouseovered(d) {
+
+      d3.selectAll(".recipenames").remove()
+
+      d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
+      d3.selectAll("path").style("visibility","visible")
+
+      lasthovered=d.data.ingredient
+
+      recipes=specificData.filter(function(i){
+        return i[lasthovered]==="1"})
+      topRecipes=recipes.sort(function(x,y){return (Number(y["rating"])-Number(x["rating"]))}) //descending scale in terms of ratings
+      topTen=topRecipes.slice(0,5) //here are the top ten recipes
+
+
+      index=1
+      topTen.forEach(function(d){
+
+        svg1.append("a")
+        .attr("xlink:href", d.link)
+        .append("text")
+        .attr("x",75)
+        .attr("y",40*index+250)
+        .text(index+". "+d.title)
+        .style("fill",10)
+        .classed("recipenames", true)
+        .on("mouseover", recipeOver)
+        .on("mouseout", recipeOut)
+        index+=1;
+      })
+
+
+
+      function recipeOver(d,i){
+        d3.select(this).attr("fill", "blue");
+      }
+
+      function recipeOut(d,i){
+        d3.select(this).attr("fill","black");
+      }
+
+      node
+          .each(function(n) { n.target = n.source = false; });
+
+      var all_links = d3.selectAll(".link")
+        all_links
+          .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
+          .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
+        .filter(function(l) { return l.target === d || l.source === d; })
+          .raise()
+
+      all_links.filter(function(l) { return l.target !== d && l.source !== d
+      }).style("visibility", "hidden");
+
+      node
+          .classed("node--target", function(n) { return n.target; })
+          .classed("node--source", function(n) {
+            return n.source; });
+
+
+
+
+
+
+    }
+
+    function clusterouted(d){
+      mouseouted(d);
+      d3.selectAll("path").style("visibility", "visible")
+    }
+
+    function mouseouted(d) {
+      link
+          .classed("link--target", false)
+          .classed("link--source", false);
+
+      node
+          .classed("node--target", false)
+          .classed("node--source", false);
+    }
+
+    // Return a list of imports for the given array of nodes.
+    function packageImports(nodes) {
+      var map = {},
+          imports = [];
+
+      // Compute a map from name to node.
+      nodes.forEach(function(d) {
+        map[d.data.ingredient] = d;
+      });
+
+      // For each import, construct a link from the source to target node.
+      nodes.forEach(function(d) {
+        if (d.data.list_ingredients) d.data.list_ingredients.forEach(function(i) {
+          imports.push(map[d.data.ingredient].path(map[i]));
+        });
+      });
+
+      return imports;
+    }
+
+});
 }
+
+function drawdonut(rowdata, index) {
+	
+	var total_ca = parseInt(rowdata.carbscontent * 4)  + parseInt(rowdata.proteincontent  * 4) + parseInt(rowdata.fatcontent  * 9)
+	var data = [
+      {name: 'Carbs', count: rowdata.carbscontent * 4, percentage: rowdata.calories * 400 / total_ca, color: '#F5A623'},
+      {name: 'Protein', count: rowdata.proteincontent * 4 , percentage: rowdata.proteincontent * 400 / total_ca, color: '#4A90E2'},
+      {name: 'Fat', count: rowdata.fatcontent * 9, percentage: rowdata.fatcontent * 900 / total_ca, color: '#F8E81C'}
+    ];
+    
+    var width = 160,
+    height = 160,
+    radius = 70;
+
+		var arc = d3.arc()
+    	.outerRadius(radius - 4)
+    	.innerRadius(60);
+
+		var pie = d3.pie()
+	    .sort(null)
+	    .value(function(d) {
+	        return d.count;
+	    });
+
+		var svg = d3.select('#chart'+index).append("svg")
+	    .attr("width", width)
+	    .attr("height", height)
+	    .append("g")
+	    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    var g = svg.selectAll(".arc")
+      .data(pie(data))
+      .enter().append("g");    
+
+   	g.append("path")
+    	.attr("d", arc)
+      .style("fill", function(d,i) {
+      	return d.data.color;
+      });
+
+
+    // g.append("text")
+    // 	.attr("transform", function(d) {
+    //     var _d = arc.centroid(d);
+    //     _d[0] *= 1.5;	//multiply by a constant factor
+    //     _d[1] *= 1.5;	//multiply by a constant factor
+    //     return "translate(" + _d + ")";
+    //   })
+    //   .attr("dy", ".50em")
+    //   .style("text-anchor", "middle")
+    //   .text(function(d) {
+        
+    //     return d.data.percentage + '%';
+    //   });
+
+        
+    g.append("text")
+	   .attr("text-anchor", "middle")
+		 .attr('font-size', '1em')
+		 .attr('y', 4)
+	   .text(total_ca+" Calories");
+}
+
 </script>
+
 </body>
 </html>
