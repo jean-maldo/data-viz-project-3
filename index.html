@@ -131,10 +131,8 @@ d3.queue()
             .await(showVisualization);
 
 var ingredient_leaves;
-var categories;
+var categories, lineColors;
 var cat_array;
-
-var color = d3.interpolateLab("#008000", "#c83a22");
 
 // Sample the SVG path string "d" uniformly with the specified precision.
 function sample(d, precision) {
@@ -203,13 +201,12 @@ function perp(p0, p1) {
 function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_dinner, data_categories, recipes) {
     if (error) throw error;
     
-      
     
-   
+
       var data=recipes; //need to change this to be a filtered listener
       specificData=data.filter(function(d){
         return d.brunch==="1"})
-
+      var color = d3.interpolateLab("#008000", "#c83a22");
       var root = packageHierarchy(data_brunch)
           .sum(function(d) { return d.size; });
 
@@ -217,21 +214,7 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
       d3.select("#ingredients").on("mouseleave",clusterouted)
       ingredient_leaves = root.leaves();
       categories = {};
-        
-      
-      packageImports(ingredient_leaves).forEach(function(d, i) {
-        path_line = line(packageImports(ingredient_leaves)[i]);
-
-        link
-            .data(quad(sample(path_line, 8)))
-            .enter().append("path")
-            .each(function(e) { e.source = d[0], e.target = d[d.length - 1]; })
-            .attr("class", "link")
-            .style("fill", function(d) { return color(d.t); })
-            .style("stroke", function(d) { return color(d.t); })
-            .attr("opacity", 0.9)
-            .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
-      });
+      lineColors = {};
       
       ingredient_leaves.forEach(function(d, i) {
         
@@ -250,6 +233,28 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
       for (var prop in categories) {
         cat_array.push(categories[prop]);
       }
+      
+      var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
+      
+      for (var i=0; i < cat_array.length; i++) {
+        for (var j=0; j < cat_array.length; j++) {
+            lineColors[cat_array[i].category + "_" + cat_array[j].category] = d3.interpolateLab(colorScale(i), colorScale(j));
+        }
+      }
+      
+      packageImports(ingredient_leaves).forEach(function(d, i) {
+        path_line = line(packageImports(ingredient_leaves)[i]);
+
+        link
+            .data(quad(sample(path_line, 8)))
+            .enter().append("path")
+            .each(function(e) { e.source = d[0], e.target = d[d.length - 1]; })
+            .attr("class", "link")
+            .style("fill", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
+            .style("stroke", function(d) { return lineColors[d.source.parent.data.key + "_" + d.target.parent.data.key](d.t); })
+            .attr("opacity", 0.9)
+            .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
+      });
       
       node = node
         .data(ingredient_leaves)
