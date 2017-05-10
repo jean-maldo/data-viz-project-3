@@ -8,7 +8,6 @@
 
 .node {
   font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #aaa;
 }
 
 .category {
@@ -216,10 +215,13 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
       categories = {};
       lineColors = {};
       
+        cat_index = 0;
+        
       ingredient_leaves.forEach(function(d, i) {
         
         if (!categories[d.data.parent.key]) {
-            categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1};
+            categories[d.data.parent.key] = {category: d.data.parent.key, x:d.x, y:d.y, count: 1, index: cat_index};
+            cat_index++;
         } else {
             categories[d.data.parent.key].x += d.x;
             categories[d.data.parent.key].y += d.y;
@@ -261,6 +263,7 @@ function showVisualization(error, data_breakfast, data_brunch, data_lunch, data_
         .enter().append("text")
           .attr("class", "node")
           .attr("dy", "0.31em")
+          .attr("fill", function(d) { console.log(colorScale(categories[d.parent.data.key].index)); return colorScale(categories[d.parent.data.key].index); })
           .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 30) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
           .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
           .text(function(d) { return d.data.key; })
