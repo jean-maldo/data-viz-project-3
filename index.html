@@ -35,7 +35,7 @@ fieldset, label { margin: 0; padding: 0; }
 body{ margin: 20px; }
 h1 { font-size: 2.5em; margin: 10px; }
 h3 { margin: 10px; }
-h2 {font-family: 'arial';}
+
 /****** Style Star Rating Widget *****/
 
 .rating {
@@ -84,9 +84,9 @@ h2 {font-family: 'arial';}
             <div class="col-sm-offset-1 col-sm-2"> <img  src="images/cover.png" alt="Cinque Terre" width="279" height="188"></div>
             <div class="col-sm-9">
                 </br>
-                <h1 class = "title">Foodspire! </h1>
+                <h1 class = "title" style = "padding-left: 40px">Foodspire! </h1>
                 </br>
-                <h3>A quick guide to nutritious guide!</h3>
+                <h3 style="padding-left: 40px">A quick guide to nutritious guide!</h3>
             </div>
         </div>
 
@@ -122,7 +122,6 @@ h2 {font-family: 'arial';}
             </div>
             <div class="col-lg-4">
                 <div class=" row">
-										<h3 id="ingredient_name"></h3>
                     <div class="dropdown" style="padding-top: 40px">
                         <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select ranking (default top rated recipes)
                         <span class="caret"></span></button>
@@ -138,8 +137,15 @@ h2 {font-family: 'arial';}
 
                 </div>
 
+             <!-- legend -->
+             <div style="padding-top: 20px">
+  <img src="images/legend.png" alt="Cinque Terre" width = "279" height = "13"> </div>
+<!-- legend ends -->
+
                 <div id = "ratinglist" class="yang_row row"></div>
             </div>
+
+
          </div>
     </div>
 
@@ -149,6 +155,21 @@ var food_cat = "breakfast"
 var food_rating = "rating"
 var rating_num = 5
 var food_cat_list = {};
+
+
+// drawrightcharts("breakfast","rating")
+
+
+//
+// $(".dropdown-menu li a").click(function(){
+//
+//     $(".btn:first-child").text($(this).text());
+//      $(".btn:first-child").val($(this).text());
+//      food_rating = $(this).attr('id')
+//      drawrightcharts(food_cat,food_rating)
+//      $(".btn:first-child").append(" <span class='caret'></span>")
+//   });
+
 
 
 function changeClass() {
@@ -200,7 +221,8 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
 
     for(i = 0; i < rating_num; i++){
 	    $("#ratinglist").append("<p><div class='row'><b>"+food_data[i].title+"</b></div><div class='row vertical-center'>"
-	    +"<div class='col-md-6 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p>Fat: "+ food_data[i].fatcontent +"g <p>Protein: "+ food_data[i].proteincontent +"g <p>Carbohydrates: "+ food_data[i].carbscontent +"g <p>Sodium: "+ food_data[i].sodiumcontent +"g <p>Fiber: "+ food_data[i].fibercontent +"g <p>Cholesterol: "+ food_data[i].cholesterolcontent +"g <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
+
+	    +"<div class='col-md-4 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p>Fat: "+ food_data[i].fatcontent +"g <p>Protein: "+ food_data[i].proteincontent +"g <p>Carbohydrates: "+ food_data[i].carbscontent +"g <p>Sodium: "+ food_data[i].sodiumcontent +"g <p>Fiber: "+ food_data[i].fibercontent +"g <p>Cholesterol: "+ food_data[i].cholesterolcontent +"g <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
 	    drawdonut(food_data[i], i)
 	    for(j=0; j<food_data[i].rating; j++){
 		   $("#stars"+i).append('<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>')
@@ -496,6 +518,9 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
 
 				    food_cat = $(this).attr('id')
 
+						// d3.select("#ingredient_links")
+						// .select("svg").selectAll("*").remove()
+
 
 						showIngredientLinks(food_cat,recipes, data_categories)
 
@@ -524,14 +549,12 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
     var lasthovered;
     function mouseovered(d) {
 
-
       d3.selectAll(".recipenames").remove()
 
       // d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
       d3.selectAll("path").style("visibility","visible")
 
       lasthovered=d.data.ingredient
-			document.getElementById("ingredient_name").innerHTML="Selected Ingredient: "+lasthovered
 
       recipes=specificData.filter(function(i){
         return i[lasthovered]==="1"})
