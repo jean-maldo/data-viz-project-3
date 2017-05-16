@@ -12,7 +12,7 @@
 
 	<style>
 	.title {font-family: 'Fjalla One';}
-	body {font-family: 'Josefin Sans';}
+	body {font-family: 'Helvetica';}
 	svg {border: solid white 1px; background-color: white; display: block; margin: auto; }
 	.cat_img:hover {
   border: 3px solid #5c5c5c;
@@ -34,6 +34,7 @@
 fieldset, label { margin: 0; padding: 0; }
 body{ margin: 20px; }
 h1 { font-size: 2.5em; margin: 10px; }
+h2 {font-size: 2em;}
 h3 { margin: 10px; }
 
 /****** Style Star Rating Widget *****/
@@ -117,10 +118,13 @@ h3 { margin: 10px; }
         <!-- 	dropdown menues
          -->
          <div class="row">
+
             <div id="ingredient_links" class="col-lg-8">
 
             </div>
+
             <div class="col-lg-4">
+							<h2 id="selected_ingredient"> </h2>
                 <div class=" row">
                     <div class="dropdown" style="padding-top: 40px">
                         <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Select ranking (default top rated recipes)
@@ -139,8 +143,11 @@ h3 { margin: 10px; }
 
              <!-- legend -->
              <div style="padding-top: 20px">
+
+
   <img src="images/legend.png" alt="Cinque Terre" width = "279" height = "13"> </div>
 <!-- legend ends -->
+
 
                 <div id = "ratinglist" class="yang_row row"></div>
             </div>
@@ -188,10 +195,7 @@ function changeClass() {
 
 function drawrightcharts(topRecipes, food_rating) { //need to pass in the data here already filtered to the top 5.
 	$("#ratinglist").empty()
-	// d3.csv("data/recipes_nutritional_cals.csv", function(csv) {
-  //   csv = csv.filter(function(row) { //filters to the category that is selected.
-  //       return row[food_cat] == '1';
-  //   });
+
 
     food_data = topRecipes.sort(function(a, b) {
 	switch(food_rating) {
@@ -222,7 +226,7 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
     for(i = 0; i < rating_num; i++){
 	    $("#ratinglist").append("<p><div class='row'><b>"+food_data[i].title+"</b></div><div class='row vertical-center'>"
 
-	    +"<div class='col-md-4 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p>Fat: "+ food_data[i].fatcontent +"g <p>Protein: "+ food_data[i].proteincontent +"g <p>Carbohydrates: "+ food_data[i].carbscontent +"g <p>Sodium: "+ food_data[i].sodiumcontent +"g <p>Fiber: "+ food_data[i].fibercontent +"g <p>Cholesterol: "+ food_data[i].cholesterolcontent +"g <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
+	    +"<div class='col-md-4 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p>Fat: "+ food_data[i].fatcontent +" <p>Protein: "+ food_data[i].proteincontent +" <p>Carbohydrates: "+ food_data[i].carbscontent +" <p>Sodium: "+ food_data[i].sodiumcontent +" <p>Fiber: "+ food_data[i].fibercontent +" <p>Cholesterol: "+ food_data[i].cholesterolcontent +" <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
 	    drawdonut(food_data[i], i)
 	    for(j=0; j<food_data[i].rating; j++){
 		   $("#stars"+i).append('<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>')
@@ -555,6 +559,8 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
       d3.selectAll("path").style("visibility","visible")
 
       lasthovered=d.data.ingredient
+			selected_ingredient="Recipes that include "+lasthovered
+			document.getElementById("selected_ingredient").innerHTML=selected_ingredient
 
       recipes=specificData.filter(function(i){
         return i[lasthovered]==="1"})
