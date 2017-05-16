@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
 	<title>Foodspire</title>
@@ -21,6 +21,13 @@
 .cat_img.active {
   border: 3px solid #00d3cc;
   border-radius: 8px;
+}
+
+
+.node:hover,
+.node--source,
+.node--target {
+  font-weight: 700;
 }
 
 .vertical-center {
@@ -285,12 +292,12 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
     d3.queue()
         .defer(d3.json, "data/ingredient-hierarchies/breakfast_hierarchy.json")
         .defer(d3.json, "data/ingredient-hierarchies/brunch_hierarchy.json")
-        .defer(d3.json, "data/ingredient-hierarchies/lunch_hierarchy.json")
-        .defer(d3.json, "data/ingredient-hierarchies/dinner_hierarchy.json")
-				.defer(d3.json, "data/ingredient-hierarchies/dessert_hierarchy.json")
-				.defer(d3.json, "data/ingredient-hierarchies/vegetarian_hierarchy.json")
-				.defer(d3.json, "data/ingredient-hierarchies/vegan_hierarchy.json")
-				.defer(d3.json, "data/ingredient-hierarchies/drink_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/lunch_gte7_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/dinner_gte10_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/dessert_gte15_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/vegetarian_gte20_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/vegan_gte7_hierarchy.json")
+        .defer(d3.json, "data/ingredient-hierarchies/drink_hierarchy.json")
         .defer(d3.csv, "data/ingredient_categories.csv")
         .defer(d3.csv,"data/recipes_nutritional_cals.csv")
         .await(showVisualization);

@@ -1,0 +1,278 @@
+source,target,dessert,source.category,target.category
+almond,amaretto,13,Nut,Alcohol
+almond,apple,12,Nut,Fruit
+almond,apricot,22,Nut,Fruit
+almond,berry,26,Nut,Fruit
+almond,brandy,13,Nut,Alcohol
+almond,cherry,36,Nut,Fruit
+almond,chocolate,68,Nut,Misc
+almond,cinnamon,10,Nut,Spice
+almond,coffee,11,Nut,Misc
+almond,cream cheese,16,Nut,Dairy
+almond,egg,72,Nut,Poultry
+almond,ginger,15,Nut,Vegetable
+almond,hazelnut,12,Nut,Nut
+almond,honey,24,Nut,Condiment
+almond,jam or jelly,10,Nut,Condiment
+almond,lemon,20,Nut,Fruit
+almond,liqueur,11,Nut,Alcohol
+almond,milk/cream,51,Nut,Dairy
+almond,orange,25,Nut,Fruit
+almond,pear,17,Nut,Fruit
+almond,pistachio,11,Nut,Nut
+almond,raisin,13,Nut,Fruit
+almond,raspberry,18,Nut,Fruit
+almond,strawberry,15,Nut,Fruit
+almond,vanilla,11,Nut,Condiment
+almond,walnut,19,Nut,Nut
+apple,cherry,13,Fruit,Fruit
+apple,cinnamon,30,Fruit,Spice
+apple,cranberry,17,Fruit,Fruit
+apple,egg,27,Fruit,Poultry
+apple,ginger,10,Fruit,Vegetable
+apple,honey,11,Fruit,Condiment
+apple,milk/cream,23,Fruit,Dairy
+apple,oat,14,Fruit,Grain
+apple,pecan,17,Fruit,Nut
+apple,phyllo/puff pastry dough,13,Fruit,Misc
+apple,prune,11,Fruit,Fruit
+apple,raisin,27,Fruit,Fruit
+apple,rum,10,Fruit,Alcohol
+apple,walnut,19,Fruit,Nut
+apricot,cherry,20,Fruit,Fruit
+apricot,chocolate,13,Fruit,Misc
+apricot,cranberry,11,Fruit,Fruit
+apricot,cream cheese,12,Fruit,Dairy
+apricot,dried fruit,11,Fruit,Fruit
+apricot,egg,15,Fruit,Poultry
+apricot,pear,10,Fruit,Fruit
+banana,chocolate,25,Fruit,Misc
+banana,egg,12,Fruit,Poultry
+banana,milk/cream,25,Fruit,Dairy
+banana,rum,21,Fruit,Alcohol
+berry,blackberry,33,Fruit,Fruit
+berry,blueberry,40,Fruit,Fruit
+berry,cherry,11,Fruit,Fruit
+berry,chocolate,30,Fruit,Misc
+berry,citrus,29,Fruit,Fruit
+berry,cranberry,16,Fruit,Fruit
+berry,cream cheese,15,Fruit,Dairy
+berry,egg,34,Fruit,Poultry
+berry,lemon,25,Fruit,Fruit
+berry,milk/cream,44,Fruit,Dairy
+berry,peach,17,Fruit,Fruit
+berry,pear,10,Fruit,Fruit
+berry,raspberry,62,Fruit,Fruit
+berry,strawberry,54,Fruit,Fruit
+berry,vanilla,10,Fruit,Condiment
+blackberry,blueberry,18,Fruit,Fruit
+blackberry,egg,19,Fruit,Poultry
+blackberry,lemon,13,Fruit,Fruit
+blackberry,milk/cream,24,Fruit,Dairy
+blackberry,raspberry,29,Fruit,Fruit
+blueberry,citrus,11,Fruit,Fruit
+blueberry,cream cheese,12,Fruit,Dairy
+blueberry,egg,12,Fruit,Poultry
+blueberry,lemon,29,Fruit,Fruit
+blueberry,milk/cream,26,Fruit,Dairy
+blueberry,raspberry,28,Fruit,Fruit
+blueberry,strawberry,15,Fruit,Fruit
+bourbon,milk/cream,11,Alcohol,Dairy
+bourbon,pecan,16,Alcohol,Nut
+brandy,cherry,10,Alcohol,Fruit
+brandy,chocolate,13,Alcohol,Misc
+brandy,milk/cream,11,Alcohol,Dairy
+brandy,prune,10,Alcohol,Fruit
+bread,egg,10,Grain,Poultry
+bread,milk/cream,12,Grain,Dairy
+butter,egg,15,Dairy,Poultry
+carrot,cream cheese,15,Vegetable,Dairy
+cheese,cream cheese,27,Dairy,Dairy
+cheese,egg,15,Dairy,Poultry
+cherry,chocolate,36,Fruit,Misc
+cherry,dried fruit,12,Fruit,Fruit
+cherry,egg,14,Fruit,Poultry
+cherry,milk/cream,21,Fruit,Dairy
+cherry,pear,11,Fruit,Fruit
+chocolate,cinnamon,25,Misc,Spice
+chocolate,citrus,19,Misc,Fruit
+chocolate,coconut,33,Misc,Fruit
+chocolate,coffee,61,Misc,Misc
+chocolate,cognac/armagnac,10,Misc,Alcohol
+chocolate,cranberry,15,Misc,Fruit
+chocolate,cream cheese,48,Misc,Dairy
+chocolate,dried fruit,13,Misc,Fruit
+chocolate,egg,141,Misc,Poultry
+chocolate,ginger,16,Misc,Vegetable
+chocolate,hazelnut,41,Misc,Nut
+chocolate,jam or jelly,21,Misc,Condiment
+chocolate,lemon,11,Misc,Fruit
+chocolate,liqueur,30,Misc,Alcohol
+chocolate,milk/cream,185,Misc,Dairy
+chocolate,mint,15,Misc,Herb
+chocolate,orange,43,Misc,Fruit
+chocolate,peanut,20,Misc,Legume
+chocolate,pear,10,Misc,Fruit
+chocolate,pecan,45,Misc,Nut
+chocolate,pistachio,20,Misc,Nut
+chocolate,raisin,10,Misc,Fruit
+chocolate,raspberry,38,Misc,Fruit
+chocolate,rum,17,Misc,Alcohol
+chocolate,sour cream,26,Misc,Dairy
+chocolate,strawberry,21,Misc,Fruit
+chocolate,vanilla,27,Misc,Condiment
+chocolate,walnut,39,Misc,Nut
+cinnamon,clove,34,Spice,Spice
+cinnamon,cream cheese,10,Spice,Dairy
+cinnamon,egg,38,Spice,Poultry
+cinnamon,ginger,28,Spice,Vegetable
+cinnamon,lemon,19,Spice,Fruit
+cinnamon,milk/cream,41,Spice,Dairy
+cinnamon,molasses,10,Spice,Condiment
+cinnamon,nutmeg,14,Spice,Spice
+cinnamon,orange,13,Spice,Fruit
+cinnamon,pear,13,Spice,Fruit
+cinnamon,pecan,13,Spice,Nut
+cinnamon,pumpkin,11,Spice,Vegetable
+cinnamon,vanilla,13,Spice,Condiment
+cinnamon,walnut,13,Spice,Nut
+citrus,cream cheese,13,Fruit,Dairy
+citrus,egg,60,Fruit,Poultry
+citrus,grapefruit,12,Fruit,Fruit
+citrus,lemon,49,Fruit,Fruit
+citrus,lime,22,Fruit,Fruit
+citrus,mango,11,Fruit,Fruit
+citrus,milk/cream,25,Fruit,Dairy
+citrus,orange,44,Fruit,Fruit
+citrus,rum,11,Fruit,Alcohol
+citrus,vanilla,10,Fruit,Condiment
+clove,ginger,18,Spice,Vegetable
+coconut,cream cheese,20,Fruit,Dairy
+coconut,egg,46,Fruit,Poultry
+coconut,lime,13,Fruit,Fruit
+coconut,mango,14,Fruit,Fruit
+coconut,milk/cream,31,Fruit,Dairy
+coconut,pecan,11,Fruit,Nut
+coconut,pineapple,22,Fruit,Fruit
+coconut,rum,16,Fruit,Alcohol
+coffee,cream cheese,10,Misc,Dairy
+coffee,egg,38,Misc,Poultry
+coffee,liqueur,10,Misc,Alcohol
+coffee,milk/cream,43,Misc,Dairy
+cognac/armagnac,egg,11,Alcohol,Poultry
+cognac/armagnac,milk/cream,12,Alcohol,Dairy
+cranberry,egg,10,Fruit,Poultry
+cranberry,milk/cream,12,Fruit,Dairy
+cranberry,orange,15,Fruit,Fruit
+cranberry,pear,15,Fruit,Fruit
+cranberry,pecan,10,Fruit,Nut
+cream cheese,egg,39,Dairy,Poultry
+cream cheese,ginger,18,Dairy,Vegetable
+cream cheese,jam or jelly,12,Dairy,Condiment
+cream cheese,lemon,19,Dairy,Fruit
+cream cheese,milk/cream,34,Dairy,Dairy
+cream cheese,orange,22,Dairy,Fruit
+cream cheese,pecan,10,Dairy,Nut
+cream cheese,raspberry,14,Dairy,Fruit
+cream cheese,sour cream,30,Dairy,Dairy
+cream cheese,strawberry,12,Dairy,Fruit
+cream cheese,vanilla,13,Dairy,Condiment
+cream cheese,walnut,18,Dairy,Nut
+date,pecan,11,Fruit,Nut
+date,walnut,14,Fruit,Nut
+dried fruit,raisin,12,Fruit,Fruit
+egg,fruit juice,14,Poultry,Fruit
+egg,ginger,39,Poultry,Vegetable
+egg,hazelnut,22,Poultry,Nut
+egg,honey,12,Poultry,Condiment
+egg,jam or jelly,19,Poultry,Condiment
+egg,lemon,64,Poultry,Fruit
+egg,lime,32,Poultry,Fruit
+egg,liqueur,21,Poultry,Alcohol
+egg,mango,19,Poultry,Fruit
+egg,milk/cream,278,Poultry,Dairy
+egg,molasses,11,Poultry,Condiment
+egg,orange,50,Poultry,Fruit
+egg,pear,17,Poultry,Fruit
+egg,pecan,36,Poultry,Nut
+egg,pineapple,13,Poultry,Fruit
+egg,pistachio,24,Poultry,Nut
+egg,pumpkin,19,Poultry,Vegetable
+egg,raisin,26,Poultry,Fruit
+egg,raspberry,37,Poultry,Fruit
+egg,rum,27,Poultry,Alcohol
+egg,sour cream,30,Poultry,Dairy
+egg,strawberry,32,Poultry,Fruit
+egg,vanilla,72,Poultry,Condiment
+egg,walnut,23,Poultry,Nut
+fig,honey,12,Fruit,Condiment
+fig,pear,10,Fruit,Fruit
+frangelico,hazelnut,12,Alcohol,Nut
+frangelico,milk/cream,11,Alcohol,Dairy
+fruit juice,orange,16,Fruit,Fruit
+ginger,lemon,11,Vegetable,Fruit
+ginger,mango,10,Vegetable,Fruit
+ginger,milk/cream,41,Vegetable,Dairy
+ginger,molasses,30,Vegetable,Condiment
+ginger,orange,10,Vegetable,Fruit
+ginger,pear,16,Vegetable,Fruit
+ginger,pecan,13,Vegetable,Nut
+ginger,pumpkin,11,Vegetable,Vegetable
+hazelnut,milk/cream,18,Nut,Dairy
+hazelnut,pear,11,Nut,Fruit
+honey,lemon,13,Condiment,Fruit
+honey,milk/cream,17,Condiment,Dairy
+honey,orange,21,Condiment,Fruit
+honey,walnut,26,Condiment,Nut
+honey,yogurt,13,Condiment,Dairy
+jam or jelly,milk/cream,18,Condiment,Dairy
+jam or jelly,raspberry,16,Condiment,Fruit
+lemon,lemon juice,10,Fruit,Fruit
+lemon,milk/cream,70,Fruit,Dairy
+lemon,orange,20,Fruit,Fruit
+lemon,strawberry,25,Fruit,Fruit
+lemon,walnut,14,Fruit,Nut
+lime,mango,18,Fruit,Fruit
+lime,milk/cream,21,Fruit,Dairy
+lime,rum,10,Fruit,Alcohol
+liqueur,milk/cream,34,Alcohol,Dairy
+liqueur,orange,22,Alcohol,Fruit
+mango,milk/cream,13,Fruit,Dairy
+mango,pineapple,18,Fruit,Fruit
+maple syrup,milk/cream,10,Condiment,Dairy
+milk/cream,mint,16,Dairy,Herb
+milk/cream,orange,38,Dairy,Fruit
+milk/cream,peach,18,Dairy,Fruit
+milk/cream,peanut,13,Dairy,Legume
+milk/cream,pear,18,Dairy,Fruit
+milk/cream,pecan,26,Dairy,Nut
+milk/cream,phyllo/puff pastry dough,12,Dairy,Misc
+milk/cream,pineapple,13,Dairy,Fruit
+milk/cream,pistachio,22,Dairy,Nut
+milk/cream,pumpkin,20,Dairy,Vegetable
+milk/cream,raisin,17,Dairy,Fruit
+milk/cream,raspberry,53,Dairy,Fruit
+milk/cream,rice,16,Dairy,Grain
+milk/cream,rum,36,Dairy,Alcohol
+milk/cream,sour cream,25,Dairy,Dairy
+milk/cream,strawberry,63,Dairy,Fruit
+milk/cream,vanilla,80,Dairy,Condiment
+milk/cream,walnut,26,Dairy,Nut
+milk/cream,yogurt,12,Dairy,Dairy
+mint,strawberry,10,Herb,Fruit
+orange,pecan,11,Fruit,Nut
+orange,pineapple,10,Fruit,Fruit
+orange,raspberry,10,Fruit,Fruit
+orange,sour cream,11,Fruit,Dairy
+orange,strawberry,11,Fruit,Fruit
+orange,vanilla,15,Fruit,Condiment
+orange,walnut,12,Fruit,Nut
+peach,raspberry,19,Fruit,Fruit
+pecan,pumpkin,10,Nut,Vegetable
+pecan,walnut,12,Nut,Nut
+pineapple,rum,10,Fruit,Alcohol
+raisin,rum,14,Fruit,Alcohol
+raisin,walnut,14,Fruit,Nut
+raspberry,strawberry,18,Fruit,Fruit
+rhubarb,strawberry,15,Fruit,Fruit
+sour cream,vanilla,13,Dairy,Condiment

@@ -1,0 +1,187 @@
+source,target,vegetarian,source.category,target.category
+almond,berry,20,Nut,Fruit
+almond,cherry,27,Nut,Fruit
+almond,chocolate,32,Nut,Misc
+almond,egg,46,Nut,Poultry
+almond,honey,24,Nut,Condiment
+almond,milk/cream,29,Nut,Dairy
+almond,raisin,23,Nut,Fruit
+apple,cinnamon,23,Fruit,Spice
+apple,egg,21,Fruit,Poultry
+apple,milk/cream,21,Fruit,Dairy
+apple,raisin,24,Fruit,Fruit
+apple,walnut,24,Fruit,Nut
+arugula,leafy green,21,Vegetable,Vegetable
+basil,cheese,27,Herb,Dairy
+basil,eggplant,20,Herb,Vegetable
+basil,garlic,25,Herb,Herb
+basil,herb,26,Herb,Herb
+basil,pasta,35,Herb,Grain
+basil,tomato,64,Herb,Vegetable
+bean,cheese,20,Vegetable,Dairy
+bean,garlic,24,Vegetable,Herb
+bean,onion,30,Vegetable,Vegetable
+bean,tomato,31,Vegetable,Vegetable
+bell pepper,cheese,21,Vegetable,Dairy
+bell pepper,eggplant,29,Vegetable,Vegetable
+bell pepper,onion,36,Vegetable,Vegetable
+bell pepper,pepper,33,Vegetable,Vegetable
+bell pepper,tomato,37,Vegetable,Vegetable
+bell pepper,zucchini,21,Vegetable,Vegetable
+berry,blackberry,22,Fruit,Fruit
+berry,blueberry,37,Fruit,Fruit
+berry,citrus,27,Fruit,Fruit
+berry,cranberry,24,Fruit,Fruit
+berry,egg,22,Fruit,Poultry
+berry,lemon,23,Fruit,Fruit
+berry,milk/cream,31,Fruit,Dairy
+berry,raspberry,42,Fruit,Fruit
+berry,strawberry,49,Fruit,Fruit
+blackberry,raspberry,21,Fruit,Fruit
+blue cheese,cheese,32,Dairy,Dairy
+blueberry,lemon,28,Fruit,Fruit
+blueberry,milk/cream,22,Fruit,Dairy
+bread,cornmeal,41,Grain,Grain
+bread,egg,35,Grain,Poultry
+bread,milk/cream,43,Grain,Dairy
+cabbage,carrot,26,Vegetable,Vegetable
+carrot,onion,28,Vegetable,Vegetable
+carrot,potato,21,Vegetable,Vegetable
+cheddar,cheese,30,Dairy,Dairy
+cheddar,egg,20,Dairy,Poultry
+cheese,citrus,20,Dairy,Fruit
+cheese,cream cheese,29,Dairy,Dairy
+cheese,egg,60,Dairy,Poultry
+cheese,feta,21,Dairy,Dairy
+cheese,garlic,42,Dairy,Herb
+cheese,goat cheese,40,Dairy,Dairy
+cheese,herb,73,Dairy,Herb
+cheese,leafy green,39,Dairy,Vegetable
+cheese,milk/cream,38,Dairy,Dairy
+cheese,mozzarella,20,Dairy,Dairy
+cheese,mushroom,33,Dairy,Vegetable
+cheese,olive,21,Dairy,Vegetable
+cheese,onion,53,Dairy,Vegetable
+cheese,parmesan,52,Dairy,Dairy
+cheese,pasta,69,Dairy,Grain
+cheese,pepper,27,Dairy,Vegetable
+cheese,potato,39,Dairy,Vegetable
+cheese,tomato,88,Dairy,Vegetable
+cheese,zucchini,27,Dairy,Vegetable
+chocolate,coconut,22,Misc,Fruit
+chocolate,coffee,39,Misc,Misc
+chocolate,cream cheese,31,Misc,Dairy
+chocolate,egg,81,Misc,Poultry
+chocolate,hazelnut,20,Misc,Nut
+chocolate,milk/cream,108,Misc,Dairy
+chocolate,pecan,27,Misc,Nut
+chocolate,raspberry,22,Misc,Fruit
+chocolate,walnut,23,Misc,Nut
+cilantro,herb,20,Herb,Herb
+cilantro,onion,35,Herb,Vegetable
+cilantro,tomato,24,Herb,Vegetable
+cinnamon,clove,32,Spice,Spice
+cinnamon,egg,33,Spice,Poultry
+cinnamon,ginger,29,Spice,Vegetable
+cinnamon,milk/cream,30,Spice,Dairy
+citrus,egg,50,Fruit,Poultry
+citrus,herb,29,Fruit,Herb
+citrus,lemon,53,Fruit,Fruit
+citrus,milk/cream,25,Fruit,Dairy
+citrus,orange,48,Fruit,Fruit
+coconut,egg,29,Fruit,Poultry
+coconut,milk/cream,23,Fruit,Dairy
+coffee,egg,29,Misc,Poultry
+coffee,milk/cream,29,Misc,Dairy
+corn,tomato,32,Vegetable,Vegetable
+cornmeal,egg,21,Grain,Poultry
+cornmeal,milk/cream,33,Grain,Dairy
+cranberry,orange,24,Fruit,Fruit
+cream cheese,egg,32,Dairy,Poultry
+cream cheese,milk/cream,32,Dairy,Dairy
+cream cheese,sour cream,26,Dairy,Dairy
+cucumber,tomato,27,Vegetable,Vegetable
+egg,ginger,32,Poultry,Vegetable
+egg,herb,28,Poultry,Herb
+egg,lemon,47,Poultry,Fruit
+egg,lime,23,Poultry,Fruit
+egg,milk/cream,251,Poultry,Dairy
+egg,onion,30,Poultry,Vegetable
+egg,orange,36,Poultry,Fruit
+egg,parmesan,20,Poultry,Dairy
+egg,pecan,25,Poultry,Nut
+egg,pistachio,20,Poultry,Nut
+egg,potato,30,Poultry,Vegetable
+egg,raisin,21,Poultry,Fruit
+egg,raspberry,22,Poultry,Fruit
+egg,sour cream,26,Poultry,Dairy
+egg,strawberry,23,Poultry,Fruit
+egg,tomato,26,Poultry,Vegetable
+egg,vanilla,51,Poultry,Condiment
+egg,walnut,20,Poultry,Nut
+eggplant,tomato,54,Vegetable,Vegetable
+feta,tomato,27,Dairy,Vegetable
+fruit juice,orange,25,Fruit,Fruit
+garlic,ginger,22,Herb,Vegetable
+garlic,herb,57,Herb,Herb
+garlic,leafy green,28,Herb,Vegetable
+garlic,lemon,23,Herb,Fruit
+garlic,onion,52,Herb,Vegetable
+garlic,parmesan,29,Herb,Dairy
+garlic,parsley,22,Herb,Herb
+garlic,pasta,34,Herb,Grain
+garlic,potato,46,Herb,Vegetable
+garlic,tomato,62,Herb,Vegetable
+ginger,milk/cream,33,Vegetable,Dairy
+ginger,molasses,23,Vegetable,Condiment
+goat cheese,tomato,31,Dairy,Vegetable
+herb,leafy green,26,Herb,Vegetable
+herb,mint,34,Herb,Herb
+herb,mushroom,23,Herb,Vegetable
+herb,onion,51,Herb,Vegetable
+herb,parsley,34,Herb,Herb
+herb,pasta,42,Herb,Grain
+herb,pepper,20,Herb,Vegetable
+herb,potato,41,Herb,Vegetable
+herb,tomato,54,Herb,Vegetable
+herb,zucchini,20,Herb,Vegetable
+honey,walnut,20,Condiment,Nut
+jalapeno,onion,30,Vegetable,Vegetable
+leafy green,onion,30,Vegetable,Vegetable
+leafy green,spinach,29,Vegetable,Vegetable
+leafy green,tomato,27,Vegetable,Vegetable
+leafy green,vinegar,22,Vegetable,Condiment
+lemon,milk/cream,44,Fruit,Dairy
+liqueur,milk/cream,20,Alcohol,Dairy
+milk/cream,mushroom,20,Dairy,Vegetable
+milk/cream,onion,28,Dairy,Vegetable
+milk/cream,orange,25,Dairy,Fruit
+milk/cream,parmesan,31,Dairy,Dairy
+milk/cream,pasta,21,Dairy,Grain
+milk/cream,potato,58,Dairy,Vegetable
+milk/cream,raspberry,32,Dairy,Fruit
+milk/cream,sour cream,20,Dairy,Dairy
+milk/cream,strawberry,36,Dairy,Fruit
+milk/cream,vanilla,58,Dairy,Condiment
+mint,onion,20,Herb,Vegetable
+mint,parsley,22,Herb,Herb
+mint,tomato,22,Herb,Vegetable
+mozzarella,tomato,25,Dairy,Vegetable
+mushroom,onion,32,Vegetable,Vegetable
+mushroom,parmesan,21,Vegetable,Dairy
+mushroom,pasta,31,Vegetable,Grain
+mushroom,potato,21,Vegetable,Vegetable
+olive,tomato,43,Vegetable,Vegetable
+onion,parmesan,20,Vegetable,Dairy
+onion,pasta,21,Vegetable,Grain
+onion,pepper,36,Vegetable,Vegetable
+onion,potato,51,Vegetable,Vegetable
+onion,tomato,86,Vegetable,Vegetable
+onion,vinegar,39,Vegetable,Condiment
+parmesan,pasta,42,Dairy,Grain
+parmesan,potato,20,Dairy,Vegetable
+parmesan,tomato,25,Dairy,Vegetable
+pasta,tomato,76,Grain,Vegetable
+pepper,tomato,26,Vegetable,Vegetable
+potato,sweet potato/yam,22,Vegetable,Vegetable
+tomato,zucchini,32,Vegetable,Vegetable

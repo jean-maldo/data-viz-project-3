@@ -6,7 +6,7 @@ import json
 data = []
 
 #ingredients together in more than or equal to 5 recipes
-with open('../data/ingredient-hierarchies/vegetarian_gte5.csv') as csvfile:
+with open('../project3/data/ingredient-hierarchies/vegan_gte7.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     header = reader.next()
     
@@ -19,7 +19,7 @@ with open('../data/ingredient-hierarchies/vegetarian_gte5.csv') as csvfile:
                 list_item['list_ingredients'].append([row[(i+1) % 2]])
                 list_item['size'] += int(row[2])
 
-with open('../data/ingredient-hierarchies/vegetarian_gte5_hierarchy.json', 'w') as outfile:  
+with open('../project3/data/ingredient-hierarchies/vegan_gte7_hierarchy.json', 'w') as outfile:  
     json.dump(data, outfile)
 
 print len(data)
