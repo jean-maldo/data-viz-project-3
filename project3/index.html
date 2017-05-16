@@ -31,6 +31,21 @@
   align-items: center;
 }
 
+#fat {
+	border: 2px solid #F8E81C;
+	padding: 5px;
+}
+
+#protein {
+	border: 2px solid #4A90E2;
+	padding: 5px;
+}
+
+#carbs {
+	border: 2px solid #F5A623;
+	padding: 5px;
+}
+
 fieldset, label { margin: 0; padding: 0; }
 body{ margin: 20px; }
 h1 { font-size: 2.5em; margin: 10px; }
@@ -105,7 +120,7 @@ h3 { font-size: 1em; margin: 10px; }
             </div>
             <div class="col-xs-6 no-gutters">
                 <div class="col-sm-6 no-gutters">
-                    <div class="col-lg-6 no-gutters" align="center"> <img id="dessert" class="cat_img" src="images/dissert.png" alt="Cinque Terre" width="120" height="80"></div>
+                    <div class="col-lg-6 no-gutters" align="center"> <img id="dessert" class="cat_img" src="images/dessert.png" alt="Cinque Terre" width="120" height="80"></div>
                     <div class="col-lg-6 no-gutters" align="center"> <img id="vegetarian" class="cat_img" src="images/vegetarian.png" alt="Cinque Terre" width="120" height="80"></div>
                 </div>
                 <div class="col-sm-6 no-gutters">
@@ -224,8 +239,8 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
 
 
     for(i = 0; i < rating_num; i++){
-	    $("#ratinglist").append("<p><div class='row'><a href="+food_data[i].link+">"+food_data[i].title+"</a></div><div class='row vertical-center'>"
-	    +"<div class='col-md-4 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p>Fat: "+ food_data[i].fatcontent +" <p>Protein: "+ food_data[i].proteincontent +" <p>Carbohydrates: "+ food_data[i].carbscontent +" <p>Sodium: "+ food_data[i].sodiumcontent +" <p>Fiber: "+ food_data[i].fibercontent +" <p>Cholesterol: "+ food_data[i].cholesterolcontent +" <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
+	    $("#ratinglist").append("<p><div class='row'><a href="+food_data[i].link+" target='_blank'>"+food_data[i].title+"</a></div><div class='row vertical-center'>"
+	    +"<div class='col-md-4 '><div class='row'><fieldset id='stars"+i +"' class='rating'></fieldset></p></div><p><div class='row'><p id='fat' >Fat: "+ food_data[i].fatcontent +"g <p id='protein' >Protein: "+ food_data[i].proteincontent +"g <p id='carbs'>Carbohydrates: "+ food_data[i].carbscontent +"g <p>Sodium: "+ food_data[i].sodiumcontent +"mg <p>Fiber: "+ food_data[i].fibercontent +"g <p>Cholesterol: "+ printCholesterol(food_data[i].cholesterolcontent) +" <p></div></div><div class='col-md-6'> <span class='float-md-left' id='chart"+i+"'></span></div>")
 	    drawdonut(food_data[i], i)
 	    for(j=0; j<food_data[i].rating; j++){
 		   $("#stars"+i).append('<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>')
@@ -234,6 +249,14 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
 
     }
 	// })
+}
+
+function printCholesterol(data){
+	if (data!=="No cholesterol data"){
+		data=data+"g"
+	}
+	return data
+
 }
 
 
@@ -575,22 +598,6 @@ function drawrightcharts(topRecipes, food_rating) { //need to pass in the data h
 			     drawrightcharts(topRecipes,food_rating)
 			     $(".btn:first-child").append(" <span class='caret'></span>")
 			  });
-
-      // index=1
-      // topTen.forEach(function(d){
-			//
-      //   svg1.append("a")
-      //   .attr("xlink:href", d.link)
-      //   .append("text")
-      //   .attr("x",75)
-      //   .attr("y",40*index+250)
-      //   .text(index+". "+d.title)
-      //   .style("fill",10)
-      //   .classed("recipenames", true)
-      //   .on("mouseover", recipeOver)
-      //   .on("mouseout", recipeOut)
-      //   index+=1;
-      // })
 
 
 
