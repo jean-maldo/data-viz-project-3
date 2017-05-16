@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -184,21 +183,6 @@ var rating_num = 5
 var food_cat_list = {};
 
 
-// drawrightcharts("breakfast","rating")
-
-
-//
-// $(".dropdown-menu li a").click(function(){
-//
-//     $(".btn:first-child").text($(this).text());
-//      $(".btn:first-child").val($(this).text());
-//      food_rating = $(this).attr('id')
-//      drawrightcharts(food_cat,food_rating)
-//      $(".btn:first-child").append(" <span class='caret'></span>")
-//   });
-
-
-
 function changeClass() {
 
     $('.cat_img.active').removeClass('active');
@@ -207,8 +191,6 @@ function changeClass() {
     food_cat = $(this).attr('id')
 		console.log(food_cat)
 
-	//
-	// drawrightcharts(topRecipes,food_rating)
 
 
 }
@@ -266,17 +248,6 @@ function printCholesterol(data){
 
 
     //code for hierarchical data is from Mike Bostock https://bl.ocks.org/mbostock/7607999
-
-    //this is for width and height of recipes
-    var width=530
-    var height=800
-
-    var svg1 = d3.select("#svg1").append("svg")
-        .attr("width", width)
-        .attr("height", height);
-    d3.select("#svg1").style("visibility","hidden")
-
-
 
 
 
@@ -466,8 +437,6 @@ function printCholesterol(data){
 			                .attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], 1); });
 			          });
 
-								// node=node.selectAll(".node").remove();
-
 								node=node.remove()
 								  node = svg.append("g").selectAll(".node"),
 
@@ -548,10 +517,6 @@ function printCholesterol(data){
 
 				    food_cat = $(this).attr('id')
 
-						// d3.select("#ingredient_links")
-						// .select("svg").selectAll("*").remove()
-
-
 						showIngredientLinks(food_cat,recipes, data_categories)
 
 				}
@@ -578,12 +543,12 @@ function printCholesterol(data){
 
     var lasthovered;
     function mouseovered(d) {
-      document.getElementById("sidebar").style.visibility="visible"
+      document.getElementById("sidebar").style.visibility="visible" //make sidebar hidden when the user selects an ingredient
       document.getElementById("instructions").style.visibility="hidden"
 
       d3.selectAll(".recipenames").remove()
 
-      // d3.select("#svg1").style("visibility","visible"); //make recipe svg visible
+
       d3.selectAll("path").style("visibility","visible")
 
       lasthovered=d.data.ingredient
@@ -720,21 +685,6 @@ function drawdonut(rowdata, index) {
       .style("fill", function(d,i) {
       	return d.data.color;
       });
-
-
-    // g.append("text")
-    // 	.attr("transform", function(d) {
-    //     var _d = arc.centroid(d);
-    //     _d[0] *= 1.5;	//multiply by a constant factor
-    //     _d[1] *= 1.5;	//multiply by a constant factor
-    //     return "translate(" + _d + ")";
-    //   })
-    //   .attr("dy", ".50em")
-    //   .style("text-anchor", "middle")
-    //   .text(function(d) {
-
-    //     return d.data.percentage + '%';
-    //   });
 
 
     g.append("text")
