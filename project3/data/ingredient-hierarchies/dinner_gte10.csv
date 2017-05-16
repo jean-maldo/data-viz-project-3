@@ -1,0 +1,199 @@
+source,target,dinner,source.category,target.category
+apple,pork,13,Fruit,Meat
+bacon,beef,10,Meat,Meat
+bacon,onion,12,Meat,Vegetable
+bacon,pasta,10,Meat,Grain
+bacon,pork,16,Meat,Meat
+bacon,tomato,11,Meat,Vegetable
+basil,herb,17,Herb,Herb
+basil,pasta,14,Herb,Grain
+basil,tomato,17,Herb,Vegetable
+bean,garlic,13,Vegetable,Herb
+bean,pasta,10,Vegetable,Grain
+bean,sausage,10,Vegetable,Meat
+bean,tomato,14,Vegetable,Vegetable
+beef,beef rib,10,Meat,Meat
+beef,beef tenderloin,14,Meat,Meat
+beef,carrot,18,Meat,Vegetable
+beef,garlic,17,Meat,Herb
+beef,ginger,11,Meat,Vegetable
+beef,ground beef,18,Meat,Meat
+beef,herb,20,Meat,Herb
+beef,mushroom,17,Meat,Vegetable
+beef,mustard,10,Meat,Condiment
+beef,noodle,12,Meat,Grain
+beef,onion,32,Meat,Vegetable
+beef,pepper,11,Meat,Vegetable
+beef,pork,16,Meat,Meat
+beef,potato,10,Meat,Vegetable
+beef,red wine,20,Meat,Alcohol
+beef,soy sauce,12,Meat,Condiment
+beef,tomato,18,Meat,Vegetable
+beef,wine,13,Meat,Alcohol
+bell pepper,chicken,11,Vegetable,Meat
+bell pepper,onion,16,Vegetable,Vegetable
+bell pepper,pepper,22,Vegetable,Vegetable
+bell pepper,potato,10,Vegetable,Vegetable
+bell pepper,tomato,19,Vegetable,Vegetable
+butternut squash,squash,10,Vegetable,Vegetable
+carrot,garlic,10,Vegetable,Herb
+carrot,onion,21,Vegetable,Vegetable
+carrot,potato,15,Vegetable,Vegetable
+cheddar,cheese,16,Dairy,Dairy
+cheese,chicken,11,Dairy,Meat
+cheese,garlic,15,Dairy,Herb
+cheese,herb,23,Dairy,Herb
+cheese,leafy green,13,Dairy,Vegetable
+cheese,mushroom,13,Dairy,Vegetable
+cheese,noodle,10,Dairy,Grain
+cheese,onion,17,Dairy,Vegetable
+cheese,parmesan,21,Dairy,Dairy
+cheese,pasta,37,Dairy,Grain
+cheese,poultry,10,Dairy,Meat
+cheese,spinach,10,Dairy,Vegetable
+cheese,tomato,30,Dairy,Vegetable
+chicken,chile pepper,13,Meat,Vegetable
+chicken,cilantro,11,Meat,Herb
+chicken,citrus,10,Meat,Fruit
+chicken,garlic,35,Meat,Herb
+chicken,ginger,21,Meat,Vegetable
+chicken,herb,32,Meat,Herb
+chicken,leafy green,16,Meat,Vegetable
+chicken,lemon,16,Meat,Fruit
+chicken,milk/cream,11,Meat,Dairy
+chicken,mushroom,20,Meat,Vegetable
+chicken,mustard,14,Meat,Condiment
+chicken,noodle,11,Meat,Grain
+chicken,olive,13,Meat,Vegetable
+chicken,onion,40,Meat,Vegetable
+chicken,orange,10,Meat,Fruit
+chicken,pasta,10,Meat,Grain
+chicken,potato,15,Meat,Vegetable
+chicken,poultry,87,Meat,Meat
+chicken,soy sauce,13,Meat,Condiment
+chicken,tarragon,11,Meat,Herb
+chicken,tomato,37,Meat,Vegetable
+chicken,vinegar,10,Meat,Condiment
+cilantro,garlic,14,Herb,Herb
+cilantro,ginger,12,Herb,Vegetable
+cilantro,onion,13,Herb,Vegetable
+cilantro,tomato,10,Herb,Vegetable
+citrus,fish,15,Fruit,Seafood
+citrus,herb,17,Fruit,Herb
+citrus,lemon,16,Fruit,Fruit
+citrus,orange,11,Fruit,Fruit
+clam,shrimp,10,Seafood,Seafood
+cod,fish,10,Seafood,Seafood
+duck,poultry,13,Meat,Meat
+eggplant,tomato,14,Vegetable,Vegetable
+fish,garlic,13,Seafood,Herb
+fish,ginger,17,Seafood,Vegetable
+fish,halibut,15,Seafood,Seafood
+fish,herb,25,Seafood,Herb
+fish,leafy green,12,Seafood,Vegetable
+fish,lemon,12,Seafood,Fruit
+fish,mushroom,10,Seafood,Vegetable
+fish,olive,10,Seafood,Vegetable
+fish,onion,13,Seafood,Vegetable
+fish,pasta,11,Seafood,Grain
+fish,potato,14,Seafood,Vegetable
+fish,salmon,32,Seafood,Seafood
+fish,snapper,10,Seafood,Seafood
+fish,tomato,25,Seafood,Vegetable
+garlic,ginger,19,Herb,Vegetable
+garlic,herb,43,Herb,Herb
+garlic,lamb,20,Herb,Meat
+garlic,leafy green,11,Herb,Vegetable
+garlic,lemon,13,Herb,Fruit
+garlic,mushroom,11,Herb,Vegetable
+garlic,onion,41,Herb,Vegetable
+garlic,parsley,10,Herb,Herb
+garlic,pasta,23,Herb,Grain
+garlic,pork,19,Herb,Meat
+garlic,poultry,15,Herb,Meat
+garlic,red wine,11,Herb,Alcohol
+garlic,rosemary,19,Herb,Herb
+garlic,thyme,10,Herb,Herb
+garlic,tomato,35,Herb,Vegetable
+garlic,white wine,15,Herb,Alcohol
+ginger,noodle,13,Vegetable,Grain
+ginger,onion,14,Vegetable,Vegetable
+ginger,pork,10,Vegetable,Meat
+ginger,poultry,12,Vegetable,Meat
+ginger,soy sauce,19,Vegetable,Condiment
+ginger,tomato,10,Vegetable,Vegetable
+herb,lamb,13,Herb,Meat
+herb,leafy green,11,Herb,Vegetable
+herb,lemon,14,Herb,Fruit
+herb,milk/cream,10,Herb,Dairy
+herb,noodle,12,Herb,Grain
+herb,onion,26,Herb,Vegetable
+herb,parsley,16,Herb,Herb
+herb,pasta,24,Herb,Grain
+herb,pepper,10,Herb,Vegetable
+herb,pork,15,Herb,Meat
+herb,potato,14,Herb,Vegetable
+herb,poultry,22,Herb,Meat
+herb,rosemary,14,Herb,Herb
+herb,tarragon,12,Herb,Herb
+herb,thyme,14,Herb,Herb
+herb,tomato,32,Herb,Vegetable
+hot pepper,onion,11,Vegetable,Vegetable
+lamb,onion,10,Meat,Vegetable
+leafy green,onion,10,Vegetable,Vegetable
+leafy green,pasta,11,Vegetable,Grain
+leafy green,poultry,12,Vegetable,Meat
+lemon,pasta,14,Fruit,Grain
+milk/cream,mushroom,15,Dairy,Vegetable
+milk/cream,pasta,16,Dairy,Grain
+milk/cream,pork,13,Dairy,Meat
+milk/cream,potato,12,Dairy,Vegetable
+milk/cream,white wine,10,Dairy,Alcohol
+mint,parsley,10,Herb,Herb
+mozzarella,pasta,13,Dairy,Grain
+mozzarella,tomato,12,Dairy,Vegetable
+mushroom,noodle,12,Vegetable,Grain
+mushroom,onion,19,Vegetable,Vegetable
+mushroom,pasta,27,Vegetable,Grain
+mushroom,potato,10,Vegetable,Vegetable
+mushroom,poultry,12,Vegetable,Meat
+mushroom,rice,11,Vegetable,Grain
+mushroom,tomato,16,Vegetable,Vegetable
+mussel,shrimp,10,Seafood,Seafood
+mussel,tomato,10,Seafood,Vegetable
+mustard,onion,10,Condiment,Vegetable
+mustard,pork,17,Condiment,Meat
+noodle,pasta,35,Grain,Grain
+noodle,tomato,13,Grain,Vegetable
+olive,onion,16,Vegetable,Vegetable
+olive,pasta,12,Vegetable,Grain
+olive,tomato,23,Vegetable,Vegetable
+onion,pasta,10,Vegetable,Grain
+onion,pepper,10,Vegetable,Vegetable
+onion,pork,20,Vegetable,Meat
+onion,potato,18,Vegetable,Vegetable
+onion,poultry,21,Vegetable,Meat
+onion,tomato,41,Vegetable,Vegetable
+onion,vinegar,13,Vegetable,Condiment
+parmesan,pasta,29,Dairy,Grain
+parmesan,tomato,15,Dairy,Vegetable
+pasta,pine nut,10,Grain,Nut
+pasta,pork,15,Grain,Meat
+pasta,ricotta,12,Grain,Dairy
+pasta,sausage,16,Grain,Meat
+pasta,spinach,10,Grain,Vegetable
+pasta,tomato,50,Grain,Vegetable
+pasta,zucchini,12,Grain,Vegetable
+pork,pork chop,22,Meat,Meat
+pork,pork tenderloin,13,Meat,Meat
+pork,rosemary,12,Meat,Herb
+pork,sausage,21,Meat,Meat
+pork,soy sauce,10,Meat,Condiment
+pork,tomato,16,Meat,Vegetable
+potato,tomato,12,Vegetable,Vegetable
+poultry,tomato,18,Meat,Vegetable
+red wine,wine,11,Alcohol,Alcohol
+sausage,tomato,16,Meat,Vegetable
+shrimp,tomato,10,Seafood,Vegetable
+tomato,veal,12,Vegetable,Meat
+tomato,white wine,15,Vegetable,Alcohol

@@ -1,0 +1,146 @@
+source,target,vegan,source.category,target.category
+almond,raisin,10,Nut,Fruit
+arugula,bell pepper,7,Vegetable,Vegetable
+arugula,leafy green,8,Vegetable,Vegetable
+arugula,onion,7,Vegetable,Vegetable
+avocado,leafy green,7,Vegetable,Vegetable
+avocado,onion,9,Vegetable,Vegetable
+avocado,tomato,9,Vegetable,Vegetable
+basil,herb,9,Herb,Herb
+basil,mint,9,Herb,Herb
+basil,tomato,14,Herb,Vegetable
+bean,corn,7,Vegetable,Vegetable
+bean,garlic,11,Vegetable,Herb
+bean,green bean,8,Vegetable,Vegetable
+bean,legume,7,Vegetable,Legume
+bean,onion,17,Vegetable,Vegetable
+bean,tomato,9,Vegetable,Vegetable
+beet,carrot,7,Vegetable,Vegetable
+bell pepper,cilantro,9,Vegetable,Herb
+bell pepper,eggplant,11,Vegetable,Vegetable
+bell pepper,herb,8,Vegetable,Herb
+bell pepper,onion,18,Vegetable,Vegetable
+bell pepper,pepper,16,Vegetable,Vegetable
+bell pepper,tomato,11,Vegetable,Vegetable
+bell pepper,vinegar,8,Vegetable,Condiment
+bell pepper,zucchini,8,Vegetable,Vegetable
+berry,blueberry,9,Fruit,Fruit
+berry,citrus,13,Fruit,Fruit
+berry,cranberry,10,Fruit,Fruit
+berry,raspberry,9,Fruit,Fruit
+berry,strawberry,19,Fruit,Fruit
+broccoli rabe,garlic,7,Vegetable,Herb
+cabbage,carrot,11,Vegetable,Vegetable
+cabbage,onion,7,Vegetable,Vegetable
+cabbage,vinegar,12,Vegetable,Condiment
+capers,eggplant,7,Vegetable,Vegetable
+capers,olive,7,Vegetable,Vegetable
+carrot,ginger,8,Vegetable,Vegetable
+carrot,onion,20,Vegetable,Vegetable
+carrot,parsnip,8,Vegetable,Vegetable
+carrot,vinegar,8,Vegetable,Condiment
+celery,onion,7,Vegetable,Vegetable
+champagne,fruit juice,8,Alcohol,Fruit
+chile pepper,cilantro,9,Vegetable,Herb
+chile pepper,onion,11,Vegetable,Vegetable
+cilantro,corn,8,Herb,Vegetable
+cilantro,garlic,9,Herb,Herb
+cilantro,ginger,7,Herb,Vegetable
+cilantro,herb,11,Herb,Herb
+cilantro,hot pepper,9,Herb,Vegetable
+cilantro,jalapeno,12,Herb,Vegetable
+cilantro,lime,9,Herb,Fruit
+cilantro,mint,7,Herb,Herb
+cilantro,onion,28,Herb,Vegetable
+cilantro,parsley,7,Herb,Herb
+cilantro,pineapple,7,Herb,Fruit
+cilantro,tomato,19,Herb,Vegetable
+cinnamon,clove,12,Spice,Spice
+citrus,grapefruit,10,Fruit,Fruit
+citrus,herb,9,Fruit,Herb
+citrus,lemon,13,Fruit,Fruit
+citrus,lime,8,Fruit,Fruit
+citrus,mango,7,Fruit,Fruit
+citrus,orange,23,Fruit,Fruit
+coriander,cumin,7,Herb,Spice
+corn,onion,8,Vegetable,Vegetable
+corn,tomato,16,Vegetable,Vegetable
+corn,zucchini,8,Vegetable,Vegetable
+cranberry,dried fruit,7,Fruit,Fruit
+cranberry,ginger,8,Fruit,Vegetable
+cranberry,orange,15,Fruit,Fruit
+cucumber,dill,8,Vegetable,Vegetable
+cucumber,mint,9,Vegetable,Herb
+cucumber,parsley,7,Vegetable,Herb
+cucumber,tomato,13,Vegetable,Vegetable
+dried fruit,raisin,7,Fruit,Fruit
+eggplant,tomato,14,Vegetable,Vegetable
+eggplant,zucchini,7,Vegetable,Vegetable
+fennel,onion,9,Vegetable,Vegetable
+fennel,orange,7,Vegetable,Fruit
+fruit juice,liqueur,7,Fruit,Alcohol
+fruit juice,orange,15,Fruit,Fruit
+garlic,ginger,16,Herb,Vegetable
+garlic,green bean,8,Herb,Vegetable
+garlic,herb,20,Herb,Herb
+garlic,leafy green,11,Herb,Vegetable
+garlic,lemon,9,Herb,Fruit
+garlic,onion,24,Herb,Vegetable
+garlic,parsley,9,Herb,Herb
+garlic,potato,11,Herb,Vegetable
+garlic,rosemary,8,Herb,Herb
+garlic,tomato,26,Herb,Vegetable
+garlic,vinegar,8,Herb,Condiment
+garlic,zucchini,7,Herb,Vegetable
+ginger,orange,7,Vegetable,Fruit
+ginger,soy sauce,8,Vegetable,Condiment
+ginger,tomato,7,Vegetable,Vegetable
+ginger,vinegar,12,Vegetable,Condiment
+green bean,onion,10,Vegetable,Vegetable
+herb,leafy green,10,Herb,Vegetable
+herb,mint,16,Herb,Herb
+herb,onion,24,Herb,Vegetable
+herb,parsley,12,Herb,Herb
+herb,pasta,8,Herb,Grain
+herb,pepper,12,Herb,Vegetable
+herb,potato,10,Herb,Vegetable
+herb,thyme,7,Herb,Herb
+herb,tomato,16,Herb,Vegetable
+herb,zucchini,9,Herb,Vegetable
+hot pepper,tomato,8,Vegetable,Vegetable
+jalapeno,onion,14,Vegetable,Vegetable
+jalapeno,tomato,11,Vegetable,Vegetable
+kale,leafy green,8,Vegetable,Vegetable
+leafy green,lettuce,7,Vegetable,Vegetable
+leafy green,olive,7,Vegetable,Vegetable
+leafy green,onion,7,Vegetable,Vegetable
+leafy green,spinach,11,Vegetable,Vegetable
+leafy green,vinegar,15,Vegetable,Condiment
+lemon,onion,8,Fruit,Vegetable
+lemon,orange,7,Fruit,Fruit
+lemon,parsley,10,Fruit,Herb
+lime,onion,9,Fruit,Vegetable
+mango,pineapple,8,Fruit,Fruit
+melon,watermelon,8,Fruit,Fruit
+mint,onion,12,Herb,Vegetable
+mint,parsley,10,Herb,Herb
+mint,tomato,11,Herb,Vegetable
+mustard,onion,8,Condiment,Vegetable
+mustard,vinegar,10,Condiment,Condiment
+olive,onion,9,Vegetable,Vegetable
+olive,tomato,9,Vegetable,Vegetable
+onion,parsley,7,Vegetable,Herb
+onion,pepper,15,Vegetable,Vegetable
+onion,potato,11,Vegetable,Vegetable
+onion,tomatillo,7,Vegetable,Vegetable
+onion,tomato,46,Vegetable,Vegetable
+onion,vinegar,22,Vegetable,Condiment
+parsley,tomato,7,Herb,Vegetable
+pepper,tomato,9,Vegetable,Vegetable
+pine nut,raisin,8,Nut,Fruit
+potato,rosemary,7,Vegetable,Herb
+potato,tomato,7,Vegetable,Vegetable
+rice,tomato,8,Grain,Vegetable
+spinach,vinegar,7,Vegetable,Condiment
+tomato,vinegar,8,Vegetable,Condiment
+tomato,zucchini,14,Vegetable,Vegetable

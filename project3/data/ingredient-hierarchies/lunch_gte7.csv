@@ -1,0 +1,152 @@
+source,target,lunch,source.category,target.category
+arugula,cheese,8,Vegetable,Dairy
+arugula,leafy green,7,Vegetable,Vegetable
+arugula,tomato,9,Vegetable,Vegetable
+avocado,leafy green,8,Vegetable,Vegetable
+avocado,tomato,7,Vegetable,Vegetable
+bacon,cheddar,8,Meat,Dairy
+bacon,cheese,11,Meat,Dairy
+bacon,egg,10,Meat,Poultry
+bacon,leafy green,9,Meat,Vegetable
+bacon,milk/cream,12,Meat,Dairy
+bacon,onion,9,Meat,Vegetable
+bacon,pork,11,Meat,Meat
+bacon,potato,11,Meat,Vegetable
+bacon,tomato,13,Meat,Vegetable
+basil,cheese,8,Herb,Dairy
+basil,goat cheese,11,Herb,Dairy
+basil,herb,9,Herb,Herb
+basil,mozzarella,9,Herb,Dairy
+basil,pasta,10,Herb,Grain
+basil,tomato,23,Herb,Vegetable
+bean,cheese,8,Vegetable,Dairy
+bean,sausage,7,Vegetable,Meat
+bean,tomato,10,Vegetable,Vegetable
+beef,ground beef,8,Meat,Meat
+beef,onion,11,Meat,Vegetable
+beet,goat cheese,10,Vegetable,Dairy
+bell pepper,cheese,7,Vegetable,Dairy
+bell pepper,onion,9,Vegetable,Vegetable
+bell pepper,pepper,8,Vegetable,Vegetable
+bell pepper,tomato,12,Vegetable,Vegetable
+blue cheese,cheese,8,Dairy,Dairy
+blue cheese,leafy green,9,Dairy,Vegetable
+butternut squash,squash,7,Vegetable,Vegetable
+carrot,onion,8,Vegetable,Vegetable
+cheddar,cheese,16,Dairy,Dairy
+cheddar,egg,8,Dairy,Poultry
+cheese,egg,12,Dairy,Poultry
+cheese,garlic,12,Dairy,Herb
+cheese,goat cheese,15,Dairy,Dairy
+cheese,ham,9,Dairy,Meat
+cheese,herb,18,Dairy,Herb
+cheese,leafy green,20,Dairy,Vegetable
+cheese,mozzarella,10,Dairy,Dairy
+cheese,mushroom,10,Dairy,Vegetable
+cheese,olive,10,Dairy,Vegetable
+cheese,onion,23,Dairy,Vegetable
+cheese,parmesan,17,Dairy,Dairy
+cheese,pasta,17,Dairy,Grain
+cheese,pepper,8,Dairy,Vegetable
+cheese,pork,15,Dairy,Meat
+cheese,poultry,7,Dairy,Meat
+cheese,prosciutto,8,Dairy,Meat
+cheese,sausage,8,Dairy,Meat
+cheese,spinach,7,Dairy,Vegetable
+cheese,swiss cheese,7,Dairy,Dairy
+cheese,tomato,26,Dairy,Vegetable
+chicken,garlic,8,Meat,Herb
+chicken,ginger,9,Meat,Vegetable
+chicken,leafy green,9,Meat,Vegetable
+chicken,mayonnaise,7,Meat,Condiment
+chicken,onion,15,Meat,Vegetable
+chicken,poultry,24,Meat,Meat
+chicken,tomato,14,Meat,Vegetable
+chive,salmon,7,Vegetable,Seafood
+cilantro,ginger,8,Herb,Vegetable
+cilantro,herb,8,Herb,Herb
+cilantro,onion,7,Herb,Vegetable
+cilantro,parsley,8,Herb,Herb
+citrus,herb,7,Fruit,Herb
+citrus,onion,7,Fruit,Vegetable
+citrus,orange,7,Fruit,Fruit
+corn,milk/cream,8,Vegetable,Dairy
+corn,tomato,8,Vegetable,Vegetable
+cream cheese,salmon,8,Dairy,Seafood
+cucumber,mint,7,Vegetable,Herb
+cucumber,shrimp,8,Vegetable,Seafood
+cucumber,tomato,16,Vegetable,Vegetable
+egg,ham,10,Poultry,Meat
+egg,herb,10,Poultry,Herb
+egg,mayonnaise,7,Poultry,Condiment
+egg,milk/cream,9,Poultry,Dairy
+egg,mushroom,7,Poultry,Vegetable
+egg,onion,9,Poultry,Vegetable
+egg,potato,8,Poultry,Vegetable
+egg,tomato,10,Poultry,Vegetable
+eggplant,tomato,11,Vegetable,Vegetable
+feta,tomato,8,Dairy,Vegetable
+fish,leafy green,7,Seafood,Vegetable
+fish,lettuce,8,Seafood,Vegetable
+fish,mayonnaise,9,Seafood,Condiment
+fish,salmon,18,Seafood,Seafood
+fish,tomato,9,Seafood,Vegetable
+fish,tuna,7,Seafood,Seafood
+garlic,herb,11,Herb,Herb
+garlic,leafy green,7,Herb,Vegetable
+garlic,onion,11,Herb,Vegetable
+garlic,pasta,8,Herb,Grain
+garlic,tomato,12,Herb,Vegetable
+goat cheese,leafy green,8,Dairy,Vegetable
+goat cheese,onion,7,Dairy,Vegetable
+goat cheese,tomato,12,Dairy,Vegetable
+ham,swiss cheese,8,Meat,Dairy
+herb,leafy green,9,Herb,Vegetable
+herb,mint,10,Herb,Herb
+herb,onion,9,Herb,Vegetable
+herb,parsley,10,Herb,Herb
+herb,pasta,8,Herb,Grain
+herb,tomato,14,Herb,Vegetable
+hot pepper,tomato,7,Vegetable,Vegetable
+leafy green,lettuce,14,Vegetable,Vegetable
+leafy green,mayonnaise,7,Vegetable,Condiment
+leafy green,onion,9,Vegetable,Vegetable
+leafy green,parmesan,9,Vegetable,Dairy
+leafy green,tomato,13,Vegetable,Vegetable
+lettuce,parmesan,7,Vegetable,Dairy
+lettuce,tomato,10,Vegetable,Vegetable
+mayonnaise,mustard,9,Condiment,Condiment
+mayonnaise,onion,9,Condiment,Vegetable
+mayonnaise,tarragon,8,Condiment,Herb
+milk/cream,onion,7,Dairy,Vegetable
+milk/cream,pasta,8,Dairy,Grain
+milk/cream,pork,7,Dairy,Meat
+milk/cream,potato,14,Dairy,Vegetable
+milk/cream,tomato,10,Dairy,Vegetable
+mint,parsley,9,Herb,Herb
+mint,tomato,7,Herb,Vegetable
+mozzarella,tomato,12,Dairy,Vegetable
+mushroom,onion,7,Vegetable,Vegetable
+mushroom,parmesan,7,Vegetable,Dairy
+mushroom,tomato,7,Vegetable,Vegetable
+noodle,pasta,8,Grain,Grain
+olive,onion,8,Vegetable,Vegetable
+olive,tomato,15,Vegetable,Vegetable
+onion,pasta,8,Vegetable,Grain
+onion,pepper,8,Vegetable,Vegetable
+onion,pork,11,Vegetable,Meat
+onion,potato,7,Vegetable,Vegetable
+onion,tomato,27,Vegetable,Vegetable
+parmesan,pasta,9,Dairy,Grain
+parmesan,prosciutto,8,Dairy,Meat
+parmesan,tomato,8,Dairy,Vegetable
+parsley,tomato,11,Herb,Vegetable
+pasta,tomato,21,Grain,Vegetable
+pork,sausage,11,Meat,Meat
+pork,tomato,7,Meat,Vegetable
+potato,tomato,8,Vegetable,Vegetable
+radish,tomato,7,Vegetable,Vegetable
+shrimp,tomato,11,Seafood,Vegetable
+tarragon,tomato,8,Herb,Vegetable
+tomato,tortillas,8,Vegetable,Misc
+tomato,zucchini,7,Vegetable,Vegetable
